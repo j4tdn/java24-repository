@@ -1,0 +1,31 @@
+Toán tử = 100% lấy giá trị ở stack gán cho nhau
+
+
+
+
+
+
+
+
+
+
+Integer = 5;
+Integer = new Integer(5);
+
+- Giong nhau:
+	+ KDL doi tuong luu o HEAP, chuoi
+	+ Doi tuong duoc tao ra o HEAP, doi tuong se bat bien(immutable) -> vi thuoc tinh la private va final
+- Khac nhau:
+	+ Toan tu new: 
+		* Luu tru o HEAP
+		* Khi tao 1 doi tuong new -> luon ta ra o nho moi
+	+ Gan truc tiep gia tri cua thuoc tinh
+		* Luu tru o HEAP - CONSTANT pool
+		* Constant pool la 1 vung nho dung de luu tru cac gia tri khong trung nhau
+		* Chi luu gia t ri cua nhung doi tuong duoc tao ra
+		* Tu KDL co san cua JAVA thong qua viec gan truc tiep
+		
+		* Khi tao 1 doi tuong moi -> kiem tra xem gia tri cua doi tuong can tao da ton tai o constant pool chua
+		+ neu chua co -> tao ra o nho, gan dia chi cho bien
+		+ ney co roi -> ko tao ra, dung cho o nho da co gan dia chi cho bien			
+	
