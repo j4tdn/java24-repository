@@ -1,0 +1,6 @@
+Primite Data Tupe = KDL Nguyên Thủy
+vd: int, char, double, long, float, boolean
+
+- Biến: 100% lưu ở STACK (ko qtrong là KDL gì)
+
+- Giá trị của KDL nguyên thủy: lưu ở STACK
