@@ -1,0 +1,22 @@
+1. Primitive Data Type =KDL Nguyên Thủy 
+VD: int, char, double, long, float, boolean
+-Biến: 100% lưu ở STACK(ko quan trong KDL là gì)
+-dữ liệu của KDL nguyên thủy (lưu ở STACK
+-Toán tử =: 100% hoạt động ở STACK( lấy giá trị của biết ở STACK gán cho nhau)
+
+khi gọi hàm , tuyền tham số qua hàm 
+Toán tử =, copy giá trị ở vùng nhớ stack
+
+Nếu như hàm trả về  void và KDl truyền vào là nguyên thủy 
+100% ra khỏi làm giá trị của biến không đổi
+
+
+khi biến được truyền tham số qua hàm 
+          nếu muốn sau khi thoát khỏi hàm , biến được cập nhật giá trị thì
+          + Biến KDL đối tượng 
+          + Trong hàm cập nhật giá trị tại HEAP của biến đó 
+          
+khai báo/ gán giá trị số/ kí tự cho KDL byte, chả
+sử dụng, in ra 
+char --> kí tự 
+byte --> số
