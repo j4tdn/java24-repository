@@ -1,0 +1,6 @@
+1. primitive Data Type = KDL nguyên thủy
+Vd: int, char, double, long, float, boolean
+
+- Biến: lưu ở STACK (Ko quan trọng KDL là gì)
+- Gía trị của KDL nguyên thủy: lưu ở STACK
+
