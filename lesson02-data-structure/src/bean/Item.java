@@ -1,11 +1,12 @@
 package bean;
 
 public class Item {
-	// thuộc tính (nằm trong ô nhớ)
+	// thuộc tính (nằm trong ô nhớ HEAP)
 	public int id;
 	public char name;
 	public double salesPrice;
 
+	// hàm khởi tạo rỗng mặc định
 	public Item() {
 	}
 
@@ -17,7 +18,6 @@ public class Item {
 
 	}
 
-	@Override
 	public String toString() {
 		return "Item [id=" + this.id + ", name=" + this.name + ", salesPrice=" + this.salesPrice + "]";
 	}
