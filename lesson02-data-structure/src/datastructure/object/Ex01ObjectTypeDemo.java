@@ -47,4 +47,8 @@ public class Ex01ObjectTypeDemo {
 	
 	
 	
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> f5ddcb2 (khoi tao)

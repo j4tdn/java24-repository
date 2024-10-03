@@ -46,4 +46,8 @@ public class Ex04PassParamViaMethod {
 		number = 9999;
 	}
 	
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> f5ddcb2 (khoi tao)

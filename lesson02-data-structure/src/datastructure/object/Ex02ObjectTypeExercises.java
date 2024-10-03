@@ -22,4 +22,8 @@ public class Ex02ObjectTypeExercises {
 		
 	}
 	
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> f5ddcb2 (khoi tao)

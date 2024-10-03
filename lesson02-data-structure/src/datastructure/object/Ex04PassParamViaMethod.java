@@ -1,5 +1,6 @@
 package datastructure.object;
 
+<<<<<<< HEAD
 import bean.Item;
 
 public class Ex04PassParamViaMethod {
@@ -72,4 +73,8 @@ public class Ex04PassParamViaMethod {
 	//	element = new Item(9, 'T', 99d);
 	// }
 	
+=======
+public class Ex04PassParamViaMethod {
+
+>>>>>>> f5ddcb2 (khoi tao)
 }

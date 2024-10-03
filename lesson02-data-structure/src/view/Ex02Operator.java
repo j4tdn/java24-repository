@@ -43,4 +43,8 @@ public class Ex02Operator {
 		boolean isValid1 = (x++ > 8 || y-- > 2);
 		System.out.printf("isValid1(%s) x(%s) y(%s)", isValid1, x, y);
 	}
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> f5ddcb2 (khoi tao)

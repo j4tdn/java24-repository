@@ -42,4 +42,8 @@ public class Ex03VariableScope {
 		return a3;
 	}
 	
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> f5ddcb2 (khoi tao)

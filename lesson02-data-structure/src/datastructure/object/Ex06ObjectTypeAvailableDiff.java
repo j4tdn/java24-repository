@@ -53,4 +53,8 @@ public class Ex06ObjectTypeAvailableDiff {
 		);
 	}
 	
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> f5ddcb2 (khoi tao)

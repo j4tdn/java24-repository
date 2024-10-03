@@ -28,4 +28,8 @@ public class Ex02PrimitiveReassignValues {
 		System.out.printf("a(%s) b(%s) c(%s) f1(%s) f2(%s)", a, b, c, f1, f2);
 	}
 	
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> f5ddcb2 (khoi tao)

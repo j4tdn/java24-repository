@@ -20,4 +20,8 @@ public class Ex02While {
 		
 	}
 	
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> f5ddcb2 (khoi tao)

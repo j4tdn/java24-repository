@@ -76,4 +76,8 @@ public class Ex03SwitchCase {
 		}
 	}
 	
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> f5ddcb2 (khoi tao)

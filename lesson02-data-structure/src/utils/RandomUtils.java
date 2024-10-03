@@ -31,4 +31,8 @@ public class RandomUtils {
 		return new BigDecimal(String.valueOf(value));
 	}
 	
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> f5ddcb2 (khoi tao)

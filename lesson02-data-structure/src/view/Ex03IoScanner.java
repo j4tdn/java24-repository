@@ -38,4 +38,8 @@ public class Ex03IoScanner {
 		
 	}
 	
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> f5ddcb2 (khoi tao)

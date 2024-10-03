@@ -138,6 +138,10 @@ public class Ex01TestMainMethod {
 		System.out.println("NS-Test");
 	}
 	
+<<<<<<< HEAD
 }
 
 
+=======
+}
+>>>>>>> f5ddcb2 (khoi tao)

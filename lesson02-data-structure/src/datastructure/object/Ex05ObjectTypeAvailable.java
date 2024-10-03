@@ -56,4 +56,8 @@ public class Ex05ObjectTypeAvailable {
 		
 	}
 	
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> f5ddcb2 (khoi tao)

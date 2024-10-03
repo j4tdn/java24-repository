@@ -23,5 +23,9 @@ class Ex02InternalClass {
 		System.out.println("Ex02InternalClass#main");
 	}
 	
+<<<<<<< HEAD
 }
 
+=======
+}
+>>>>>>> f5ddcb2 (khoi tao)
