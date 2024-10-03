@@ -12,6 +12,8 @@ public class BindingInputUtils {
 			try {
 				System.out.print("Nhap N: ");
 				n = Integer.parseInt(ip.next());
+				if (n < 0)
+					throw new Exception();
 				return n;
 			} catch (Exception e) {
 				System.out.println("Vui long nhap lai!!");
@@ -30,6 +32,8 @@ public class BindingInputUtils {
 			try {
 				System.out.print("Nhap N: ");
 				n = Integer.parseInt(ip.next());
+				if (n < 0)
+					throw new Exception();
 				if (Integer.toString(n).length() < bindingLength)
 					throw new Exception();
 				return n;
@@ -50,6 +54,8 @@ public class BindingInputUtils {
 			try {
 				System.out.print(mess);
 				n = Integer.parseInt(ip.next());
+				if (n < 0)
+					throw new Exception();
 				if (n < min || n >= max)
 					throw new Exception();
 				return n;
