@@ -9,6 +9,7 @@ public class Ex03DoWhile {
 		do {
 			System.out.println(i + " ");
 			i++;
+			break;
 		} while (i < 10);
 	}
 }
