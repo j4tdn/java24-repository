@@ -12,7 +12,7 @@ public class Ex01PassParamViaMethod {
 		
 		int a1 = 11;
 		int a2 = 22;
-		System.out.println("a1(%s) a2(%s)\n", a1, a2);
+		System.out.printf("a1(%s) a2(%s)\n"+ a1, a2);
 		
 		
 		

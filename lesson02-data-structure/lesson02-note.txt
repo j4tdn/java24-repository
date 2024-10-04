@@ -3,3 +3,35 @@ VD: int, char, double, long, float, boolean
 
 Biến: 100% lưu ở STACK(Không quan trọng là kiểu DL gì)
 - giá tri cua kdl nguyên thuỷ : STACK
+
+1. Tạo ra file .java
+ --> có thể có 1 hoặc N class
+ --> yêu cầu: tên file java phải trùng với public class
+ 
+ 2. một class
+ --> Tạo ra hàm main để thực thi chương trình
+ 	VD: Ex01
+ -> đóng vai trò là KDL
+ 	VD: Item, Store
+ --> đóng vai trò là 1 utility class chứa các hàm chức năng được sử dụng ở nhiều nơi
+ 	VD: utils.RandomUtils
+ 	
+ 3. Java có 2 loại KDL
+ 	+ KDL nguyên thủy
+ 	+ KDL đối tượng
+ 
+ 4. Cần biến lưu giá trị là số nguyên, giờ lưu KDL gì, vì sao
+ 
+ 5. Ý nghĩa của từ khóa final
+ 	VD: final Item item = new Item("", ..)....
+ 	
+ 6. -- ++ prefix suffix && ||
+ 
+ 7. Scanner nhập xuất, trôi lệnh khi dùng string
+ 
+ 8. if else switch case
+ 
+ 9. for while dowhile break continue 
+ 
+ 10. array(lesson10)
+ 

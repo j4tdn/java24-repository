@@ -15,9 +15,4 @@ public class Ex06ObjectTypeAvailableDiff {
  *  
  * 
  */
-	String s11 = "bye"; //H1
-	String s22 = "tam biet"; //H2
-	String s33 = "bye"; //H1
-	String s44 = "bye"; //H1
-	s33 = "Teo"; // H3
 }
