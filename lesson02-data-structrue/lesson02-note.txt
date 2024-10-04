@@ -4,3 +4,24 @@ vd: int, char, double, long, float, boolean
 - Biến: 100% lưu ở STACK (ko qtrong là KDL gì)
 
 - Giá trị của KDL nguyên thủy: lưu ở STACK
+
+1. tạo ra file .java
+--> có thể có 1 or N class
+--> ycau: tên file java phải trùng vs public class
+
+2. 1 class 
+--> tạo ra hàm main để excute ctrinh
+	vd: ex01for
+--> đóng role là KDL
+	vd: Store, Ttem ..
+--> đóng role là 1 util class chứa các func đc use ở nhiều nơi
+	vd: utils.RandomUtils
+	
+3. java có 2 KDL:
+cả 2 biến đều lưu ở stack
+	+ primitive type: stack chỉ lưu được giá trị đơn
+	+ obj type: heap lưu được đa giá trị (attribute)
+	
+4. ý nghĩa final: ko thể thay đổi val ở stack
+
+
