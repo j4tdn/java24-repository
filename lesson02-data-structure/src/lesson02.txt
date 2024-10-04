@@ -29,3 +29,27 @@ Integer = new Integer(5);
 		+ neu chua co -> tao ra o nho, gan dia chi cho bien
 		+ ney co roi -> ko tao ra, dung cho o nho da co gan dia chi cho bien			
 	
+	
+	REVIEW:
+	1. Tao ra file .java
+	--> co the co 1 hoac N class
+	--> yeu cau: ten file java phai trung voi public class
+	
+	2. Mot class
+	--> tao ra ham main de thuc thi chuong trinh
+	--> dong vai tro la 1 kieu du lieu
+	--> dong vai tro la 1 utility class chua cac ham chuc nang duoc su dung o nhieu noi
+	
+	3. Java co 2 loai kieu du lieu
+		+ kdl nguyen thuy(primiti)
+		+ kdl doi tuong(object)
+		
+	4. Can bien luu gia tri la so nguyen, gio luu kdl gi vi sao?
+	
+	5. Y nghia cua tu khoa final
+	
+	6. ++ -- prefix suffix && ||
+	
+	7. Scanner nhap xuat, troi lenh
+	
+	8. if else sw case. sw case su dung khi chi co dieu kien =
