@@ -7,6 +7,7 @@ public class Ex04BreakContinue {
 		//loop break continue
 		for (int i=1;i<=10;i++) {
 			if ( i % 5 == 0 ) {
+				//Thoát khỏi toàn bộ vòng lặp
 				break;
 			}
 			System.out.println(i+ " ");
@@ -16,6 +17,7 @@ public class Ex04BreakContinue {
 			if ( i % 5 == 0 ) {
 				// Kết thúc sớm vòng lặp hiện tại rồi
 				//nhảy sang vòng lặp tiếp theo
+				//bỏ qua đoạn code thực thi phía dưới
 				continue;
 			}
 			System.out.println(i+ " ");
