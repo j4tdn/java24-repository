@@ -1,7 +1,5 @@
 package selfexercise;
 
-import bean.Item;
-
 /*
  * Khởi tạo biến number = 22 
  * Cập nhật giá trị biến number = 44
