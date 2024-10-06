@@ -3,6 +3,11 @@ package utils;
 import java.util.Scanner;
 
 public class Ex01Utils {
+	Scanner ip = new Scanner(System.in);
+	
+	public static int testInput(int maxWrongTimes, int maxValue, int minValue, String statement) {
+		
+	}
 	
 	public static int testInput(int maxWrongTimes, int minValue, String statement) {
 		Scanner ip = new Scanner(System.in);
