@@ -1,15 +1,27 @@
-package utils;
+package Utils;
 
 public class NumberUtils {
-	
-	public static long factorial(int n) {
-		long f = n;
-		while(n > 1) {
-			n--;
-			f = f * n;
+
+	public static long Factorial(int number) {
+		long f = number;
+		while (number > 1) {
+			number--;
+			f = f * number;
 		}
 		return f;
+	}
+	
+	public static boolean checkPrime(int number) {
+		if(number < 2) {
+			return false;
+		}
 		
+		for (int i = 2; i <= Math.sqrt(number); i++) {
+			if (number % i == 0) {
+				return false;
+			}
+		}
+		return true;
 	}
 
 }

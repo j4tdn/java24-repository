@@ -1,17 +1,16 @@
 package view;
 
-import utils.NumberUtils;
+import Utils.NumberUtils;
 
 public class Ex03Factorial {
 
 	public static void main(String[] args) {
-		
-		int[] elements = {5, 8, 12, 3};
-		
-		for(int element: elements) {
-			System.out.println(element + " ! = " + NumberUtils.factorial(element));
+
+		int[] numbers = { 5, 6, 7, 8 };
+		for (int number : numbers) {
+			System.out.println(number + "! = " + NumberUtils.Factorial(number));
 		}
-			
+
 	}
-	
+
 }
