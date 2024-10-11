@@ -1,5 +1,8 @@
 package utils;
 
-public class fact {
-
+private static long fact(int n){
+	long f = n;
+	while(n>1){
+		n= n*(n-1);
+	}
 }
