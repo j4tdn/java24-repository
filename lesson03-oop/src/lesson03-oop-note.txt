@@ -1,0 +1,29 @@
+Car
+	private attributes ...
+	
+- Use private to ensure hướng dev of OOP
+	+ each class sẽ mng riêng các attributes của nó
+	
+- Trog coding
+	+ Prj có files code, files gọi qua về functions lẫn nhâu để xử lý(tt # private)
+	
+--> Conflict vs idea of OOP
+--> Xử lý
+	+ cho các attribute là private
+	+ khai báo thêm getter, setter cho các attribute để access/ change value
+	
+Ques 1: why attributes phải kháo báo là private rồi dùng getter/setter access
+mà not use public để cho code ngắn gọn
+	+ cho private vì nếu để public thì access từ bất kỳ class nào => same FOP
+	  ko có mng riêng các tt cho từng Object
+	+ nếu để public thì ở class bên ngoài có thể access trực tiếp tt và 
+	  change luôn CTDL(KDL) của tt, sai bài toán
+	VD: colors từ dynamic size sang fixed size
+	+ từ nay về sau, khi create 1 class
+		- private attribute & getter setter to access/change value
+	VD r-l:
+		+ Emp: taiKhoan + nhận lương
+		+ Company: quyLuong - gửi lương
+		=> khi public thì có thể biết được quyLuong cty hoặc số tiền trong taiKhoan of Emp
+			=> conflict trong thực tế
+	
