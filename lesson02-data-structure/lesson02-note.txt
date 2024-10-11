@@ -21,3 +21,17 @@ Vd: int, char, double, long, float, boolean
  3. Java có 2 loại KDL
  	+ KDL nguyên thủy
  	+ KDL đối tượng
+ 	
+4. Cần biến lưu giá trị là số nguyên, giờ lưu KDL gì vì sao ?
+
+5. Ý nghĩa của từ khóa final
+
+6. ++ -- prefix suffix && ||
+
+7. Scanner nhập xuất, trôi lệnh
+
+8. if else switch case
+
+9. for while dowhile break continue
+
+10. array(lesson10)
