@@ -1,0 +1,26 @@
+Car
+  private attributes ...
+  
+- Sử dụng private để đảm bảo hướng phát triển của OOP
+  + từng class sẽ quản lý riêng các thuộc tính của nó
+  
+  
+- Nhưng trong coding
+  + Dự án có nhiều file code, các file gọi qua về các hàm thuộc tính lẫn
+    nhau để xử lý(tt phải khác private)
+    
+--> Conflict với idea của OOP
+--> Xử lý
+    + Cho các thuộc tính là private
+    + Khai báo thêm getter, setter cho các thuộc tính để truy cập/thay đổi giá trị
+    
+Câu hỏi 1: Vì sao các thuộc tính phải khai báo là private rồi dùng getter/setter truy cập
+mà không sử dụng public để code ngắn gọn
+	+ Nếu để public thì truy cập được từ bất kỳ class nào, 
+		hoàn toàn giống FOP ko có quản lý riêng các tt cho từng đối tượng
+	+ Nếu để public thì ở class bên ngoài có thể truy cập
+	    trực tiếp thuộc tính và thay đổi luôn CTDL(KDL) của tt, sai bài toán
+	VD: colors từ dynamic size sang fixed size
+	+ Từ nay về sau khi tạo ra 1 class
+	    private attribute và getter setter để truy cập/thay đổi giá trị
+
