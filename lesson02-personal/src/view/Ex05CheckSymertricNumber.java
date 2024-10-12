@@ -1,6 +1,6 @@
 package view;
 
-import Utils.IoUtils;
+import utils.IoUtils;
 
 public class Ex05CheckSymertricNumber {
 	

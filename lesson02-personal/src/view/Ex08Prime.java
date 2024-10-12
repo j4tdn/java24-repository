@@ -1,7 +1,7 @@
 package view;
 
-import Utils.IoUtils;
-import Utils.NumberUtils;
+import utils.IoUtils;
+import utils.NumberUtils;
 
 public class Ex08Prime {
 
