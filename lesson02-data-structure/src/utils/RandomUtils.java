@@ -4,7 +4,13 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 
 public class RandomUtils {
+	private RandomUtils() {
+		
+	}
 	private static Random rd = new Random();
+	
+	
+	
 	public static double generatePoint() {
 		double point = rd.nextDouble(0,11);
 		if (point > 10)
