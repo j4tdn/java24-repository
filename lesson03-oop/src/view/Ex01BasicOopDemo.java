@@ -26,8 +26,7 @@ public class Ex01BasicOopDemo {
 		System.out.println("c1 --> " + c1);
 		System.out.println("c2 --> " + c2);
 		System.out.println("c3 --> " + c3);
-		
-		Car c4 = null;
+				Car c4 = new Car();
 		c4.setId(44); // NullPointerException
 	}
 	
