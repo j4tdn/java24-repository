@@ -11,7 +11,33 @@ Car
 --> Xử lý
 	+ cho các attribute là private
 	+ khai báo thêm getter, setter cho các attribute để access/ change value
-	
+
+* Destructor (hàm hủy) dc use, gọi để rm, clear objs mà ko còn đc use
+ô nhớ ở HEAP k còn đc lket bởi ô nhớ nào ở STACK cả
+
+* Từ khóa static (dùng chung thì static, ngược lại thì non-static)
+	+ use ở tt(1 biến global, 1 tt of KDL class)
+	Với tt non-static 
+		-> tt đó sẽ thuộc range of obj
+		-> tt đó sẽ đc mng riêng trên trường obj, ô nhớ
+		
+	Với tt static
+		-> tt đó sẽ thuộc range of class
+		--> all objs đc tạo ra từ class này để use chung val của biến static	
+		+ can dc access từ Obj 
+		--> ko khuyến khích, vì nhìn code set tt of 
+			1 obj nhưng mà lại ăn code cho all Obj
+		+ can đc access từ class
+			 
+	+ use ở hàm
+		Khai báo hàm đó là static if hàm ko phụ thuộc vào obj đang gọi
+		--> Obj nào gọi cũng cho KQ giống nhau
+		
+		Khai báo là non-static nếu hàm đó phụ thuộc vào Obj đang gọi
+		--> mỗi Obj khi gọi vào có thể cho ra KQ khác nhau
+		
+	+ use ở class
+		-> demo ở builder pattern
 Ques 1: why attributes phải kháo báo là private rồi dùng getter/setter access
 mà not use public để cho code ngắn gọn
 	+ cho private vì nếu để public thì access từ bất kỳ class nào => same FOP
