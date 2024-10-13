@@ -1,0 +1,51 @@
+Car 
+1. private attributes .....
+
+- Sử dụng private để đảm bảo hướng phát triển của OOP 
+	+ Từng class sẽ quản lý riêng các thuộc tính của nó 
+	
+- Nhưng trong coding thì không thể tạo 1 class đơn thuần mà phải gọi qua về các hàm thuộc lẫn nhau để xử lý (đòi hỏi public)
+
+
+--> Conflict với idea của OOP
+====================
+	Xử lý
+	+ Cho các thuộc tính là private
+	+ Khai báo thêm getter, setter  cho các thuộc tính để truy cập/ thay đổi giá trị
+	
+2. Destrucor ( hàm hủy ) được sử dụng, gọi để xóa, clear những đối tượng mà ko còn được sử dụng, ô nhớ ở HEAP k còn
+	 được liên kết bởi ô nhớ nào ở STACK cả
+
+3. Từ khóa static:
+		+ Sử dụng ở thuộc tính ( 1 biến toàn cục, 1 thuộc tính của KDL Class)
+			 - Với thuộc tính non-static --> thuộc tính đó sẽ thuộc phạm vi của đối tượng (mỗi đối tượng mỗi ô nhớ )  
+				 --> thuộc tính đó sẽ dc quản lý riêng trên từng đối tượng, ô nhớ 
+			 
+			 - Với thuộc tính static --> thuộc tính đó sẽ thuộc phạm vi của class 
+			 --> tất cả các đối tượng tạo ra từ class này để sử dụng chung giá trị của biến static ( tức là 1 thuộc tính dùng chung cho nhiều đối tượng )
+			  	+ có thể được truy cập từ đối tượng
+			  		--> ko khuyến khích, vì nhìn code set cho tt của 1 đối tượng
+			  		nhưng thực chất sẽ tác động lên toàn bộ đối tượng ( vd: 
+		+ Sử dụng ở hàm
+			- Khai báo hàm đó là static nếu hàm không phụ thuộc vào đối tượng đang gọi 
+			--> đối tượng nào gọi cũng cho KQ giống nhau
+			- Khai báo hàm đố là non-static nếu hàm phụ thuộc vào đối tượng đang gọi 
+			--> mỗi đối tượng khi gọi vào có thể cho ra KQ khác nhau 	
+			
+		+ Sử dụng ở Class 
+	 
+	**Câu hỏi 1: Vì sao các thuộc tính phải khai báo là private rồi dùng getter/setter truy cập
+mà không sử dụng public để code ngắn gọn ?
+--> Trả lời: 
+	+ Nếu để public thì có thể dc truy cập trực tiếp từ bất kỳ class nào, hoàn toàn giống FOP mà ko có quản lí riêng từng thuộc 
+		tính cho các đối tượng.
+	+ Nếu để public thì các class ở ngoài có thể truy cập trực tiếp và thay đổi luôn CTDL(KDL) của thuộc tính, sai bài toán
+		VD: colors từ dynamic size sâng fixed size
+====> Từ nay về sau khi tạo ra class 
+	**	phải dùng: private attribute và getter,setter để truy cập/thay đổi giá trị
+******************************
+Các bước tạo Class:
+	+b1: tạo Class
+	+b2: tạo Constructor ( 2 hàm: 1 rỗng và 1 có tham số)
+	+b3: tạo getter/setter 
+	+b4: tạo toString

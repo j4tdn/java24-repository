@@ -5,8 +5,20 @@ import java.math.RoundingMode;
 import java.util.Random;
 
 public class Ex01RandomUtils {
+	// util: tiện ích, hỗ trợ
+
+	// tất cả các hàm trong util class --> dều la static tl mêthods
+	// nên được gọi từ class
+	// dù có tạo ra n đối tượng thì cũng k ảnh hưởng đến KQ của hàm static
+	// --> thay vì dùng hàm tạo mặc định thì dev có thể tạo đối tượng lãng phí tài
+	// nguyên
+	// --> Ta sẽ private hàm khởi tạo mặc định lại để tránh khởi tạo luôn trong
+	// class util
 // bien/Ham static chi dc khoi tao 1 lan duy nhat torng luc class dang loading
 	private static Random rd = new Random();
+
+	private Ex01RandomUtils() {
+	};
 
 	public static double generatePoint() {
 		double point = rd.nextDouble(0, 11); // [0, 11)
