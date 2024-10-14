@@ -7,6 +7,17 @@ import java.util.Random;
 public class RandomUtils {
 	// utils = utility: tiện ích, hỗ trợ 
 	// Biến/hàm static chỉ được khởi tạo 1 lần duy nhất khi class loading 
+	
+	// Tất cả các hàm trong util class --> đều là static util methods
+	// nên được gọi từ class
+	// Dù tạo ra N đối tượng thì cũng không ảnh hưởng đến kết quả của hàm static
+	// --> Thay vì dùng defualt constructor(public) thì dev có thể tạo 
+	// đối tượng lãng phí tài nguyên --> dùng private constructor
+	private RandomUtils() {
+		
+	}
+	
+	// Biến/hàm chỉ được khởi tạo 1 lần duy nhất khi class loading
 	private static Random rd = new Random();
 	
 	public static double generatePoint() {
