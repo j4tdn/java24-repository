@@ -81,8 +81,4 @@ public class Ex01IfElse {
 		ip.close();
 	}
 	
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> f5ddcb2 (khoi tao)

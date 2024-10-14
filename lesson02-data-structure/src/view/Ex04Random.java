@@ -28,8 +28,4 @@ public class Ex04Random {
 		System.out.println("g --> " + g);
 	}
 	
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> f5ddcb2 (khoi tao)

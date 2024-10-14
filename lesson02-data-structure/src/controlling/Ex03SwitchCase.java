@@ -75,9 +75,4 @@ public class Ex03SwitchCase {
 			System.out.println("Invalid Day");
 		}
 	}
-	
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> f5ddcb2 (khoi tao)

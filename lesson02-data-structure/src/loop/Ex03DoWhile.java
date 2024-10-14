@@ -19,8 +19,4 @@ public class Ex03DoWhile {
 		// 3. Làm bài tập
 	}
 	
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> f5ddcb2 (khoi tao)

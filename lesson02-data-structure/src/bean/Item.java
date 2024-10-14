@@ -54,9 +54,5 @@ public class Item {
 	public String toString() {
 		return "Item [id=" + this.id + ", name=" + this.name + ", salesPrice=" + this.salesPrice + "]";
 	}
-	
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> f5ddcb2 (khoi tao)
+

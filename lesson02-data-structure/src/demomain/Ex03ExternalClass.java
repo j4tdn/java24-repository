@@ -13,8 +13,4 @@ public class Ex03ExternalClass {
 		// Ex01TestMainMethod.closure(); private
 	}
 	
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> f5ddcb2 (khoi tao)

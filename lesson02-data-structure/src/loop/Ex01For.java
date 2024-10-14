@@ -17,8 +17,4 @@ public class Ex01For {
 		}
 	}
 	
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> f5ddcb2 (khoi tao)

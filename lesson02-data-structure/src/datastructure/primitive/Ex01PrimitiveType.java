@@ -33,8 +33,4 @@ public class Ex01PrimitiveType {
 		System.out.println("isValid --> " + isValid);
 	}
 	
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> f5ddcb2 (khoi tao)

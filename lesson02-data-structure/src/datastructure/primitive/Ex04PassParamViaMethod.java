@@ -45,9 +45,4 @@ public class Ex04PassParamViaMethod {
 	private static void modify(int number) { // xanh
 		number = 9999;
 	}
-	
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> f5ddcb2 (khoi tao)

@@ -19,8 +19,4 @@ public class Ex01StackFinal {
 		System.out.println("c --> " + c);
 	}
 	
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> f5ddcb2 (khoi tao)

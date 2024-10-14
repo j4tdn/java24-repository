@@ -45,8 +45,4 @@ public class Ex02TernaryOperator {
 		System.out.println("Xếp loại --> " + rank);
 	}
 	
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> f5ddcb2 (khoi tao)

@@ -22,8 +22,4 @@ public class Store {
 	public String toString() {
 		return "Store [name=" + name + ", openingTime=" + openingTime + ", closingTime=" + closingTime + "]";
 	}
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> f5ddcb2 (khoi tao)

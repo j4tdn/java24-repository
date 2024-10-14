@@ -41,9 +41,4 @@ public class Ex03VariableScope {
 		System.out.printf("a3(%s)\n", a3);
 		return a3;
 	}
-	
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> f5ddcb2 (khoi tao)

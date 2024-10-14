@@ -15,8 +15,4 @@ public class Ex07ImmutableAndFinal {
 		// a3 = 7;
 	}
 	
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> f5ddcb2 (khoi tao)
