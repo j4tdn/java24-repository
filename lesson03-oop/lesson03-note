@@ -1,0 +1,46 @@
+Car
+   pribate attributes ... 
+- sử dụng private để đảm bảo hướng phát triển của ÔP
+ + từng class sẽ quản lý riêng các thuộc tính của nó
+ 
+ 
+- Nhưng trọng coding
+	+ Dự án có nhiều file code, các file gọi qua về các hàm thuộc tính 
+	lẫn nhau để xử lý (tt phải khác private)
+	
+--> cònlict với idea của OOP
+--> Xử lý
+	+ Cho các thuộc tính là private
+	+ Khai báo thêm getter , setter cho các thuộc tính để truy cập/ thay đổi giá trị
+	
+từ khóa static
+	+ Sử dụng ở thuộc tính( 1 biến TC, 1 TT của KDL class)
+	với thuộc tính non-static
+	
+	--> thuộc tính đó sẽ thuộc phạm vi đối tượng 
+	--> thuộc tính đó sẽ được quản lý riêng trên từng đối tượng , ô nhớ
+	
+	với thuộc tính static
+	--> thuộc tính đó sẽ thuộc phạm vi của class
+	--> tất cả các đối tượng được tạo ra từ class này đều sử dụng chung giá trị của biến static
+	
+	+ Sử dụng ở hàm
+	Khai báo hàm đó là static nếu hàm không phụ thuộc vào đối tượng đang gọi
+	--> đối tượng nào gọi cũng cho KQ giống nhau
+	
+	Khai báo hàm đó là non-static nếu hàm phụ thuộc vào đối tượng đang gọi
+	--> mỗi đối tượng khi gọi vào có thể cho KQ khác nhau
+	
+	
+	
+	
+	
+Câu hỏi 1: Vì sao các thuộc tính phải khai báo là private rồi dùng getter/setter truy 
+cập mà không sử dụng punlic để code ngắn gọn 
+	+ Nếu để public thì truy cập được từ bất kỳ class nào, 
+		hoàn toàn giống FOP ko có quản lý riêng các tt cho từng đối tượng
+	+ Nếu để public thì ở class bên ngoài có thể truy cập
+	    trực tiếp thuộc tính và thay đổi luôn CTDL(KDL) của tt, sai bài toán
+	VD: colors từ dynamic size sang fixed size
+	+ Từ nay về sau khi tạo ra 1 class
+	    private attribute và getter setter để truy cập/thay đổi giá trị
