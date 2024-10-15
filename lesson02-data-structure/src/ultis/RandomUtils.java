@@ -5,7 +5,18 @@ import java.math.RoundingMode;
 import java.util.Random;
 
 public class RandomUtils {
-
+	//util = utility: tiện ích, hỗ trợ
+	
+	//tất cả các hàm trong util class --> dều là static util method
+	//Nên được gọi ra từ class
+	//Dù tạo ra N đối tượng thì cũng không ảnh hưởng đến kq của hàm static
+	// --> thay vì dùng default constructor(public) thì dev có thể tọa
+	// đối tượng lãng phí tài nguyên --> dùng private constructor.
+	
+	private RandomUtils() {
+	}
+	
+	// biến/ hàm static chỉ được khởi tạo 1 lần duy nhất khi class loading
 	private static Random rd = new Random();
 	
 	public static double generatePoint() {

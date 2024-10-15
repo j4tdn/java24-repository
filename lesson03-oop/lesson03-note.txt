@@ -14,6 +14,33 @@ Car
 	+Cho các thuộc tính là private
 	+Khai báo thêm getter, setter cho các thuộc tính để truy cập/thay đổi giá trị
 	
+- Destructor(Hàm hủy) được sử dụng/ gọi để xóa, clear những đối tượng mà không còn được
+  sử dụng, ô nhớ ở HEAP không còn được liên kết bởi ô nhớ nào ở STACK cả
+
+- Từ khóa static:
+	* Sử dụng ở thuộc tính(1 biến TC, 1 TT của KDL class)
+	  	- Với thuộc tính non-static 
+	  		--> thuộc tính đó sẽ thuộc phạm vi của đổi tượng
+	  		--> thuộc tính đó sẽ được quản lý riêng trên từng đối tượng, ô nhớ
+	  	
+	  	- Với thuộc tính static
+	  		--> thuộc tính đó sẽ thuộc phạm vi của class
+	  		--> tất cả các đối tượng được tạo ra từ class này để sử dụng chung giá trị của 
+	  			biến static 
+				+ Có thể được truy cập từ đối tượng	  		
+					--> không khuyến khích, vì nó sẽ ăn code cho tất cả đối tượng
+				+ Có thể được truy cập từ class
+	
+	* Sử dụng ở hàm
+		- Khai báo hàm đó là static nếu hàm không phụ thuộc vào đổi tượng đang gọi
+			--> đối tượng nào gọi cũng cho KQ giống nhau
+			
+		- Khai báo hàm đó là non-static nếu hàm đó phụ thuộc vào đối tượng đang gọi
+			--> mỗi đối tượng khi gọi vào có thể cho ra KQ khác nhau.
+	
+	* Sử dụng ở class
+		--> builder pattern
+
 Q1: Vì sao các thuộc tính phỉa khai báo là private rồi dùng getter / setter truy cập mà không 
 	sử dụng public để code ngắn gọn
 	
