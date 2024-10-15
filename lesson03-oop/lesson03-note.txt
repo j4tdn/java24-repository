@@ -1,0 +1,25 @@
+Cau hoi 1: Vi sao cac thuoc tinh phai khai bao la private roi dung getter/setter try cap ma khong su dung public de ngan gon code.
+	+ Neu de public thi try cap duoc tu bat ky class nao, toan hoan giong FOP ko co quan ly rieng cac thuoc tinh cho tung doi tuong
+	+ Neu de public thi o ben ngoai co the truy cap truc tiep thuoc tinh va thay doi CTDL(KDL) cua thuoc tinh, asi bai toan
+	VD: list colors tu dynamic size sang fixed size
+	
+Tu khoa static
+	+ Su dung o thuoc tinh(1 bien TC, 1 TT cua KDL class)
+	Voi thuoc tinh non-static 
+	-> thuoc tinh do se thuoc pham vi cua doi tuong
+	-> thuoc tinh do se duoc quan ly rieng tren tung doi tuong, o nho
+	Voi thuoc tinh static
+	-> thuoc tinh do se thuoc pham vi cua class
+	-> tat ca cac doi tuong duoc tao ra tu class nay deu su dung chung gia tri cua bien static
+	+ Su dung o ham
+	+ su dung o 
+
+	+Su dung o ham
+	Khai bao ham do la static net ham khong phu thuoc vao doi tuong dang goi
+	--> doi tuong nao goi cung cho ket qua giong nhau
+	Khai bao ham do la non-static neu ham phu thuoc vao doi tuong dang goi
+	--> moi doi tuong goi ham se tra ve ket qua khac nhau
+					
+					
+Voi utils vi cac ham trong no deu la static nen k can tao doi tuong gay lang phi tai nguyen
+	--> vo hieu hoa ham khoi tao bang cach thay doi public thanh private			
