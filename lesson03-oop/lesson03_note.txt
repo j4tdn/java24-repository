@@ -1,0 +1,4 @@
+Sử dụng private để đảm bảo hướng phát triển của OOP
+ + từng class sẽ quản lý riêng các thuộc tính của nó
+ Câu hỏi : Vì sao các thuộc tính phải khai báo  là private rồi dùng getter setter truy cập
+ 
