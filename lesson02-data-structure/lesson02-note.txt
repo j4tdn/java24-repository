@@ -3,3 +3,38 @@ Vd: int, char, double, long, float, boolean
 
 - Biến: 100% lưu ở STACK
 - Giá trị của KDL NT: lưu ở STACK
+
+
+
+Ngày 4/10
+1. Tạo ra file .java
+--> Có thể có 1 hoặc N class
+--> yêu cầu: tên file java phải trùng vs public class
+
+2. Một class
+--> tạo ra hàm main để thực thi chương trình
+	Vd:Ex01For
+--> đóng vai trò là KDL
+	Vd: Item, Store
+--> đóng vai trò là 1 utility class chưa các hàm chức năng
+	đc sử dụng ở nhiều nơi
+	Vd: utils.RandomUtils
+
+3. Java có 2 loại KDL
+	+ KDL nguyên thủy
+	+ KDL đối tượng
+	
+4. Cho 1 số nguyên, giờ lưu KDL gì vì sao?
+
+5. Ý nghĩa từ khóa final
+
+6. ++ -- prefix suffix && ||
+
+7. Scanner nhập xuất, trôi lệnh
+
+8. if else so sánh còn case chỉ bằng ko so sánh
+
+9. for while dowhile break continue
+
+10. array(lesson10)
+	
