@@ -2,6 +2,8 @@ package view;
 
 import java.util.Scanner;
 
+import bean.Vehicle;
+
 public class Ex02 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

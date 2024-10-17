@@ -1,4 +1,4 @@
-package view;
+package bean;
 
 public class Vehicle {
     private String name;
