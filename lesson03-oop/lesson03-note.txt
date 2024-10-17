@@ -1,0 +1,18 @@
+Car
+  private attributes...
+  
+  -Sử dụng private để đảm bảo hướng phát triển của OOP
+  + từng class sẽ quản lý riêng các thuộc tính của nó
+  
+  
+  -Nhưng trong coding
+  + dự án có nhiều file code. các file gọi qua về các hàm thuộc tính lần nhai để xử lý
+  (tt phải khác private)
+  
+  --> Conflict với idea của OOP
+  --> Xử lý
+  + Cho các thuộc tính là private
+  +Khai báo thêm getter, setter cho các thuộc tính để truy cập/thay đổi giá trị
+  
+  Câu hỏi 1: Vì sao các thuộc tính phải khai báo là private rồi dùng 
+  getter/setter truy cập mà không sử dụng public để code ngắn gọn
