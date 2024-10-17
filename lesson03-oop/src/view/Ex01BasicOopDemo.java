@@ -22,6 +22,6 @@ public class Ex01BasicOopDemo {
 		System.out.println("c3 --? " + c3);
 		
 		 Car c4 = null;
-		 c4.setId(44); // NullPointerException
+		 c4.setId(44); // NullPointerException	
 	}
 }

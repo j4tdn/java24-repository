@@ -1,0 +1,10 @@
+1. Vì sao các thuộc tính phải khai báo là private rồi dùng getter/setter truy cập mà
+không sử dụng public cho ngắn gọn
+	+ Nếu để public thì truy cập được từ bất kì clas nào,
+	  hoàn toàn giống FOP không có quản lý riêng các tt cho từng đối tượng
+	+ Nếu để public thì ở class bên ngoài có thể truy cập trực tiếp thuộc tính
+	  và thay đổi luôn CTDL(KDL) của tt, sai bài toán
+	VD: colors từ dynamic size sang fixed size
+	+ Từ nay về sau khi tạo ra 1 class
+		private atribute và getter setter để truy cập/ thay đôi giá trị
+2. Destructor đc sử dụng khi cần xóa dữ liệu đối tượng không còn được sử dung ...

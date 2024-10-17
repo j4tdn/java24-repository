@@ -5,9 +5,17 @@ import java.math.RoundingMode;
 import java.util.Random;
 
 public class RandomUtils {
-	// util = utility: tiện ích, hỗ trợ
+	// util = utility: tiá»‡n Ă­ch, há»— trá»£
 	
-	// Biến/Hàm static chỉ được khởi tạo 1 lần duy nhất khi class loading
+	// Biáº¿n/HĂ m static chá»‰ Ä‘Æ°á»£c khá»Ÿi táº¡o 1 láº§n duy nháº¥t khi class loading
+	
+	// Tất cả các hàm trong util class --> đều là static util method
+	// nên được gọi từ class
+	
+	public RandomUtils() {
+		
+	}
+	
 	private static Random rd = new Random();
 	
 	public static double generatePoint() {
@@ -16,17 +24,17 @@ public class RandomUtils {
 			point = 10;
 		}
 		
-		System.out.println("\nĐiểm = " + point);
+		System.out.println("\nÄ�iá»ƒm = " + point);
 		
-		double rounded = bd(point) // chuyển đổi double sang BigDecimal
-				.setScale(1, RoundingMode.HALF_UP) // làm tròn commercial 1 chữ số thập phân
-				.doubleValue(); // chuyển từ BigDecimal về lại double
-		System.out.println("Điểm(làm tròn) = " + rounded);
+		double rounded = bd(point) // chuyá»ƒn Ä‘á»•i double sang BigDecimal
+				.setScale(1, RoundingMode.HALF_UP) // lĂ m trĂ²n commercial 1 chá»¯ sá»‘ tháº­p phĂ¢n
+				.doubleValue(); // chuyá»ƒn tá»« BigDecimal vá»� láº¡i double
+		System.out.println("Ä�iá»ƒm(lĂ m trĂ²n) = " + rounded);
 		
 		return rounded;
 	}
 	
-	// Chuyển đổi value từ KDL double sang BigDecimal
+	// Chuyá»ƒn Ä‘á»•i value tá»« KDL double sang BigDecimal
 	private static BigDecimal bd(double value) {
 		return new BigDecimal(String.valueOf(value));
 	}
