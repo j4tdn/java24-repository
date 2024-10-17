@@ -1,0 +1,23 @@
+Class: 
+	Customer: id, name, phone, address
+	Item: id, os, color, cost
+	
+B1: create list of customers
+B2: create array of items in store
+B3: Shopping function  		(Object)
+-> Who is buying ?  		(Attribute)
+-> List of items 			(Attribute)
+-> Ammount of each item		(Attribute)
+-> Time 					(Attribute)
+=====> Create Class -> Order: customer, items[], datetime               // Quantity ko the de tren nay`, vi se ko biet sl bao nhieu 
+=====> Create Class -> ItemDetail: item, quantity
+========================================================
+c1: 1, Ahuy, 123, NewZealend
+c2: 2, Man, 232, My
+
+i1: IP10, IOS, Black, 1000 
+i2: IP11, IOS, Yellow, 1900 
+i3: IP12, IOS, Rose, 2100 
+i4: IP13, IOS, White, 2200 
+
+o1: c1, {id1(i1, 3), id2(i2, 1), id3(i3, 1)}
