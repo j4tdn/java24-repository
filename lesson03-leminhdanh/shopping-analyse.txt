@@ -1,0 +1,15 @@
++ class 
+customer: id, name , phone. address
+item: id, os, color, cost
+
+B1: Create list of customer
+B2: Create array of items in store
+B3: Shopping function
++ Who is buying
++ List of items
++ Amount if each item
++ DateTime
+=> Order: customer, itemdetails[], DateTime 
+=> ItemDetails: item, quantity
+
++export(order) => TotalOfAmount:Void
