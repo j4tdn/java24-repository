@@ -1,0 +1,27 @@
+Polymorphism = Tính chất đa hình
+
+
+Tính chất đa hình có 2 loại
++ Đa hình trong phương thức
++ Đa hình trong đối tượng
+
+1. Đa hình trong phương thức
+Định nghĩa
+----------
+Là phương thức có hình thái, thể hiện này thể hiện kia
+Có 2 loại
++ Overloading
+  --> 2/N phương thức được gọi là overloading nếu
+  . Cùng thuộc 1 class
+  . Khác
+    --> Số lượng tham số
+    --> Ít nhất 1 KDL truyền vào của tham số
++ Overriding
+  --> 2/N phương thức được gọi là overloading nếu
+   . Thuộc 2/N class có quan hệ thừa kế
+   . Hàm trong class con override lại từ class cha
+     VD: toString
+   Câu hỏi 1: Override thuộc tính được không
+   Câu hỏi 2: Override hàm static được không
+
+

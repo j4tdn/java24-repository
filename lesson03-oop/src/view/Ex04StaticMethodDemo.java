@@ -15,7 +15,7 @@ public class Ex04StaticMethodDemo {
 		System.out.println("Sum --> " + Ex04StaticMethodDemo.sum(x1, x2));
 		
 		Ex04StaticMethodDemo o1 = new Ex04StaticMethodDemo(5);
-		System.out.println("n! = " + o1.fact());
+		System.out.println("\nn! = " + o1.fact());
 		
 		Ex04StaticMethodDemo o2 = new Ex04StaticMethodDemo(5);
 		System.out.println("\nn! = " + o2.fact());
@@ -29,7 +29,7 @@ public class Ex04StaticMethodDemo {
 	// Hàm này chỉ phụ thuộc vào
 	// tham số truyền vào a, b, ko phụ thuộc vào đối tượng đang gọi
 	// --> nên là static method
-	private static int sum(int a, int b) {
+	static int sum(int a, int b) {
 		return a + b;
 	}
 	
