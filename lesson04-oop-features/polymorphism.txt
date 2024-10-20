@@ -1,0 +1,38 @@
+polymorphism = t/c đa hình
+
+có 2 type:
+	+ poly trong method
+	+ poly trong obj
+1. poly trong method
+def: là method có hình thái, thể hiện này thể hiện kia
+- 2 type:
+	+ overloading
+	 ->> 2/N method dc gọi là overloading nếu
+		* cùng thuộc 1 class
+		* khác --> amount parameter
+			   --> ít nhất 1 KDL truyền vào của tham số	
+	+ overriding
+	 ->> 2/N method dc gọi là overriding nếu
+	 	* thuộc 2/N class có quan hệ thừa kế
+	 	* hàm trong class con override lại từ class cha
+	 		VD: toString
+	 		
+Ques 1: override attribute ?
+
+Ques 2: override hàm static ?
+
+2. poly trong obj
+def: là khi 1 biến KDL cha có thể trỏ đến chính nó hoặc KDL con (là 1 obj có nhiều thể hiện)
+	VD: Shape --> Square, Rectangle, Circle...
+
+mục đích: 
+	+ dễ dàng ép KDL trong range cha con, anh em lúc compile
+	+ linh hoạt hơn trong:
+		 --> tạo mảng: nhận danh sách các phần tử là chính nó hoặc KDL con
+		 --> truyền tham số qua hàm: tham số có thể nhận KDL chính nó hoặc KDL con
+thực tế:
+	+ hầu hết thì biến KDL nào thì new, gán KDL đó
+	+ nếu gặp case biết dc biến KDL cha con --> always tạo biến KDL cha gán, new KDL con
+	  để code linh hoạt hơn
+		
+keyword: instanceof

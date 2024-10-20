@@ -1,0 +1,8 @@
+encapsulation = t/c đóng gói
+
+def: t/c encap dc thể hiện qua các access modifier, nếu tt, method có AM là 
+	+ private: dc use trog range of class
+	+ public: đc use ở bất ký class, package nào trog prj
+	+ protected: đc use trog package hiện tại
+				 dc phép use ở các class con bên ngoài package	
+	+ 		: dc use trog package hiện tại
