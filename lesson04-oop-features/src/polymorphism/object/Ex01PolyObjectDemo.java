@@ -72,22 +72,63 @@ public class Ex01PolyObjectDemo {
 		Shape s2 = new Rectangle();
 		Shape s3 = s1;
 		
+		// s1 = s2;
+		
 		s1.calcS();
 		s2.calcS();
 		s3.calcS();
 		
-		Square sq1 = (Square) new Shape();
-		sq1.setBackground();
+		// Square sq1 = (Square) new Shape();
+		Square sq2 = (Square)s1;
+		
+		// sq1.setBackground();
+		System.out.println("Line#86");
+		sq2.setBackground();
 		
 		/*
+		 * 
 		 Câu hỏi 1: 
-		   Biến KDL con trỏ đến đối tượng KDL cha được không ?
-		   Vì sao ?
+		   Biến KDL con trỏ đến đối tượng KDL cha được không, vì sao ?
+		   
+		   + Khi lấy biến KDL con gọi đến hàm riêng, tại thời điểm runtim ko thể tìm thấy
+		     hàm riêng đó trong KDL cha
+		     --> Lỗi ngay tại thời điểm gán đối tượng KDL cha cho biến KDL con
 		   
 		 Câu hỏi 2:
 		   Tại sao không code trực tiếp biến KDL nào trỏ đến đối tượng KDL đó
-		   mà phải dùng biến cha trỏ đến con ?  
+		   mà phải dùng biến cha trỏ đến con ?
+		 
+		   + Dễ dàng ép KDL trong phạm vi cha con, anh em lúc compile
+		   + Linh hoạt hơn trong
+		     --> Tạo mảng: nhận danh sách các phần tử là chính nó hoặc KDL con
+		     --> Truyền tham số qua hàm: tham số có thể nhận KDL chính nó hoặc KDL con
 		 */
+		
+		// Lúc compile từng phần tử trong shapes --> Shape
+		// In ra các đối tượng là hình vuông
+		
+		Shape[] shapes = {s1, s2, s3, square1, rectangle1};
+		
+		int squareCounter = 0;
+		for (Shape shape: shapes) {
+			// support from JDK 16
+			if (shape instanceof Square rt) {
+				squareCounter++;
+				rt.setBackground();
+			}
+		}
+		System.out.println("square counter --> " + squareCounter);
+		
+		printf(s1);
+		printf(s2);
+		printf(square1);
+		printf(rectangle1);
+	}
+	
+	private static void printf(Shape shape) {
+		System.out.println("shape --> {");
+		System.out.println("  " + shape);
+		System.out.println("}\n");
 	}
 	
 }
