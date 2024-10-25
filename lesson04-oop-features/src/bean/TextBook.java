@@ -17,7 +17,7 @@ public class TextBook extends Book {
 		this.isNew = isNew;
 		this.discountInPercent = discountInPercent;
 	}
-
+	
 	public Boolean getIsNew() {
 		return isNew;
 	}
