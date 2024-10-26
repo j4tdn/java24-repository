@@ -1,0 +1,24 @@
++ Class
+Customer : id, name, phone, address
+Item	 : id, os, color, cost
+=> ItemDetail: item, quantity 
+=> class Order: customer, itemsDetails[], datetime
+
+
+B1: Create list of customer
+B2: Create array of items in store
+B3: Shopping function 
++ Who is buying 
++ List of items
++ Amount of each item
++ DateTime
+
++Object
+c1: KH1, Adam, 234, NewYork
+c2: KH2, Enma, 314, Houston
+
+
+i1: SS10+, Android, Black, 600
+i2: SS8+, Android, White, 600
+
+Function: export(order)  => TotalOfAmount: void

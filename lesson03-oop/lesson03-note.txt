@@ -1,0 +1,53 @@
+Car
+	private attributes
+	
+--> Sử dụng private để đảm bảo hướng phát triển của OOP
+	+ từng class sẽ quản lí riêng các thuộc tính của nó
+
+-	Trong coding
+	+ Dự án có nhiều file code, các file gọi qua về lần nhau nhiều lần
+	để xử lý (thuộc tính phải khác private)
+	
+--- Conflict với idea của OOP
+
+---> Xử lý
+	+ Cho các thuộc tính là private
+	+ Khai báo thêm getter, setter cho các thuộc tính để
+	truy cập thay đổi giá trị
+	
+Destructor (Hàm hủy) được sử dụng, gọi để xóa, clear những đối tượng mà
+không còn được sử dụng, ô nhớ ở HEAP không còn được liên kết bởi ô nhớ ở STACK cả
+
+Từ khóa static
+	+ Sử dụng ở thuộc tính (là biến toàn cục, 1 thuộc tính của KDL class)
+	  Với thuộc tính non-static 
+	  ---> thuộc tính sẽ thuộc phạm vi của đối tượng
+	  ---> thuộc tính đó sẽ được quản lý riêng trên tường đối tượng, ô nhớ
+	  
+	  Với thuộc tính static
+	  ---> thuộc tính đó sẽ thuộc pham vi của class 
+	  ---> tất cả các đối tượng được tạo ra từ class này đều sử dụng chung giá trị
+	  	   của biến static
+	  	   + có thể được truy cập từ đối tượng
+	  	     --> không khuyến khích, vì nhìn code set cho 1 đối tượng 
+	  	     nhưng mà lại ăn code cho tất cả đối tượng 
+	  	   + có thể được truy cập từ class
+	  	   
+	 
+	+ Sử dụng ở hàm
+	  Khai báo hàm đó là static nếu hàm đó không phụ thuộc vào đối tượng đang gọi
+	  ---> đối tượng nào gọi đều cho kết quả như nhau
+	  
+	  Khai báo hàm đó là non-static nếu hàm đó phụ thuộc vào đối tượng đang gọi
+	  ---> mỗi đối tượng khi gọi vào có thể cho ra kết quả khác nhau	
+	+ Sử dụng ở class
+Câu hỏi 1: Vì sao các thuộc tính phải khai báo là private rồi dùng getter, setter truy cập
+mà không sử dụng public để code ngắn gọn
+	+ Nếu để public thì truy cập được từ bất kì class nào 
+	hoàn toàn giống như FOP ko có quản lí riêng các thuộc tính cho từng đối tượng
+	
+	+ Nếu để public thì ở class bên ngoài có thể truy cập trực tiếp những thuojc tính
+	và thay đổi luôn CTDL (KDL) của thuộc tính, sai bài toán
+	VD: colors từ dynamic size sang fixed size	
+	+ Từ nay về sau khi tạo ra class: 
+		private attribute và sử dụng getter, setter để truy cập/thay đổi giá trị
