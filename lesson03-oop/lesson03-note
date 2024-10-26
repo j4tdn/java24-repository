@@ -1,0 +1,49 @@
+Car
+ private attributes
+ - sử dụng private để đảm bảo hướng phát triển của OOP   
+ + Từng class sẽ quản lý riêng các thuộc tính của nó 
+ 
+ - Nhưng trong coding 
+ 	+ Dự án có nhiều file code, các file gọi qua về các hàm thuộc tính lẫn nhau để xử lý (tt phải khác private)
+ 	
+--> Conflict với idea của OOP
+--> Xử lý
+	+ Cho các thuộc tính là private
+	+ Khai báo thêm getter, setter cho các thuộc tính để truy cập/thay đổi giá trị 
+	
+	
+Destructor(hàm hủy) được sử dụng, gọi để xóa, clear những đối tượng mà không còn được sử dụng, ô nhớ HEAP k còn được liên kết bởi ô nhớ nào stack cả
+
+Từ khóa static 
+	+ Sử dụng ở thuộc tính(biến toàn cục, 1 thuộc tính của KDL class) 
+	
+	
+	Với thuộc tính non-static 
+	--> thuộc tính sẽ thuộc phạm vi của đối tượng
+	--> Thuộc tính đó sẽ được quản lý riêng trên từng đối tượng, ô nhớ
+	
+	Với thuộc tính static 
+	--> Thuộc tính đó sẽ thuộc phạm vi class
+	--> Tất cả các đối tượng được tạo ra từ class này đều sử dụng chung giá trị của biến static
+		+ Có thể được truy cập từ đối tượng
+		--> KHông khuyến khích dùng, vì nhìn vào code set cho tt của 1 đối tượng nhưng mà lại ăn code cho tất cả đối tượng
+		+ có thể được truy cập từ class
+	
+	
+	+ Sử dụng ở hàm
+	Khai báo hàm đó là static nếu hàm đó không phụ thuộc vào đối tượng đang gọi
+	--> Đối tượng nào gọi cũng cho kết quả giống nhau
+	
+	KHai báo hàm đó là non-static nếu hàm phụ thuộc vào đối tượng đang gọi 
+	--> Mỗi đối tượng khi gọi vào có thể cho ra kết quả khác nhau
+	+ Sử dụng ở class
+
+
+Câu hỏi 1 : Vì sao các thuộc tính phải khai báo là private rồi dùng getter/setter truy cập mà không khai báo là public 
+
++ Private vì nếu để public thì truy cập được từ bất kỳ class nào, hoàn toàn giống FOP không có quản lý riêng các tt cho từng đối tượng 
++ Nếu để public thì ở class bên ngoài có thể truy cập trực tiếp thuộc tính và thay đổi luôn CTDL(KDL) của tt, sai bài toán 
+Vd : colors từ dynamic size sang fixed size 
++ Từ nay về sau khi tạo ra 1 class private attribute  và getter setter để truy cập/thay đổi giá trị
+
+
