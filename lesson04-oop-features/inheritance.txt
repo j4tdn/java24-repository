@@ -1,0 +1,30 @@
+Inheritance = t/c kế  thừa
+Def: 
+- Khi có các KDL có chung tt &! method chung
+	=> Tạo ra các KDL cha để chứa các phần chung đó để reuse code
+	
+KDL cha là:
++ class: khi muốn thừa kế các thuộc tính & phương thức có body
++ interface: tạo ra các hàm chung chưa biết phần body
+			==> abstract method
++ abstract class: similar class nhưng có thể chứa thêm hàm chung ko có body
+
+Ques 1: Java có hỗ trợ đa thừa kế không?
+	-> Đa thừa kế: 1 class con có thể thừa kế N class cha
+==> KHÔNG
+*Vì: khi class con thừa kế từ class cha, ko bắt buộc phải override hàm từ class cha
+nếu trường hợp class cha có chung hàm, chung phần khai báo mà class con lại không 
+override, khi lấy Obj con gọi hàm chung đó --> ko biết phải dùng từ ai
+
+Ques 2: Phân biệt abstract class & interface
+Từ version 1.0 - 1.7
+Giống: - Đều có thể chứa hàm abstract
+	   - Có thể đóng role là KDL cha
+	   - Khi new 1 int, abs đều new ra 1 anonymous class
+Khác:
+	* abstract: có thể chứa hàm bình thường
+				access modified package
+				extends only 1 class
+	* int: ko
+		   a/m public
+		   implements nhiều cái
