@@ -1,0 +1,38 @@
+Inheritance = Tính chất thừa kế
+
+Định nghĩa:
+============
+Khi có các KDL có chung thuộc tính & phương thức
+	-> Tạo ra các KDL cha để chứa các phần chung đó để tái sử dụng 
+	
+KDL cha là:
++ class: Khi muốn thừa kế các thuộc tính và phương thức có body
+
++ interface: Tạo ra các hàm chung chưa biết phần body
+		   : abstract method
+		   
++ abstract class: tương tự class nhưng có thể chứa thêm hàm chung
+
+1. Java có hỗ trợ đa thừa kế không
+Đa thừa kế: 1 class con thừa kế từ N class cha
+==> Không
+
+Vì: khi class con thừa kế từ class cha, không bắt buộc phải override hàm từ class cha
+nếu trường hợp các class cha có chung phần khai báo mà class con lại không override, khi lấy đối tượng con gọi hàm chung đó
+	--> không biết phải dùng từ ai
+	
+	
+2. Phân biệt abstract class và interface
++ Giống:
+	- đều có thể chứa hàm trừu tượng
+	- đếu có thể đóng vai trò KDL cha
+	- khi new ra 1 interface or abstract class thì phải override lại 
+	hàm trừu tượng(anomymous class)
++ khác nhau:
+	- abstract class có thể chứa hàm bình thường, còn interface thì không
+	- access modifiler không khai báo, mặc định trong abstract class
+	 là trong phạm vi package, còn interface là public
+	- abstract class khi lớp con thừa kế phải dùng từ khóa extend và chỉ extend 1 class
+	 còn interface có thể implement từ nhiều cái.
+--> từ version 1.0 -> 1.7
+	 

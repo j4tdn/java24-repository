@@ -1,7 +1,5 @@
 package inheritance.cclass;
 
-import java.lang.ref.Reference;
-
 import bean.ReferenceBook;
 import bean.Textbook;
 
