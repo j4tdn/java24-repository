@@ -10,4 +10,10 @@ public class Ex01TestInterfacePublicMethod implements Shape {
 
 	}
 
+	@Override
+	public void setBorder() {
+		System.out.println("5px");
+
+	}
+
 }

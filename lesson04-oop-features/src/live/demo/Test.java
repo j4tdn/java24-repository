@@ -24,11 +24,4 @@ public class Test {
 		}
 	}
 
-	public static int count(Human[] humans) {
-		for(Human human : humans) {
-			if(human instanceof Staff) {
-			}
-		}
-	}
-
 }

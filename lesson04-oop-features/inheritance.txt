@@ -22,3 +22,81 @@ nếu trường hợp các class cha có chung hàm chung phần khai báo mà c
 thì khi lấy đối tượng KDL con gọi hàm chung đó --> không biết dùng từ ai
 
 2. Phân biệt abstract class và interface
+
+- Giống nhau
++ Đóng vai trò là 1 KDL cha
++ Có thể chứa hàm trừu tượng(chỉ chứa phần khai báo, không có thân hàm)
++ Khi có class KDL là class extends, implements từ abtract class/interface
+hoặc tạo ra 1 đối tượng trực tiếp từ abstract class/interface
+--> băt buộc phải override lại các abstract methods
+
+- Khác nhau
+  Abstract class
+  + KDL con là class thừa kế thì dùng từ khóa extends và chỉ được phép đơn thừa kế
+  + Chứa thêm các hàm bình thường có body
+  + Thuộc tính có thể static hoặc non-static tùy khai báo
+  + Hàm bình thường thì có phạm vi trong package hiện tại
+  
+  Interface
+  + KDL con là class thực thi thì dùng từ khóa implements và có thể đơn, đa thực thi
+  + Chỉ chứa các hàm trừu tượng
+  + Thuộc tính mặc định là "public static final"
+  + Hàm trừu tượng trong interface mặc định là public abstract
+--> 100% đúng với version JDK 1.0 đến 1.7
+
+  + Từ Java8 trở đi interface có thể hàm bình thường: default, static, private
+
+Khái niệm: class, abstract class, interface
+- class extends class
+- class extends abstract class
++ class implements interface
+---------------------------
+- interface extends interface
+--> khi có các interface có chung các hàm trừu tượng tạo ra interface cha cho các interface con thừa kế
+gộp các hàm trừu tượng từ interface cha vào interface con
+
+- abstract class implements interface
+--> biến các hàm trừu tượng trong interface thành các hàm trừu tượng trong abstract class
+không bắt buộc phải override
+
+------ Thay đổi của interface từ JDK 8,9 ------
+Interface bây giờ ngoài hàm trừu tượng ra thì nó có thể chứa thêm các hàm "bình thường"(có body)
+bằng cách là thêm các từ khóa: default, static, private
+
+
+Trước JDK 8
++ Một interface có 1 hay nhiều hàm trừu tượng đi chăng nữa thì muốn tạo 1 đối tượng
+từ interface có 2 cách
+	1. Tạo immplementation class implements từ interface
+	--> override các hàm trừu tượng đó
+	--> new impl class ra để tạo đối tượng
+	--> Square implements Shape
+	2. Dùng từ khóa new trực tiếp interface
+	--> override các hàm trực tiếp tại lúc new
+	--> anonymous inner type(class)
+	
+Từ JDK, bổ sung(cho trường hợp interface có duy nhất 1 hàm trừu tượng)
+	Ngoài 2 cách được hỗ trợ bởi các version trước
+	JDK 8 hỗ trợ tạo đối tượng cho interface bằng anonymous function(lamda expression)
+	
+	VD: Shape: calcS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

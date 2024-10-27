@@ -7,5 +7,10 @@ public class Circle implements Shape {
 		System.out.println("Circle#calcS .. implementation");
 		
 	}
+	
+	@Override
+	public void setBorder() {
+		System.out.println("1px");
+	}
 
 }
