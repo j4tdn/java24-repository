@@ -21,9 +21,82 @@ thì khi lấy đối tượng con gọi hàm chung đó thì ---> không phải
 
 2. Phân biệt abstract class và interface:
 
-Giống nhau: cả 2 đều có thể chứa hàm trừu tượng, đóng vai trò là KDL cha, khi new ra 1 interface, abstract phải override lại hàm trừu tượng
+Giống nhau: cả 2 đều có thể chứa hàm trừu tượng (chứa phần khai báo, không có thân hàm)
+, đóng vai trò là KDL cha
+, Khi có KDL là class extends, implements từ abstract class/interface
+hoặc tạo ra một đối tượng trực tiếp từ abstract class/interface
+	---> bắt buộc phải override lại các abstract method(hàm trừu tượng)
 
 Khác nhau:
-Abstract: mặc định là default, extends chỉ từ 1
+Abstract: 
++ KDL con là class thừa kế thì dùng từ khóa extends và chỉ được phép
+  đơn thừa kế
+  
++ Chứa thêm các hàm "bình thường" (có body)
++ Thuộc tính có thể static hoặc non-static tùy khai báo
++ Hàm bình thường thì có phạm vi trong pakage hiện tại
 
-Interface: mặc định public , implement nhiều
+Interface: 
++ KDL con là class thực thi thì dùng từ khóa implements và có thể đơn thực thi hay
+  đa thực thi
+  
++ Chỉ chứa các hàm trừu tượng
++ Thuộc tính mặc định là "public static final"
++ Hàm trừu tượng trong interface mặc định là public abstract
++ Từ java8 trở đi interface có thêm hàm bình thường: default, static, private
+
+----> 100% đúng với version JDK 1.0 đến 1.7
+
+Khái niệm class, abstract class, interface
+- class extends class
+- class extends abstract class
+- class implements interface
+---------------------------------------
+- interface extends interface
+  ---> khi mà có các interface có chung các hàm trừu tượng 
+  	   tạo ra interface cha cho nó các interface con thừa kế
+  	   gộp các hàm trừu tượng từ interface cha vào interface con
+  	   
+- abstract class implements interface
+  --> biến các hàm trừu tượng trong interface trong thành
+  	  các hàm trừu tượng trong abstract class
+      Không bắt buộc phải override (VD ở view)
+
+---- Thay đối của interface từ JDK 8,9 -----
+Interface bây giờ ngoài hàm trừu tượng ra thì nó có thể chứa thêm các hàm
+"Bình thường" (có body) bằng cách thêm các từ khóa như bên dưới: default, static, private
+
+Trước JDK 8:
++ Một interface có 1/N hàm trừu tượng đi chăng nữa muốn tạo 1 đối tượng
+  từ interface có 2 cách
+  1. Tạo implementation class implements từ interface
+  	 --> override các hàm trừu tượng đó
+  	 --> new impl class ra để tạo đối tượng
+  	 --> Square implements Shape
+  2. Dùng từ khóa new trực tiếp interface
+  	 --> override trực tiếp các hàm lúc new
+  	 --> anonymous inner type(class)
+Từ JDK 8, bổ sung(cho trường hợp interface có duy nhất 1 hàm trừu tượng)
+  Ngoài 2 cách được hỗ trợ bởi các version trước
+  JDK 8 hỗ trợ tạo đối tượng cho interface 
+  bằng anonymous function(lambda expression)
+  
+  VD: Shape: void calcS()
+  	  IntTest: boolean test(int number)
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+

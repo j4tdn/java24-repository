@@ -6,12 +6,12 @@ public class Manager extends Person {
 	public Manager() {
 	}
 
-	public Manager(String name, LocalDate birth, Double salaryCoefficient, Integer position) {
+	public Manager(String name, LocalDate birth, Double salaryCoefficient, Double position) {
 		super(name, birth, salaryCoefficient, position);
 	}
 
 	@Override
-	public Double salaryInDouble() {
+	public double salaryInDouble() {
 		double totalMoney = (this.getSalaryCoefficient() * this.getPosition()) * 3000000;
 		return totalMoney;
 	}

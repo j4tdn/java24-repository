@@ -23,7 +23,7 @@ public class Staff extends Person {
 	}
 
 	@Override
-	public Double salaryInDouble() {
+	public double salaryInDouble() {
 		double totalMoney = this.getSalaryCoefficient() * 1250000;
 		return totalMoney;
 	}

@@ -7,10 +7,10 @@ public abstract class Person {
 	private String name;
 	private LocalDate birth;
 	private Double salaryCoefficient;
-	private Integer position;
+	private Double position;
 	private String workUnit;
 
-	public abstract Double salaryInDouble();
+	public abstract double salaryInDouble();
 
 	public Person() {
 	}
@@ -23,7 +23,7 @@ public abstract class Person {
 		this.workUnit = workUnit;
 	}
 
-	public Person(String name, LocalDate birth, Double salaryCoefficient, Integer position) {
+	public Person(String name, LocalDate birth, Double salaryCoefficient, Double position) {
 		super();
 		this.name = name;
 		this.birth = birth;
@@ -31,7 +31,7 @@ public abstract class Person {
 		this.position = position;
 	}
 
-	public Person(String name, LocalDate birth, Double salaryCoefficient, Integer position, String workUnit) {
+	public Person(String name, LocalDate birth, Double salaryCoefficient, Double position, String workUnit) {
 		super();
 		this.name = name;
 		this.birth = birth;
@@ -64,11 +64,11 @@ public abstract class Person {
 		this.salaryCoefficient = salaryCoefficient;
 	}
 
-	public Integer getPosition() {
+	public Double getPosition() {
 		return position;
 	}
 
-	public void setPosition(Integer position) {
+	public void setPosition(Double position) {
 		this.position = position;
 	}
 
