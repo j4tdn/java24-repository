@@ -1,0 +1,7 @@
+Abstraction = tính chất abstraction
+
+Def: được thể hiện qua:  
++ class
++ abs class
++ interface
++ abs method
