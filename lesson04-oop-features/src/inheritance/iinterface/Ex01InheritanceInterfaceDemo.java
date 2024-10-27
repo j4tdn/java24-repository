@@ -13,6 +13,11 @@ public class Ex01InheritanceInterfaceDemo {
 			public void calcS() {
 				System.out.println("Circle#calcS ... implementation");
 			}
+			
+			@Override
+			public void setBorder() {
+				System.out.println("4px");
+			}
 		};
 		shape1.calcS();
 		
@@ -27,6 +32,8 @@ public class Ex01InheritanceInterfaceDemo {
 		
 		sq1.calcS();
 		sq2.calcS();
+		
+		System.out.println("shape color --> " + Shape.color);
 		
 				
 	}

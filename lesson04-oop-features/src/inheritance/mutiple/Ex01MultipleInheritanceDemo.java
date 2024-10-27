@@ -6,8 +6,8 @@ public class Ex01MultipleInheritanceDemo {
 		
 		Child c1 = new Child();
 		c1.running();
-		c1.playBadminton();
-		
+		// c1.playBadminton();
+		// c1.cook();
 	}
 	
 }

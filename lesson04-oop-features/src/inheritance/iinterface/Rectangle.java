@@ -9,4 +9,9 @@ public class Rectangle implements Shape {
 		System.out.println("Rectangle#calcS ... implementation");
 	}
 	
+	@Override
+	public void setBorder() {
+		System.out.println("2px");
+	}
+	
 }
