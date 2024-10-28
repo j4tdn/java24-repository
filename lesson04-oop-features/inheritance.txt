@@ -34,5 +34,44 @@ nếu trường hợp các class cha có chung phần khai báo mà class con l�
 	 là trong phạm vi package, còn interface là public
 	- abstract class khi lớp con thừa kế phải dùng từ khóa extend và chỉ extend 1 class
 	 còn interface có thể implement từ nhiều cái.
+	- abstract class có thể static or non-static tùy khai báo, interface là public static final.
 --> từ version 1.0 -> 1.7
-	 
+
+Khái niệm: class, abstract class, interface
+- class extends class
+- class extends abstract class
+- class implements interface
+-------------------------
+- interface extends interface
+	--> khi có các interface có chung các hàm trừu tượng
+		tạo ra interface cha cho các interface con kế thừa
+		gộp các hàm trừu tượng từ interface cha vào interface con	 
+		
+- abstract class implements interface
+	--> biến các hàm trừu tượng trong interface thành các
+		hàm trừu tượng trong abstract class --> không bắt buộc phải override
+	
+	----------thay đổi của interface từ JDK 8, 9 ------------
+	Interface bây giờ ngoài hàm trừu tượng ra nó có thể chứa thêm các hàm 
+	"bình thường"(có body) bằng cách là thêm các từ khóa: default, static, private
+	
+	
+Trước JDK 8
++ Một interface có 1/N hàm trừu tượng đi chăng nữa thì muốn tạo 1 đối tượng
+	từ interface có 2 cách
+	1. Tạo implementation class implements từ interface
+		--> override các hàm trừu tượng đó
+		--> new impl class ra để tạo đối tượng
+		--> Square implements Shape
+	2. Dùng từ khóa new trực tiếp interface
+		--> override các hàm trực tiếp tại lúc new
+		--> anonymous inner type(class) 
+
+  Từ JDK 8, bổ sung (cho trường hợp interface có duy nhất 1 hàm trừu tượng)
+	ngoài 2 cách được hỗ trợ bởi các versions trước
+	JDK 8 hỗ trợ tạo đối tượng cho interface bằng anonymous function(lambda expression)
+	
+	VD: Shape: void calcs()
+		IntTest: boolean test(int number)
+	
+		
