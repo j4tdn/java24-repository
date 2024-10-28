@@ -1,0 +1,59 @@
+Polymorphism - Tính chất đa hình
+
+Tính chất đa hình có 2 loại
++ Đa hình trong phương thước
++ Đa hình trong đối tượng
+
+1. Đa hình trong phương thức
+Định nghĩa
+----------
+Là phương thức có hình thái, thể hiện này thể hiện kia
+Có 2 loại
++ Overloading
+--> 2 hoặc nhiều phương thức được gọi là overloading nếu 
+	- Cùng thuộc 1 class
+	- Khác
+	--> Số lượng tham số
+	--> Ít nhất 1 KDL truyền vào của tham số
+	
++ Overriding
+--> 2 hoặc nhiều phương thức được gọi là overriding nếu 
+	- Thuộc 2 hoặc nhiều class có quan hệ cha con
+	- Hàm trong class con override lại từ class cha
+	VD: hàm toString
+	
+	Câu hỏi 1: Override thuộc tính được không 
+	
+	Câu hỏi 2: Override hàm static được không
+		  
+ 2. Đa hình trong đối tượng
+ Định nghĩa
+ ----------
+ Là khi một biến KDL cha có thể trỏ đến chính nó hoặc KDL con 
+ Là đối tượng có nhiều thể hiện
+ VD: Shape --> Square, Rectangle, Circle ...
+ 
+ Mục đích:
+  + Dễ dàng ép KDL trong phạm vi cha con, anh em lúc compile
+    + Linh hoạt hơn trong
+    --> Tạo mảng: nhận danh sách các phần từ là chính nó hoặc KDL con
+    --> Truyền tham số qua hàm: tham số có thể nhận KDL chính nó hoặc KDL con
+    
+Thực tế:
++ Hầu hết thì biến KDL nào thì new/gán KDL đó 
++ Nếu gặp trường hợp biết được biến KDL cha con
+--> Luôn luôn tạo biến KDL cha gán, new KDL con để code linh hoạt hơn
+
+Từ khóa: instanceof --> dùng để kiểm tra KDL 
+ 
+    
+Câu hỏi 1: Biến KDL con trỏ đến đối tượng KDL cha được không ? Vì sao
+	+ Khi lấy biến KDL con gọi đến hàm riêng, tại điểm runtime không thể tìm thấy hàm riêng đó trong KDL cha
+	--> Lỗi ngay tại thời điểm gán đối tượng KDL cha cho biến KDL con
+
+	
+Câu hỏi 2: Tại sao không code trực tiếp biến KDL nào trỏ đến KDL đó mà phải dùng biến cha trỏ đến con ?
+    + Dễ dàng ép KDL trong phạm vi cha con, anh em lúc compile
+    + Linh hoạt hơn trong
+    --> Tạo mảng: nhận danh sách các phần từ là chính nó hoặc KDL con
+    --> Truyền tham số qua hàm: tham số có thể nhận KDL chính nó hoặc KDL con
