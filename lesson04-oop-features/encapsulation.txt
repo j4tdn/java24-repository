@@ -1,0 +1,13 @@
+1.Encapsulation = Tính chất đóng gói 
+
+Định nghĩa : 
+------------------
+Tính chất đóng gói được thể hiện access modifier,nếu thuộc tính , phương thức có access modifier là 
++private :  được sử dụng phạm vi của class
+
++public :   được sử dụng ở bất kỳ class , package nào trong dự án
+
++protected: được sử dụng trong package
+		  : đươc sử dụng ở cái class con bên ngoài package  
++ 		  : được sử dụng trong package hiện tại
+

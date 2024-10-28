@@ -1,0 +1,8 @@
+Abstract = tính chất trừu tượng
+
+Định nghĩa 
+Tinh chất trừu tượng được thể qua
++ class 
++abstract class
++interface
++abstract method
