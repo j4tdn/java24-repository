@@ -1,0 +1,79 @@
+Inheritance = Tính thừa kế 
+** Tất cả đều là từ 1.0 -> 1.7
+Định nghĩa
+==========
+Khi có các KDL có chung thuộc tính &| phương thức 
+--> tạo ra KDL cha để chứa các phần chung đó để tái sử dụng code
+
+KDL cha là 
++ class: khi muốn thừa kế các thuộc tính và phương thức có body
+ 
++ interface: tạo ra các hàm chung khi chưa biết phần body ( abstract method )
+
++ abstract class: tương tự class nhưng có thể chưa thêm hàm chung ko có body
+-> ưu tiên sử dụng class, nếu trong class có hàm trừu tượng ko body thì mới dùng từ khóa abstract
+1. Java có hỗ trợ đa thừa kế không ? 
+**Đa thừa kế: 1 class con thừa kế từ N class cha 
+Trả lời:
+--> Mấu chốt nằm ở: Khi một class con thừa kế từ lớp cha, nó sẽ không bắt buộc override các hàm từ class cha
+--> Vậy nên khi lấy đối tượng con gọi hàm chung ở class cha, nếu hàm chung đó ở lớp cha có trùng phần khai báo (trùng tên hàm, KDL)
+thì nó sẽ không biết dùng từ ai.                                                       
+2. Phân biệt abstract class và interface
+Giống: 
++ đều có thể chứa hàm trừu tượng(chỉ chứa phần khai báo, ko body)
++ đều đóng vai trò là KDL cha
++ khi có KDL con là class extends, implements từ abtract class/interface
+hoặc tạo ra đối tượng trực tiếp từ abtract class/interface 
+--> thì đều phải override lại các abtract method 
+Khác:
++ Abstract Class: 
+- KDL con là class thì thừa kế dùng extends, và chỉ được thừa kế 1
+- Hàm bth có phạm vi trong package hiện tại
+- Chứa thêm các hàm "bình thường" (có body)
+- Thuộc tính có thể là static hoặc non-static
+
+
++ Interface: 
+- KDL con là class thực thi thì dùng từ khóa implements và có thể đơn, đa thực thi
+- Chỉ chứa hàm trừu tượng
+- thuộc tính mặc định là "public static final"
+- Hàm trừu tượng mặc định là "public abstract"
+- Từ java8 trở đi Interface có thêm hàm bình thường: default, static, private
+
+Khái niệm: clas, abstract class, interface
+	- Class extends Class
+	- Class extends abstract class
+	- Class implements Interface
+-----------------------------------
+Ngoài ra: 
+- Interface extends Interface
+	--> Khi có các Interface có chung các hàm trừu tượng 
+	Tạo ra interface cha cho cá interface con thừa kế
+	Gộp các hàm trừu tượng từ ỉnterface cha vào interface con
+- Abtract class implements interface
+	--> Biến các hàm trừu tượng trong interface thành
+	các hàm trừu tượng trong abstract class. Nên ko bắt buộc override
+
+----------Thay đổi của interface từ JDk 8,9 ----------------
+Interface bây giờ ngoài hàm trừu tượng ra thì interface có thể chứa thêm các
+hàm bình thường có body bằng cách thêm từ khóa: default, static , private  
+
+Trước JDK 8:
++ 1 interface có 1 hay n hàm trừu tượng đi chăng nữa 
+thì muốn tạo 1 đối tượng từ interface có 2 cách:
+	1. Tạo implementation class implements từ interface
+		--> override các hàm trừu tượng dó
+		--> new impl class để tạo đối tượng
+		--> Square implements Shape
+	2. Dùng từ khóa new trực tiếp interface
+		--> override các hàm trực tiếp tại lúc new
+		--> anonymous inner type (class)  
+
+Từ JDK 8: bổ sung(cho trường hợp interface có duy nhất 1 hàm trừu tượng)
+	Ngoài 2 cách được hỗ trợ bởi các versions trước:
+	+ JDK 8 hỗ trợ tạo đối tượng cho interface bằng anonymous function (lamda expression)
+	
+VD: Shape:  void calcS()
+	Intest: boolean test(int)
+
+                `
