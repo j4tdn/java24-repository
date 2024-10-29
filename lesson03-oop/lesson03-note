@@ -1,6 +1,6 @@
 Car
-   pribate attributes ... 
-- sử dụng private để đảm bảo hướng phát triển của ÔP
+   private attributes ... 
+- sử dụng private để đảm bảo hướng phát triển của OOP
  + từng class sẽ quản lý riêng các thuộc tính của nó
  
  
@@ -8,7 +8,7 @@ Car
 	+ Dự án có nhiều file code, các file gọi qua về các hàm thuộc tính 
 	lẫn nhau để xử lý (tt phải khác private)
 	
---> cònlict với idea của OOP
+--> conflict với idea của OOP
 --> Xử lý
 	+ Cho các thuộc tính là private
 	+ Khai báo thêm getter , setter cho các thuộc tính để truy cập/ thay đổi giá trị
