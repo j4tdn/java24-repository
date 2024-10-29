@@ -5,7 +5,7 @@ public class InTest01 {
 	private static int a1;
 	public static int a2;
 	protected static int a3;
-	int a4;
+	int a4 = 4;
 
 	private static void method01() {};
 

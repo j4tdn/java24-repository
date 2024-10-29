@@ -74,10 +74,7 @@ public class Ex01PolyObjectDemo {
 		  Tại sao không  code trực tiếp biến KDL nào thì trỏ đến KDL đó mà phải
 		  dùng biến cha trỏ đến biến con ?
 		  
-		  + Để dễ dàng ép KDL trong phạm vi cha con, anh em lúc compile
-		  + Linh hoạt hơn trong 
-		   	--> Tạo mảng: nhận danh sách các phần tử là chính nó hoặc KDL con
-		   	--> Truyền tham số qua hàm: tham số có thể nhận KDL chính nó hoặc KDL con
+		f
 		  
 		 */
 		

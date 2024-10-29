@@ -1,0 +1,99 @@
+ Inheritance = Tính chất thừa kế
+ 
+ Định nghĩa
+ ==============
+ Khi có các KDL có chung thuộc tính &| và phương thức 
+ --> Tạo ra các KDL cha để chứa các phần chung đó để tái sử dụng code
+ 
+ KDL cha là:
+ + class: khi muốn thừa kế các thuộc tính và phương thức có body
+ + interface: khi muốn tạo ra các hàm chung mà chưa biết phần body (abstact method)
+ + abstract class: tương tự class nhưng có thể chứa thêm hàm chung không có body
+  --> ưu tiên sử dụng class nếu trong class có hàm abstract thì mới dùng từ khóa abstract cho class
+ 
+ 1. Java có hỗ trợ đa thừa kế không ?
+ 	Đa thừa kế: 1 class con thừa kế
+ 	==> KHÔNG
+ 	Vì: khi một class con thừa kế từ class cha nó không bắt buộc phải override các hàm từ class cha
+ nếu trường hợp các class cha có các hàm chung phần khai báo mà class con lại không override, thì khi
+ mà lấy đối tượng con gọi hàm có khai báo chung đó thì nó ko biết gọi hàm từ cha nào
+ 
+ 2. Phân biệt abstract class và interface class
+  Giống nhau:  + Đóng vai trò là 1 KDL cha
+  			   + Có thể chứa hàm trừu tượng (chỉ chứa phần khai báo, không có thân hàm)
+  			   + Khi có KDL là class extends, implements từ abstract class/interface
+  			   		--> bắt buộc phải override lại các abstract method
+  			   		--> có thể tạo ra anonymous class
+  Khác nhau:
+  Abstract class 
+  + KDL còn là class thừa kế thì dùng từ khóa extends và chỉ được phép đơn thừa kế
+  + Chứa thêm các hàm "bình thường" (có body)
+  + Thuộc tính có thể là static non-static tùy khai báo
+  + Hàm bình thường thì có phạm vi trong package hiện tại
+  Interface
+  + KDL còn là class thực thi thì dùng từ khóa implements và có thể đơn, đa thực thi
+  + Chỉ chứa các hàm trừu tượng
+  + Thuộc tính mặc định là "public static final"
+  + Hàm trừu tượng trong interface thì mặc định là public abstract
+  + Từ java 8 trở đi, interface có thể chưa thêm hàm bình thường: default, static, private
+      Lúc này thì interface và abstract nó giống nhau, nhưng dùng interface với từ khóa implemets có thể đâ kế thừa
+      còn từ kháo extends của absstract class thì không
+ 
+  - Trong abstract có thể chưa hàm bthg interface thì ko
+  - Access modifier mặc định trong abstract giống Access modifie của class
+    							   interface là public						
+  - Abstract dùng từ khóa extends và chỉ extends 1 lớp cha
+  	Interface dùng từ khóa implements và implements đưuọc nhiều lớp cha
+  	
+  	
+  Khái niệm: class, abstract class, interface
+  - class extends class
+  - class extends abstract class
+  -----------
+  - interface extends interface
+  	--> Khi có các interface có chung các hàm trừu tượng
+  	tạo ra interface cha cho các interface con thừa kế
+  	gộp các hàm trừu tượng từ interface cha vào interface con
+  
+  - abstract class implements interface
+    --> Biến các hàm trừu tượng trong interface thành
+    		 các hàm trừu tượng trong abstrac class
+  		Không bắt buộc phải override
+  		
+  
+------------- Thay đổi của interface từ JDK 8,9 -----------
+Interface bây giờ ngoài hàm trừu tượng ra nó có thể chứa thêm các
+hàm "bình thường" (có body) bằng các thêm các từ khóa: default, static, private
+	 		
+  Trước JDK 8
+  + Một interface có 1 hay nhiều hàm trừu tượng đi chăng nữa thì muốn tạo 1 đối tượng
+  từ interface thì có 2 cách
+  1. Tạo implementation class implements từ interface
+  --> override các hàm trừu tượng đó
+  --> new ipl class ra để tạo đối tượng
+  --> Square implements Shape
+  2. Dùng từ khóa new trực tiếp interface
+  --> override các hàm trực tiếp tại lúc new
+  --> anonymous inner type(class)
+  
+  Từ JDK 8, bổ sung(cho trường hợp có duy nhất 1 hàm trừu tượng)
+    Ngoài 2 cách được hỗ trợ bởi các version trước
+    JDK 8 hỗ trợ tạo đối tượng cho các interface:
+    	bằng anonymous function(lamda expression)
+  
+  VD: Shape: caclS
+  
+  
+  
+ Search từ khóa "Composition over Inheritance"
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   

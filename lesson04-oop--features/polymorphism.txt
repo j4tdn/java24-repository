@@ -11,6 +11,7 @@
  Có 2 loại 
  + Overloading: 
  	--> 2 hay nhiều phương thức được gọi là Overloading nếu 
+ 	. Cùng tên
  	. Cùng class
  	. Khác 
  		--> Số lượng tham số 

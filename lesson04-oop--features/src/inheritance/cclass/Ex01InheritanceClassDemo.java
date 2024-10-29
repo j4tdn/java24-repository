@@ -8,7 +8,7 @@ public class Ex01InheritanceClassDemo {
 	  Giải lập bài toán về manage sách ở văn phòng phẩm, 
 	 
 	  Sách giáo khoa: mã sách, tên sách, giá bán, tình trạng sách
-	 Sách giáo khoa: mã sách, tên sách, giá bán, thuế xuất bản
+	  Sách tham khảo: mã sách, tên sách, giá bán, thuế xuất bản
 	
 	 */
 
