@@ -1,0 +1,12 @@
+Encapsulation = Tính chất đóng gói
+
+Định nghĩa
+----------
+Tính chất đóng gói được thể hiện qua các cái access modifier, nếu thuộc tính, phương thức có access midifier là:
+ + private : được sử dụng trong phạm vi của class
+ + public  : được sử dụng ở bất kỳ cái class, package nào trong dự án
+
+ + protected : được sử dụng trong package hiện tại
+             : được phép sử dụng ở class con bên ngoài package
+             
+ +           : được sử dụng trong package hiện tại             
