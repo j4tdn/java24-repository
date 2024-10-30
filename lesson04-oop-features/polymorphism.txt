@@ -1,0 +1,27 @@
+Tính chất đa hình = polymorphism
+
+tính chất đa hình có 2 loại:
+  +đa hình trong phương thức
+  +đa hình trong đối tượng
+
+1. Định nghĩa đa hình trong phương thức
+   
+   -là phương thức có hình thái, thể hiện này thề hiện kia
+   
+   -có 2 loại:
+     +Overloading
+      --> 2 hay nhiều phương thức được gọi là overloading nếu:
+             + cùng thuộc 1 class
+             + khác 
+               --> số lượng tham số
+               --> ít nhât khác 1 kiểu dữ liệu truyền vào của tham số
+             +
+     +Overriding
+      --> 2 hay nhiều phương thức được gọi là overriding nếu
+             + thuộc 2 hoặc nhiều class có quan hệ cha con(thừa kế)
+             + hàm trong class con override lại từ class cha
+               vd: toString
+               
+câu 1: Override thuộc tính được không
+Câu 2: Override hàm static được không               
+               
