@@ -26,9 +26,6 @@ public class DepartmentManager extends People implements PositionCoefficient {
 				+ getSalaryCoefficient() + ", Hệ số chức vụ :" + PosCoefficient() +", Tên đơn vị:" + getUnitName() ;
 	}
 
-
-	
-
 	@Override
 	double payRoll() {
 		
