@@ -8,5 +8,6 @@ public abstract class Divisible {
 	}
 
 	public abstract int[] divisible();
+	public abstract void print();
 
 }
