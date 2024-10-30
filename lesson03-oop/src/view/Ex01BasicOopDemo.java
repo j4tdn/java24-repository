@@ -1,6 +1,6 @@
 package view;
 
-import bin.Car;
+import bean.Car;
 
 public class Ex01BasicOopDemo {
 	
