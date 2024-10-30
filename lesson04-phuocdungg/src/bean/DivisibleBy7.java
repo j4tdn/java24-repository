@@ -22,4 +22,16 @@ public class DivisibleBy7 extends Divisible {
 
 		return finalArray;
 	}
+
+	@Override
+	public void print() {
+		for (int i = 0; i < numbers.length; i++) {
+			if (i == numbers.length - 1) {
+				System.out.print(numbers[i] + "|");
+			} else {
+				System.out.print(numbers[i] + ",");
+			}
+		}
+
+	}
 }
