@@ -1,0 +1,44 @@
+Polymorphism = Tính chất đa hình
+
+Tính chất đa hình có 2 loại
++ Đa hình trong phương thức
++ Đa hình trong đối tượng
+
+Định nghĩa
+----------
+
+Là phương thức có hình thái, thể hiện này thể hiện kia
+Có 2 loại
++ Overloading:
+--> 2/N phương thức đc gọi là overloading nếu
+Cùng thuộc 1 class
+Khác:
+Số lượng tham số
+Ít nhất 1 KDL truyền vào của tham số
+
++ Overriding:
+--> 2/N phương thức đc gọi là overloading nếu
+Thuộc 2/N class có quan hệ thừa kế (cha con)
+Hàm trong class con override lại từ class cha
+Vd: toString
+Câu hỏi 1: Override thuộc tính được ko
+
+Câu hỏi 2: Override hàm static đc ko
+
+Đa hình trong đối tượng
+Là khi 1 biến KDL cha có thể trỏ đến chính nó hoặc KDL con
+Là đối tượng có nhiều thể hiện
+Vd: Shape -> Square, Rectangle, Circle ...
+
+Mục đích:
++ Dễ dàng ép KDL trong phạm vi cha con, anh em lúc compile 
++ Linh hoạt hơn trong 
+--> Tạo mảng: nhận danh sách các phần tử là chính nó hoặc KDL con 
+--> Truyền tham số qua hàm: tham số có thể nhận KDL chính nó hoặc KDL con
+
+Thực tế:
++ Hầu hết thì biến KDL nào thì new, gán KDL đó
++ Nếu gặp trường hợp biết đc biến KDL cha con
+--> Luôn luôn tạo biến KDL cha gán, new KDL con để code linh hoạt
+
+Từ khóa: instanceof

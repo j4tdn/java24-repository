@@ -1,0 +1,80 @@
+Inheritance = Tính chất thừa kế
+
+ĐN
+===
+Khi có các KDL có chung thuộc tính và phương thức
+--> Tạo ra các KDL cha để chứa các phần chung đó để tái sd code
+
+KDL cha là 
++ class: Khi muốn thừa kế các thuộc tính
++ interface: tạo ra các hàm chung chưa biết phần body
+		   : abstract method
++ abstract class: tương tự class nhưng có thể chứa thêm hàm chung ko có body
+
+1. Java có thể hỗ trợ đa thừa kế ko
+Đa thừa kế: 1 class con thừa kế từ N class cha
+==> KHÔNG
+Vì: Khi class con thừa kế từ class cha, ko bắt buộc phải override hàm từ class cha
+nếu trường hợp các class cha có chung hàm chung phần khai báo mà class con lại
+ko override, khi lấy đối tượng con gọi hàm chung đó --> ko biết phải dùng từ ai
+
+2. Phân biệt abstract class và interface
+Giống nhau:
+- Đóng vai trò là 1 KDL cha
+- Có thể chứa hàm trừu tượng (chỉ chứa phần khai báo, ko có thân hàm)
+- Khi có KDL là class extends, imp từ abs class/interface
+hoặc tạo ra 1 đối tượng trực tiếp từ abs class/interface
+	---> bắt buộc phải override lại các abstract method
+
+Khác nhau:
+- Abstract class
++ KDL con la class thừa kế thì dùng từ khóa extends và chỉ đc phép đơn thừa kế
++ Chưa thêm các hàm "bình thường" (có body)
++ Thuộc tính có thể static hoặc non-static tùy khai báo
++ Hàm bth thì có pvi trong package htai
+
+- Interface
++ KDL còn là class thực thi thì dùng từ khóa imp và có thể đơn, đa thực thi
++ Chỉ đc chứa các hàm trừu tượng
++ Thuộc tính mặc định là "public static final"
++ Hàm trừu tượng trong interface mặc định là public abstraact
+
++ Từ java 8 trở đi interface có thêm hàm bth: default, static, private 
+
+---> 100% đúng vs version JDK đến 1.7
+
+Khái niệm: class, abs class, interface
+- Class extends class
+- Class extends abs class
+- class imp interface
+-------------
+interface extends interface
+---> Khi có các interfacec có chung các hàm trừu tượng
+	 Tạo ra interface cha cho các interface con thừa kế
+	 gộp các hàm trừu tượng từ interface cha vào các interface con
+	 
+- abs class imp interfadce
+---> biến các hàm trừ tượng trong interface thành
+		  các hàm trừu tượng trong abs class
+	 Ko bắt buộc override
+	 
+---- Thay đổi của interface từ JDK 8, 9 ----
+Interface bây giờ ngoài hàm trừu tượng ra nó có thể chứa thêm các hàm
+"bình thường" (có  body) bằng cách là thêm các từ khóa: private, default, static, private
+
+Trước JDK 8
++ 1 interfacce có 1/N hàm trừu tượng đi chăng nửa thì muốn tạo 1 đối tượng từ interface
+có 2 cách
+	1. Tạo implementation class imp từ interface
+		--> override các hàm trừu tượng đó
+		--> new impl class ra để tạo đối tượng
+		--> Square imp Shape
+	2. Dùng từ khóa new truwjctieeps interface
+		--> override các hàm trực tiếp tại lúc new
+		--> anoymous inner type(class)
+Từ JDK 8, bổ sung(cho trường hợp interface có duy nhất 1 hàm trừu tượng)
+	Ngoài 2 cách đc hỗ trợ bởi các version trc
+	JDK 8 hỗ trợ tạo đối tượng cho interface
+		bằng anoymous function(lambda expression)
+	VD: Shape: void calcS
+	 	IntTest: boolean test(int number)

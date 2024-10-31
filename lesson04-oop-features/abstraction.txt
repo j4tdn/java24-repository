@@ -1,0 +1,9 @@
+Abs = Tính trừu tượng
+
+ĐN
+=====
+Tính chất trừu tượng đc thể hiện qua
++ class
++ abs class
++ interface
++ abs method
