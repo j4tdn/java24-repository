@@ -17,7 +17,7 @@ public class Ex02 {
 			if(count == numbers.length)
 				return result;
 			result++;
-		} while (result == numbers.length + 1);
+		} while (result < (numbers.length + 1));
 		
 		return result;
 	}

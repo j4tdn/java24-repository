@@ -1,6 +1,7 @@
 package view;
 
 import bean.Book;
+import bean.Customer;
 import bean.ReferenceBooks;
 import bean.Textbook;
 import utils.BookUtils;
@@ -12,6 +13,8 @@ public class Ex05 {
 		Book tb3 = new Textbook("03", 100d, "Kim dong", 0);
 		Book rb1 = new ReferenceBooks("01", 120d, "vu trong phung", 0.02d);
 		Book rb2 = new ReferenceBooks("02", 154d, "Kim lan", 0.05d);
+
+		Customer p1 = new Customer("01", "le minh danh", "0856287565", "Da Nang", new Book[] { tb1, rb1 });
 
 		Book[] books = new Book[] { tb1, tb2, tb3, rb1, rb2 };
 		BookUtils.priceMaller50(books);
