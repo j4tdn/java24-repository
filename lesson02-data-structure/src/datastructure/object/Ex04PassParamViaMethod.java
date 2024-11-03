@@ -69,4 +69,4 @@ public class Ex04PassParamViaMethod {
 }
 //Câu hỏi: vì sao có int rồi còn dùng Interger ?
 // khi nào biến mình cần lưu trữ BẮT BUỘC có giá trị 
-// thì dùng int, còn không bắt buộc ( như thông tin thêm ) thì sử dụng interger 
+// thì dùng int, còn không bắt buộc ( như thông tin thêm ) thì sử dụng integer 

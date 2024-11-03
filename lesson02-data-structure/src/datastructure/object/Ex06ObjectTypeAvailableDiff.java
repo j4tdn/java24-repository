@@ -29,7 +29,7 @@ public class Ex06ObjectTypeAvailableDiff {
 		// + Có rồi ---> ko tạo, dùng ô nhớ đã có để gán địa chỉ cho biến
 		String s11 = "bye"; // h1
 		String s22 = "tambuiet"; // h2
-		String s33 = "bye"; // h2
+		String s33 = "bye"; // h1
 		// đang gán dữ liệu trực tiếp, nó sẽ kiểm tra xem có ô nhớ nào trùng không rồi
 		// tạo ô nhớ
 		System.out.printf("s11 [value=%s](hashcode=%s)\n s22 [value=%s](hashcode=%s)\n s33 [value=%s](hashcode=%s)\n ",
