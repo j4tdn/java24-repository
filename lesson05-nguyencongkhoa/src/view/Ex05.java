@@ -26,6 +26,9 @@ public class Ex05 {
 		System.out.println("\nToàn bộ sách giáo khoa có đơn giá từ 100 đến 200:");
 		findSGKPriceRange100to200(books);
 		
+		Book[] booksOfCusBuy = new Book [] {rf1, tb2};
+		System.out.println("\nTổng tiền khách hàng mua rf1 và tb2 là: " + calPrice(booksOfCusBuy));
+		
 	}
 	
 	private static void findNXBNhiDong(Book[] books) {
@@ -52,5 +55,20 @@ public class Ex05 {
 				}
 			}
 		}
+	}
+	
+	private static double calPrice(Book[] books) {
+		double sum = 0;
+		for (Book b : books) {
+			if (b instanceof TextBook) {
+				sum += b.getPrice();
+				if (((TextBook) b).getNew() == false) {
+					sum += b.getPrice()*0.7;
+				}
+			} else if (b instanceof ReferenceBook) {
+				sum += b.getPrice() * (((ReferenceBook) b).getTax() + 1);
+			}
+		}
+		return sum;
 	}
 }
