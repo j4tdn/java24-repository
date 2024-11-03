@@ -1,15 +1,15 @@
 package bean;
 
-public abstract class refferBook implements IBook{
+public abstract class Book implements IBook{
 	private int  idBook;
 	private double price;
 	private String NXB;
 	
-	public refferBook() {
+	public Book() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public refferBook(int idBook, double price, String nXB) {
+	public Book(int idBook, double price, String nXB) {
 		super();
 		this.idBook = idBook;
 		this.price = price;
