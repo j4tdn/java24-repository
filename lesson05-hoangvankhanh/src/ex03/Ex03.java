@@ -23,11 +23,13 @@ public class Ex03 {
 		for (char n : a.toCharArray()) {
 			if (Character.isDigit(n)) {
 				number = number * 10 + (n - '0');
-
+			} else {
+				if (number > maxValidNumber) {
+					maxValidNumber = number;
+				}	
+				number = 0;
 			}
-
 		}
-
 		return maxValidNumber;
 	}
 }

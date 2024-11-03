@@ -17,23 +17,24 @@ public class Ex04 {
 			a[i] = ip.nextInt();
 		}
 		
-		System.out.println(a[n]);
+		System.out.println(sum(a));
 		
 		ip.close();
 		
 	}
 	
-//	private static int sum(int[] a) {
-//		int sum = 0;
-//		
-//		if (a.length <= 2) {
-//			sum = 0;
-//		}
-//		
-//		for (int i = 0; i < a.length; i++) {
-//			
-//		}
-//		
-//	}
+	private static int sum(int[] a) {
+		int sum = 0;
+		
+		if (a.length <= 2) {
+			sum = 0;
+		}
+		
+		for (int i = 1; i < a.length - 1; i++) {
+			sum += a[i];
+		}
+		
+		return sum;
+	}
 
 }
