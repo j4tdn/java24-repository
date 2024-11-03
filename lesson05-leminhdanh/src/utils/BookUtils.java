@@ -34,7 +34,7 @@ public class BookUtils {
 					price += book.getPrice()*0.7;
 				}
 			}else if(book instanceof ReferenceBooks) {
-
+				price += book.getPrice()*(1+((ReferenceBooks) book).getTax());
 			}
 		}
 		System.out.println("so tien thanh toan la:" + price);
