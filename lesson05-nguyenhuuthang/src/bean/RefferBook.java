@@ -1,29 +1,30 @@
 package bean;
 
 public class RefferBook extends Book {
-	private String state;
+	private double tax;
 	
 	public RefferBook() {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public RefferBook(int idBook, double price, String nXB, String state) {
+	public RefferBook(int idBook, double price, String nXB, double tax) {
 		super(idBook, price, nXB);
-		this.state = state;
+		this.tax = tax;
 	}
 	
 
-	public String getState() {
-		return state;
+	public double getTax() {
+		return tax;
 	}
 
-	public void setState(String state) {
-		this.state = state;
+	public void setTax(double tax) {
+		this.tax = tax;
 	}
 
 	@Override
 	public double tatolMoney() {
-		// TODO Auto-generated method stub
-		return 0;
+//		đơn giá * (1 + %
+//		thuế)
+		return (getPrice() * (1 + getTax()));
 	}
 }
