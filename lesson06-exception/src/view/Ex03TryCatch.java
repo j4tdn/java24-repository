@@ -22,6 +22,7 @@ public class Ex03TryCatch {
 		- Đặt đoạn code có khả năng bị exception trong khối try
 		- Đặt đoạn code xử lí trong khối catch
 		- Lưu ý: Xử lí được khi bắt đúng exception
+				 Exception cha có thể bắt cho exception con
 	
 	 */
 	
