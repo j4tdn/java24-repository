@@ -1,0 +1,10 @@
+ --> NullPointerExxception
+ --> IllegalArgumentException
+ --> NumberFormatException: For input string "aa"
+ 
+ + Tạo ra custom exception để
+ --> Giúp bài toán của mình có exception cụ thể
+ --> Tạo ra message mặc định cho custom exception
+ 
+ 
+ 
