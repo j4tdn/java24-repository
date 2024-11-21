@@ -1,0 +1,12 @@
+1. Exception là gì ? Khi nào xảy ra
+
+2. Cách xử lí Exception
+	+ Validate
+	+ Try-Catch
+	+ Throw/ Throws
+	
+3. Phân biệt compile(checked) và runtime (unchecked) exception
+
+4. Tạo custom Exception
+
+5. Hiểu từ khóa finally
