@@ -15,10 +15,6 @@ public class Ex04ReadNumber {
 		dozens = (n - hundreds * 100) / 10;
 		unitRow = n % 10;
 
-		System.out.println(hundreds);
-		System.out.println(dozens);
-		System.out.println(unitRow);
-
 		result += readHundreds(hundreds);
 		result += readDozens(dozens);
 		

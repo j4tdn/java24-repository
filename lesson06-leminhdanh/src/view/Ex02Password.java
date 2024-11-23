@@ -20,10 +20,7 @@ public class Ex02Password {
 			} catch (InvalidPasswordException e) {
 				System.out.println(e.getMessage());
 			}
-			if(count == 5) {
-				break;
-			}
-		} while (count <= 5);
+		} while (count < 5);
 		System.out.println();
 	}
 
