@@ -4,7 +4,7 @@ import java.time.Year;
 import java.util.Scanner;
 
 /*
- * Nhập năm sinh: fdsdfs
+ * Nhập năm sinh:
 Exception in thread "main" java.lang.NumberFormatException: For input string: "fdsdfs"
 	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
 	at java.base/java.lang.Integer.parseInt(Integer.java:662)
@@ -30,7 +30,6 @@ public class Ex02Validation {
 		do {
 			text = ip.nextLine();
 			if(text.matches("\\d+")) {
-				
 				break;
 			} 
 			
