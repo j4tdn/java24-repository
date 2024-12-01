@@ -40,6 +40,8 @@ public class Ex03CalendarBasicOperations {
 		 */
 		
 		
+		Locale.setDefault(Locale.FRANCE);
+		
 		Calendar c = Calendar.getInstance();
 		c.set(Calendar.MONTH, Calendar.JULY);
 		
@@ -64,8 +66,10 @@ public class Ex03CalendarBasicOperations {
 		
 		// số ngày trong tháng
 		int daysInMonth = c.getActualMaximum(Calendar.DAY_OF_MONTH);
+		int daysInYear = c.getActualMaximum(Calendar.DAY_OF_YEAR);
 		
 		System.out.println("Số ngày trong tháng " + month + " là " + daysInMonth);
+		System.out.println("Số ngày trong năm " + year + " là " + daysInYear);
 		
 		System.out.println("\n==========\n");
 		
@@ -83,6 +87,8 @@ public class Ex03CalendarBasicOperations {
 		formated = df.format(c.getTime());
 		System.out.println("formatted after 1 year --> " + formated);
 		
+		int fdow = c.getFirstDayOfWeek();
+		System.out.println("firstDayOfWeek --> " + fdow);
 	}
 	
 }
