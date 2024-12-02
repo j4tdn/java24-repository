@@ -21,10 +21,10 @@ public class Ex01InitialDate {
 		System.out.println("2. Date arbitrary --> " + date); // ?? Về nhà xem video check lại kết quả
 		
 		// Người : Ngày/tháng/năm
-		// Máy tính: Mốc thời gian: 1.1.1970 0:0:0 UTC+0 Greenwich Time
+		// Máy tính: Mốc thời gian (epoch time):  1.1.1970 0:0:0 UTC+0 Greenwich Time
 		
 		// mốc thời gian sử dụng để +- 2 khoảng thời gian
-		date = new Date(2160000);
+		date = new Date(21600000);
 		System.out.println("3. Date with ms --> " + date); // ?? Về nhà xem video check lại kết quả
 		
 		
