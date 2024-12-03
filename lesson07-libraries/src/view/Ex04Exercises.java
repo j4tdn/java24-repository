@@ -15,7 +15,7 @@ public class Ex04Exercises {
 		Calendar c = Calendar.getInstance();
 		Date date = c.getTime(); // tại sao gán được kiểu dữ liệu Calendar vào được kiểu dữ liệu Date
 
-		c.set(Calendar.DAY_OF_MONTH, 18);
+//		c.set(Calendar.DAY_OF_MONTH, 18);
 
 		// 1. Kiểm tra năm hiện tại có phải là năm nhuận không ?
 		int year = c.get(Calendar.YEAR);
