@@ -1,7 +1,9 @@
 package inheritance.mutiple;
 
-public interface  GrandFather {
+public interface GrandFather {
+	
+	void building();
 	
 	void coding();
-
+	
 }
