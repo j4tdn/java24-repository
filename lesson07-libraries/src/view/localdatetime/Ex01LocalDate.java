@@ -2,6 +2,7 @@ package view.localdatetime;
 
 import java.time.LocalDate;
 import java.time.Month;
+import java.util.Locale;
 
 public class Ex01LocalDate {
 	
@@ -14,6 +15,7 @@ public class Ex01LocalDate {
 	 */
 
 	public static void main(String[] args) {
+		
 		LocalDate date1 = LocalDate.now();
 		System.out.println("date: " + date1);
 

@@ -7,7 +7,7 @@ import static util.DateTimeUtill.*;
 
 public class Ex02Period {
 
-	// Sử dụng period để tìm khoản thời gian giữ 2 mốc LocalDate
+	// Sử dụng period để tìm khoản thời gian giữa 2 mốc LocalDate
 
 	public static void main(String[] args) {
 
