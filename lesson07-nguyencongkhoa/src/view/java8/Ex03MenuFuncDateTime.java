@@ -70,6 +70,7 @@ public class Ex03MenuFuncDateTime {
 		String pattern = "dd/MM/yyy HH:mm:ss";
 		ZonedDateTime zdt = ZonedDateTime.now(ZoneId.of(zoneId));
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern(pattern);
+		// zdt.format(dtf) <==> zdt.format(dtf) đều đúng, use depend on priority order && convenient when work w API
 		System.out.println("Thời gian hiện tại (" + pattern + ") ở khu vực " + zoneId + " là: " + zdt.format(dtf));
 	}
 

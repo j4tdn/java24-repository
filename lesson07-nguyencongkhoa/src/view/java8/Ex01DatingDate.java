@@ -6,6 +6,8 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.Period;
 
+import utils.UtilsInput;
+
 import static utils.UtilsDateTime.*;
 import static utils.UtilsInput.*;
 
@@ -16,6 +18,7 @@ public class Ex01DatingDate {
 	
 	public static void main(String[] args) {
 		startDateTime();
+		UtilsInput.nextLine();// handle trôi lệnh
 		String choice = getValue("\nHave you broken up yet? (y/n): ");
 		if (choice.equals("y")) {
 			endDateTime();

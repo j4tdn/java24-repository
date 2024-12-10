@@ -31,11 +31,12 @@ public class Ex02WeekDayCalculator {
 		/* tương tự, khởi tạo sẵn thứ là 1, cứ trôi 7 ngày sẽ cnt++
 		 	==> max tương tự, lấy giá trị vừa đếm + vào giá trị trôi 7 ngày
 		 	chẳng hạn hiện tại là 21.02.1995 thì có sẵn number 3 of ?, khi + 7 = 28 ==> tăng cnt = 4	*/
-		int currentWeekdayInMonth;
 		int cntNumber = 1;
 		for (int i = 1; i <= 4; i++) {
 			if (i * 7 < date.getDayOfMonth()) {
 				cntNumber++;
+				
+				
 			}
 		}
 		int cntMax = cntNumber;
