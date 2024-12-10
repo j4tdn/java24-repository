@@ -1,7 +1,6 @@
 package view.localdatetime;
 
-import static utils.DateTimeUtils.optional;
-import static utils.DateTimeUtils.optionalEnd;
+import static utils.DateTimeUtils.*;
 
 import java.time.Duration;
 import java.time.LocalDateTime;

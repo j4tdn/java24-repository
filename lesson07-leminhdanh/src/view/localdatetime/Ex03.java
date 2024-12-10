@@ -1,24 +1,21 @@
 package view.localdatetime;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.Period;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.IsoFields;
-import java.util.Calendar;
 import java.util.Locale;
 import java.util.Scanner;
-import java.util.TimeZone;
 
 public class Ex03 {
 	private static Scanner ip = new Scanner(System.in);
 
 	public static void main(String[] args) {
-		Calendar c = Calendar.getInstance(); 
 		LocalDate date = LocalDate.of(2003, 03, 17);
-		currentTime(c);
+		currentTime();
 		lastDayOfMonth(date);
 		firstAndLastDayOfWeek(date);
 		currentWeekOfYear(date);
@@ -26,13 +23,12 @@ public class Ex03 {
 		daysOld();
 	}
 
-	private static void currentTime(Calendar c) {
+	private static void currentTime() {
 		System.out.print("Nhập múi giờ:");
 		String timeZone = ip.nextLine();
-		TimeZone tz = TimeZone.getTimeZone(timeZone);
-		TimeZone.setDefault(tz);
-		DateFormat df = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
-		System.out.println("Thời gian hiện tại là " + df.format(c.getTime()));
+		LocalDateTime date = LocalDateTime.now(ZoneId.of(timeZone));
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm:ss", Locale.of("vi", "VN"));
+		System.out.println("Thời gian hiện tại là " + date.format(formatter));
 	}
 
 	private static void lastDayOfMonth(LocalDate date) {
