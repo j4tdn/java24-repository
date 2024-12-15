@@ -1,0 +1,7 @@
+1. Liên quan đến việc lưu trữ các giá trị không đổi
+
+1. 1 biến (nguyên thủy/đối tượng) có từ khóa final final phía trước 
+--> không thể thay đổi giá trị ở STACK
+
+2. 1 đối tượng cho tất cả các thuộc tính không thể cập nhật 
+--> không thể thay đổi giá trị ở HEAP
