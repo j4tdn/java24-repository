@@ -22,12 +22,12 @@ Cách 3: Sử dụng builder design pattern
 --> Dùng builder khi có class có nhiều(convetion >= 6,7) thuộc tính và
     + cần các hàm khởi tạo dạng overloading không được ...
     + 1 lúc cập nhật nhiều giá trị, gọi hàm setter trả về void bất tiện
-    + muốn đối tượng được tạo ra là immutable
+    + muốn đối tượng được tạo ra là immutable: Integer, Double Float, String ...
       : final at stack
       : immutable at heap
       
 3.1 Sử dụng class Builder để build ra đối tượng cần tạo
---> Tạo ra immutable object cho Item
+--> Tạo ra immutable object cho Item(ko cho thay đổi, ko cho setter)
 public class Item {
    ....
    
@@ -38,4 +38,4 @@ public class Item {
 
 3.2 Sử dụng class hiện tại để tạo đối tượng cho chính nó
     3.2.1: Mutable
-    3.2.2: Immutable(LocalDate)
+    3.2.2: Immutable(LocalDate)(cho gọi with để set lại nhưng đang tạo ô nhớ mới)
