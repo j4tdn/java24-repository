@@ -1,0 +1,9 @@
+Mục đính: Lữu trữ tập hợp các giá trị là Hằng Số trong 1 phạm vi
+ nào đó  --> ENUM
+		
+Bài toán: Xác định vị trí của 1 điểm so với đường tròn 
++ trong, trên, ngoài ... String ...
+--> return String: "Trong", "Trên", "Ngoài"
+--> Fixed: ONSIDE = "Trên"
+
+--> Enum: CirclePosition: INSIDE, OUTSIDE, ONSIDE

@@ -6,6 +6,9 @@ import java.util.Date;
 import utils.DateTimeUtils;
 
 public class Ex06DateTimeConverter {
+	
+	// String   - Date -  Calendar
+	// Calendar - Date -  String
 
 	private static String pattern = "dd.MM.yyyy";
 	private static String inputString = "12.10.2008";
