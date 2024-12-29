@@ -8,5 +8,9 @@ Cách 1 : Sử dụng hàm khởi tạo constructor
 
 Cách 2 : Sử dụng singleton design pattern 
 --> Dùng singleton khi một class chỉ muốn tạo ra duy nhất 1 đối tượng
+--> Ví dụ : Muốn gọi hàm không phải static thì phải tạo đối tượng, tạo N đối tượng gọi
+Cũng không làm ảnh hưởng đến kết quả --> Tạo 1 đối tượng --> singleton
+--> VD : ItemService --> ItemServiceImpl 
 + Class thông thường --> Tạo N đối tượng 
 + Class ví dụ utils có private constructor --> tạo ra 0 đối tượng
++ Singleton --> Tạo 1 đối tượng
