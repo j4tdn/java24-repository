@@ -1,0 +1,7 @@
+Liên quan đến việc lưu trữ các giá trị không đổi
+
+1.một biến co từ khóa final phía trước 
+--> không thay đổi giá trị ở Stack
+
+2. Một object cho tất cả thuộc tính không thể cập nhập
+--> không thể thay đổi giá trị ở Heap

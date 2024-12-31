@@ -18,6 +18,7 @@ public class Car {
 		this.model = model;
 		this.name = name;
 		this.salesPrice = salesPrice;
+		
 	}
 	
 

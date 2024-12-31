@@ -1,0 +1,11 @@
+Mục đích :  Lưu trữ tâp hợp là các giá trị hằng số trong pham vị nào đó -> Enum
+
+
+Bài toán : Xác đinh vị trí của 1 điểm so với đường tròn
++ Trong , Trên , Ngoài .. String ...
+
+--> return String "Trong","Trên","Ngoai"
+
+--> Fixed  : ONSIDE = "trên"
+
+--> Enum : CirclePosition : INSIDE , OUTSIDE,ONSIDE

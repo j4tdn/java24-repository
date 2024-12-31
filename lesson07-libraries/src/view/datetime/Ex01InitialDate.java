@@ -26,6 +26,8 @@ public class Ex01InitialDate {
 		// mốc thời gian sử dụng để +- 2 khoảng thời
 		date = new Date(21600000);
 		System.out.println("3. Date with ms --> " + date);
+		
+		
 	}
 	
 }
