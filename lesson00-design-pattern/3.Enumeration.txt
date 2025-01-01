@@ -1,0 +1,2 @@
+Mục đích: lưu trữ tập hợp các giá trị là hằng số trong một phạm vi nào đó
+--> ENUM
