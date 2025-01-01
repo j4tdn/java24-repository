@@ -1,0 +1,8 @@
+Liên quan đến việc lưu trữ các giá trị không đổi
+
+1. Một biến (NT, DT) có từ khóa final phía trước
+--> không thể thay đổi giá trị ở STACK
+
+2. Một đối tượng cho tất cả các thuộc tính không thể cập nhập
+--> không thể thay đổi giá trị ở HEAP
+
