@@ -1,0 +1,29 @@
+7.
+	class
+	attrubute/parameter
+	method
+
+14. phan biet this va super
+	-this dại diện cho đt đang gọi hàm non-static(các hàm hiện tại và của cha)
+	-super được dùng khi đối tượng thừa kế đt khác(các hàm của cha)
+	
+17. functional interface
+	bắt buộc duy nhất 1 hàm trừu tượng, nhiều hơn là không được. Vì (Video 29/12/2024)
+	trong interface muốn có hàm bth thêm: default,....?
+--------------------	
+Regex(biểu thức chính qui):
+	số 0-9
+	kí tự hoa thường a-zA-Z
+	kí tự đặc biệt !@#$%^&*(
+	khoảng trắng \s
+	tập hợp []
+	số lượng 	*
+				+
+				{k}
+				{a,b}
+				{a,} --> a -->n
+	Email: google
+	
+	"[a-zA-Z0-9\.-]+@[a-zA-Z]+\."
+
+ 
