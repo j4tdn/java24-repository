@@ -1,0 +1,4 @@
+liên quan đến việc lưu trữ các giá trị không đổi
+
+1. một biến(NT,DT) có từ khóa final phía trước
+--> không thể thay đổi giá trị từ stack
