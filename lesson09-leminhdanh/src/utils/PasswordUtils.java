@@ -23,27 +23,27 @@ public class PasswordUtils {
 		if (pw.matches("[\\w\\d]+")) {
 			throw new InvalidPasswordException("Có ít nhất một kí tự đặc biệt (~!@#$%^&*)");
 		}
-		char[] temp = new char[10];
-		for (char p : password) {
-			for (char a : account) {
-				int count = 0;
-				if (p == a) {
-					int n = 0;
-					for (int i = 0; i < temp.length; i++) {
-						if (p != temp[i]) {
-							n++;
-						}
-					}
-					if (n == count) {
-						temp[count] = p;
-					}
-				}
-			}
-		}
-
-		if (temp.length >= 3) {
-			throw new InvalidPasswordException();
-		}
+//		char[] temp = new char[10];
+//		for (char p : password) {
+//			for (char a : account) {
+//				int count = 0;
+//				if (p == a) {
+//					int n = 0;
+//					for (int i = 0; i < temp.length; i++) {
+//						if (p != temp[i]) {
+//							n++;
+//						}
+//					}
+//					if (n == count) {
+//						temp[count] = p;
+//					}
+//				}
+//			}
+//		}
+//
+//		if (temp.length >= 3) {
+//			throw new InvalidPasswordException();
+//		}
 
 	}
 }
