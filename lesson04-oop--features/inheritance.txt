@@ -12,7 +12,7 @@
   --> ưu tiên sử dụng class nếu trong class có hàm abstract thì mới dùng từ khóa abstract cho class
  
  1. Java có hỗ trợ đa thừa kế không ?
- 	Đa thừa kế: 1 class con thừa kế
+ 	Đa thừa kế: 1 class con thừa kế nhiều class cha
  	==> KHÔNG
  	Vì: khi một class con thừa kế từ class cha nó không bắt buộc phải override các hàm từ class cha
  nếu trường hợp các class cha có các hàm chung phần khai báo mà class con lại không override, thì khi
@@ -36,8 +36,9 @@
   + Thuộc tính mặc định là "public static final"
   + Hàm trừu tượng trong interface thì mặc định là public abstract
   + Từ java 8 trở đi, interface có thể chưa thêm hàm bình thường: default, static, private
-      Lúc này thì interface và abstract nó giống nhau, nhưng dùng interface với từ khóa implemets có thể đâ kế thừa
-      còn từ kháo extends của absstract class thì không
+      Lúc này thì interface và abstract nó giống nhau, nhưng dùng interface với từ khóa implements có thể đa
+       kế thừa
+      còn từ kháo extends của abstract class thì không
  
   - Trong abstract có thể chưa hàm bthg interface thì ko
   - Access modifier mặc định trong abstract giống Access modifie của class

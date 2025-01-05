@@ -9,7 +9,7 @@ import builder.Item.Builder;
 public class Ex01BuilderDemo {
 
 	public static void main(String[] args) {
-
+		
 		Item i1 = Item.builder().withId(1).withName("A").withSalesPrice(12d).build();
 		System.out.println("i1 --> " + i1);
 

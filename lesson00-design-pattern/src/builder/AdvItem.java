@@ -48,9 +48,5 @@ public class AdvItem {
 		return "AdvItem [id=" + id + ", name=" + name + ", salesPrice=" + salesPrice + ", expiredDate=" + expiredDate
 				+ "]";
 	}
-	
-	
-	
-	
 
 }

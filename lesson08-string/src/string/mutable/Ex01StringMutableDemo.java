@@ -5,7 +5,7 @@ public class Ex01StringMutableDemo {
 	// String: Immutable
 	// Vấn đề: Với những bài toán liên quan đến cập nhật giá trị
 	//			 của chuỗi nhiều lần --> tốn kém ô nhớ
-ư	// Vd: Cho danh sách gồm n phần từ
+	// Vd: Cho danh sách gồm n phần từ
 	// 		--> Viết hàm + các chuỗi trong danh sách lại với nhau
 	// ["a","b","c","d","e"]
 

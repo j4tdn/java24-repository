@@ -1,7 +1,7 @@
 Car
  	private attributes ...
- - Sử dụng privatr để đảm bảo hướng phát triển của OOP
- + Từng class sẽ quant lý các thuộc tính của nó
+ - Sử dụng private để đảm bảo hướng phát triển của OOP
+ + Từng class sẽ quản lý các thuộc tính của nó
  
  
  - Nhưng trong coding
@@ -10,10 +10,10 @@ Car
   	
   --> Conflict cới idea của OOP
   --> Xử lý
-   + Cho các thuộc tính là Privatr
+   + Cho các thuộc tính là private
    + Khai báo thêm getter, setter cho các thuộc tính để truy cập/thay đổi giá trị 
   
-  Destrucote (hàm hủy) được sử dụng, gọi để xoám clear những đối tượng mà không còn được sử dụng
+  Destructor (hàm hủy) được sử dụng, gọi để xoá clear những đối tượng mà không còn được sử dụng
   , ô nhớ ở HEAP k còn được liên kết bởi ô nhớ nào ở STACK cả
   
   Từ khóa static:

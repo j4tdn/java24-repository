@@ -12,7 +12,7 @@ public class Ex01ImmutableDemo {
 	
 	// --> private/ non-private ...
 	// --> accesible: boolean
-	// rèflection (trong các thư viện hay dùng hơn)
+	// reflection (trong các thư viện hay dùng hơn)
 	
 	
 	}

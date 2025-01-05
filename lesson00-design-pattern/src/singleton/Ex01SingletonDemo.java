@@ -12,6 +12,7 @@ public class Ex01SingletonDemo {
 		System.out.println("\n========\n");
 		
 		RemoteDate rd2 = RemoteDate.getInstance();
+		rd2.setDayOfYear(50);
 		System.out.println("rd2 hash --> " + System.identityHashCode(rd2));
 		System.out.println("rd2 value --> " + rd2);
 		
