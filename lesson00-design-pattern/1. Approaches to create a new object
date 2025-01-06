@@ -1,0 +1,41 @@
+Các cách để khởi tạo 1 đối tượng trong Java
+
+- Để có đối tượng(ô nhớ ở HEAP) thì trước hết phải có 1 TYPE([abstract]class, interface)
+
+Cách 1: Sử dụng hàm khởi tạo constructor
+--> Dùng với những đối tượng thông thường new bao nhiêu đối tượng cũng được
++ Hàm khởi tạo có thể truy cập được từ bên ngoài
++ Sử dụng từ khóa new để tạo ra
+
+
+Cách 2: Sử dụng singleton design pattern
+--> Dùng singleton khi 1 class mình chỉ muốn tạo ra duy nhất 1 đối tượng
+--> Ví dụ: hàm ko phải static thì phải tạo đối tượng, tạo N đối tượng gọi cũng
+ko làm ảnh hưởng đến kết quả --> tạo 1 đối tượng --> singleton
+--> VD: ItemService --> ItemServiceImpl
+
++ Class thông thường --> tạo N đối tượng
++ Class ví dụ utils có private constructor --> tạo 0 đối tượng
++ Singleton --> tạo 1 đối tượng
+
+Cách 3: Sử dụng builder design pattern
+--> Dùng builder khi có class có nhiều(convetion >= 6,7) thuộc tính và
+    + cần các hàm khởi tạo dạng overloading không được ...
+    + 1 lúc cập nhật nhiều giá trị, gọi hàm setter trả về void bất tiện
+    + muốn đối tượng được tạo ra là immutable: Integer, Double, Float, String ...
+      : final at stack
+      : immutable at heap
+      
+3.1 Sử dụng class Builder để build ra đối tượng cần tạo
+--> Tạo ra immutable object cho Item(ko cho thay đổi, ko cho setter)
+public class Item {
+   ....
+   
+   public static class Builder {
+   
+   }
+}
+
+3.2 Sử dụng class hiện tại để tạo đối tượng cho chính nó
+    3.2.1: Mutable
+    3.2.2: Immutable(LocalDate)(cho gọi with để set lại nhưng đang tạo ô nhớ mới)
