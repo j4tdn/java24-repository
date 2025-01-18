@@ -22,6 +22,9 @@ public class Ex01 {
 
     }
 
+    // Kết quả tạm đúng
+    // Nhưng nếu a chuyển qua tìm học sinh đặt loại C, sẽ có thể xảy ra trường hợp
+    // là một bạn học loại C 2 lần, khi đó kết quả tên bạn đó sẽ bị trùng, chưa được
     public static void findGradeAStudents(Student[] students) {
         for (Student student : students) {
             if (student.getGrade() == 'A') {

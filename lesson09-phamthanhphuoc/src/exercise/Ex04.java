@@ -5,6 +5,8 @@ import exception.*;
 public class Ex04 {
 	public static void main(String[] args) {
 		Scanner ip = new Scanner(System.in);
+		
+		// Lưu ý cách đặt tên biến giúp a hi
 		String Name;
 		String PassWord;
 		
@@ -39,6 +41,9 @@ public class Ex04 {
 			 
 			 System.out.println("Đăng Ký Tài Khoản Thành Công!");
 			
+			 // Trường hợp nhiều catch thế này
+			 // Em có thể throw exception cha hoặc đưa vào mảng xong in ra nhiều lỗi cùng lúc
+			 // Để a sửa tại lớp
 		} catch (LengthPassword e) {
 			System.out.println("Mật khẩu phải có ít nhất 6 ký tự!");
 		}catch (UppercasePassword e) {
