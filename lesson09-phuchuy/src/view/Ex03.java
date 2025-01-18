@@ -12,6 +12,8 @@ public class Ex03 {
 		
 		System.out.println(Arrays.toString(words));
 		
+		// Kết quả tốt
+		// Nhưng bài này a expect mọi người dùng StringBuilder đó em
 		for (String word: words) {
 			word =  revert(word);
 			System.out.print(word + " ");

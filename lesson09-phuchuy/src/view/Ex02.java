@@ -14,6 +14,8 @@ public class Ex02 {
 
 			
 	}
+	
+	// Hmm, chưa được :(
 	private static String[] inputString(int length) {
 		String[] strings = new String[length];
 		
