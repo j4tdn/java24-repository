@@ -29,6 +29,8 @@ public class Ex04RegisterAcc {
 		ip.close();
 	}
 
+	// Chưa đặt yêu cầu
+	// A sẽ sửa tại lớp hi
 	private static void requirePass(String str) throws PasswordLengthException, PasswordFormatException {
 		if (str.length() < 8) {
 			throw new PasswordLengthException("Chieu dai mat khau khong du !!! Vui long nhap lai");

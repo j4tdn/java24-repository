@@ -5,7 +5,7 @@ public class Ex02LargestNumInString {
 	public static void main(String[] args) {
 		String s1 = "01a2b3456cde478";
 		String s2 = "aa6b546c6e22h";
-		getMaxNum(s1);
+		getMaxNum(s2);
 		
 	}
 	
@@ -13,6 +13,9 @@ public class Ex02LargestNumInString {
 		String[] nums = strs.split("[^0-9]+");
 		int max = 0;
 		for(String num : nums) {
+			// Sau khi split xong nếu các kí tự không phải số nằm đầu hoặc cuối
+			// ví dụ aa88c, khi em cắt ra sẽ được "", 88
+			// num có thể là chuỗi rỗng cho nên kiểm tra num khác rỗng mới parseInt hi
 			int number = Integer.parseInt(num);
 			if(max < number) {
 				max = number;
