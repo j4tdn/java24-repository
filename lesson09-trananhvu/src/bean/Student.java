@@ -3,8 +3,12 @@ package bean;
 public class Student {
     private int id;
     private String name;
+    
+    // Em nên tạo enum để xử lý sẽ hay hơn
+    // Không bị các vấn đề hard code hoa thường như a, A này kia
     private String rank;
 
+    // nhớ format code
     public Student() {
     }
     public Student(int id, String name, String rank) {

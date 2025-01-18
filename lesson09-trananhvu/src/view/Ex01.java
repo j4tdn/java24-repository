@@ -6,6 +6,10 @@ import java.util.Arrays;
 
 public class Ex01 {
 
+	
+	// Kết quả tạm đúng
+    // Nhưng nếu a chuyển qua tìm học sinh đặt loại C, sẽ có thể xảy ra trường hợp
+    // là một bạn học loại C 2 lần, khi đó kết quả tên bạn đó sẽ bị trùng, chưa được
     private static Student[] findGoodStudents(Student[] students) {
         Student[] goodStudents = new Student[students.length];
         int count = 0;
@@ -17,6 +21,8 @@ public class Ex01 {
         return Arrays.copyOfRange(goodStudents, 0, count);
     }
 
+    // Sai yêu cầu
+    // Đề không yêu cầu tìm học sinh có học lực F
     private static Student[] findBadStudents(Student[] students) {
         Student[] badStudents = new Student[students.length];
         int count = 0;
