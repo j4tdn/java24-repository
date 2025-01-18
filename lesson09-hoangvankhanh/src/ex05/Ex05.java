@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Ex05 {
 	
+	// Logic sai
 	public static void main(String[] args) {
 		Scanner ip = new Scanner(System.in);
 		

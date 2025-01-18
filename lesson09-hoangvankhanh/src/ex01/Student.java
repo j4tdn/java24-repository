@@ -6,7 +6,6 @@ public class Student {
 	private Point point;
 	
 	public Student() {
-		// TODO Auto-generated constructor stub
 	}
 
 	

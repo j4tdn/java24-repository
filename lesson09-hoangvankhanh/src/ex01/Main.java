@@ -12,6 +12,7 @@ public class Main {
 
 		System.out.println("Danh sách sinh viên từng đạt loại A trong năm 2024: ");
 
+		// Lần sau nên viết hàm để xử lý em hi
 		for (Student student : students) {
 			if (student.getPoint() == Point.A) {
 				System.out.println("Mã sinh viên: " + student.getId() + ", Tên: " + student.getName());
@@ -26,6 +27,9 @@ public class Main {
 //			}
 //		}
 
+		// Cách làm này đúng hơn so với cách em tìm học sinh xếp loại F, nhưng cách làm chưa hay lắm
+		// Em phải tốn đến 2 vòng for lồng nhau để xử lý
+		// Bài nay a đã từng share 1 lần khi làm bài tìm phần tử trung nhau trong mảng {1,2,1,3,4,5,2}
 		System.out.println("Danh sách sinh viên học lại:");
 		for (int i = 0; i < students.length; i++) {
 			for (int j = i + 1; j < students.length; j++) {

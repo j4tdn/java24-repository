@@ -11,7 +11,7 @@ public class Ex04 {
 		String accountName = ip.nextLine();
 		
 		String password;
-		boolean check;
+		boolean check; // hạn chế đặt các tên biến kiểu này em hi
 		
 		do {
 			System.out.println("Mật khẩu: ");
@@ -28,6 +28,8 @@ public class Ex04 {
 			return false;
 		}
 		
+		// Mấy pattern này em search đâu ra à chứ a không chỉ như này :(
+		// Số thì chỉ là \\d thôi là đủ rồi, có thêm .* *. để làm gì
 		if(!password.matches(".*\\d.*")) {
 			System.out.println("Mật khẩu phải chứa số");
 			return false;
