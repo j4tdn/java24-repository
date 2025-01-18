@@ -10,6 +10,7 @@ public class Main {
 
 	        String currentNumber = "";
 	        
+	        // Logic tốt nhưng a từng chỉ cách dùng hàm split có thể làm đơn giản hơn em hi
 	       for (int i = 0; i < s.length(); i++) {
 	            char c = s.charAt(i);
 
@@ -35,11 +36,13 @@ public class Main {
 	    public static String[] getLargestNumbers(String... ss) {
 	        int[] largestNumbers = new int[ss.length];
 
+	        // xử lý
 	        for (int i = 0; i < ss.length; i++) {
 	            largestNumbers[i] = getLargestNumberFromString(ss[i]);
 	        }
 
 	      
+	        // sắp xếp
 	        for (int i = 0; i < largestNumbers.length - 1; i++) {
 	            for (int j = i + 1; j < largestNumbers.length; j++) {
 	                if (largestNumbers[i] > largestNumbers[j]) {

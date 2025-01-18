@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class AccountRegistration {
 
+	// Tất cả các bài, khi code xong nhớ refactor ctrl shift f em hi
 	    public static void main(String[] args) {
 	        Scanner scanner = new Scanner(System.in);
 

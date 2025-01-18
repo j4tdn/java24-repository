@@ -3,6 +3,9 @@ package nguyenthilannhu.Ex01;
 import java.util.Objects;
 
 public class Student {
+	// Những cái a hướng dẫn đâu hết rồi :(
+	// Vì sao lại code như thế này
+	
       int id;
       String name;
       char grade;
