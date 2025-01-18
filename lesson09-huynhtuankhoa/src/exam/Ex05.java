@@ -7,6 +7,8 @@ public class Ex05 {
 		String number = "44";
 		boolean isHappyNumber = false;
 		int i = 0;
+		
+		// A chưa hiểu vụ i != 20 này lắm
 		while (i != 20) {
 			number = getEachNum(number);
 			if (number.equals("1")) {
@@ -18,6 +20,7 @@ public class Ex05 {
 		System.out.println(isHappyNumber? true : false);
 	}
 	
+	// Cách này cũng được hoặc em có thể %10 để lấy ra từ số
 	public static String getEachNum(String num) {
 		StringBuilder newNum = new StringBuilder();
 		String[] nums = num.split("");
