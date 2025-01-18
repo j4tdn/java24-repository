@@ -15,6 +15,8 @@ public class Ex03ReverbString {
 
 	}
 
+	// Kết quả đúng
+	// Mà do em để hàm return void nên code khá dài
 	public static void revert(String s) {
         
         System.out.println("\nChuỗi đảo ngược theo từng từ:");

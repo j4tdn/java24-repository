@@ -14,6 +14,8 @@ public class Ex04SignUp {
 		System.out.print("Nhập mật khẩu: ");
 		String password = scanner.nextLine();
 		PassWordCheck.ValidPassword(password);
+		
+		// A chưa khai báo hàm isValidPassword(...)
 		if (isValidPassword(password, username)) {
 			System.out.println("Đăng ký tài khoản thành công!");
 		} else {
