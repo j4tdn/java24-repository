@@ -7,7 +7,7 @@ import bean.Student;
 public class Ex01 {
 	
 	public static void main(String[] args) {
-		Student[] list = {};
+		Student[] list = {}; // các biến thừa nên xóa em hi
 		Student[] students = {
 				new Student(102, "Nam", "C"),
 				new Student(103, "Bảo", "F"),
@@ -21,7 +21,9 @@ public class Ex01 {
 				new Student(104, "Hoàng", "B")	
 		};
 		
-		
+		// Kết quả tạm đúng
+	    // Nhưng nếu a chuyển qua tìm học sinh đặt loại C, sẽ có thể xảy ra trường hợp
+	    // là một bạn học loại C 2 lần, khi đó kết quả tên bạn đó sẽ bị trùng, chưa được
 		System.out.println("DS Sinh vien dat loai A: ");
 		for (Student student : students) {
 			if (student.getRank() == "A") {
@@ -29,6 +31,9 @@ public class Ex01 {
 			}
 		}
 		
+		// Kết quả đúng nhưng cách làm a chưa mê lắm :(
+		// Này kiểu for lồng for NxN, e có thể làm kiểu bài toán tìm phần tử trùng nhau
+		// trong mảng {1,1,2,3,2} a từng chỉ 1 lần, áp dụng tương tự
 		System.out.println("DS Sinh vien hoc lai 2 lan: ");
 		for(int i = 0; i < students.length; i ++) {
 			for(int j = i + 1; j <students.length; i++) {

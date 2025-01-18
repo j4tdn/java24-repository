@@ -2,16 +2,19 @@ package bean;
 
 public class Student {
 
-	public Integer MSV;
+	// Lưu ý tên biến, chữ cái đầu tiên phải viết thường em nghen
+	public Integer MSV; // Hmm, ai cho đặt tên biến tiếng việt ri :(
 	public String Name;
+	
+	// Em nên tạo 1 enum tên là Rank thì sẽ hay hơn hi
+	// A nhớ từng hướng dẫn Enum rồi
 	public String Rank;
 	
 	public Student() {
-		// TODO Auto-generated constructor stub
 	}
 
+	// Những phần thừa a xóa cố gắng để ý
 	public Student(Integer mSV, String name, String rank) {
-		super();
 		MSV = mSV;
 		Name = name;
 		Rank = rank;
