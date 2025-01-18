@@ -4,6 +4,12 @@ public class Student {
 
 	private int id;
 	private String name;
+	
+	// String cũng được, nhưng em nên tạo enum ví dụ tên là Rank sẽ hay hơn, tránh gặp
+	// các vấn đề liên quan đến chuỗi thường hoa ...
+	// public enum Rank {}
+	//     A, B, C, D, F
+	// }
 	private String rank;
 
 	public Student() {

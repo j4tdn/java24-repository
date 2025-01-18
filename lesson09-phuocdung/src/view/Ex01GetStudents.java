@@ -35,6 +35,11 @@ public class Ex01GetStudents {
 				
 	}
 	
+	// 1. Em nên đặt tên hàm là getStudents(Student[] students, Rank rank) để áp dụng tổng quát hơn
+	
+	// 2. Kết quả tạm đúng
+    // Nhưng nếu a chuyển qua tìm học sinh đặt loại C, sẽ có thể xảy ra trường hợp
+    // là một bạn học loại C 2 lần, khi đó kết quả tên bạn đó sẽ bị trùng, chưa được
 	private static Student[] getStudentsRankA(Student[] students) {
 		Student[] studentsRankA = new Student[10];
 		int i = 0;
@@ -50,6 +55,8 @@ public class Ex01GetStudents {
 		return Arrays.copyOfRange(studentsRankA, 0, i);
 	}
 	
+	// Chưa đúng với yêu cầu a đưa ra
+	// Tìm những sinh viên 'đã' tham gia học lại ...
 	private static Student[] getStudentsRankF(Student[] students) {
 		Student[] studentsRankF = new Student[10];
 		int i = 0;
