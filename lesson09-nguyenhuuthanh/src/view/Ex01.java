@@ -4,6 +4,8 @@ package view;
 import bean.Student;
 import static bean.Grade.*;
 
+import java.util.Arrays;
+
 public class Ex01 {
     
     public static void main(String[] args) {
@@ -38,23 +40,27 @@ public class Ex01 {
     
     }
     
+    // Có 2 vấn đề
+
+    // 1. Em phải đi duyệt mảng students tìm A 2 lần --> lần 1 để tìm count, thừa
+    //    A nhớ a chỉ cách làm tương tự rồi mà hè, a có sửa tạm như bên dưới
+    
+    // 2. Nếu chuyển qua tìm học sinh đặt loại C, sẽ có thể xảy ra trường hợp
+    // là một bạn học loại C 2 lần, khi đó kết quả tên bạn đó sẽ bị trùng, chưa được
     private static Student[] findGradeAStudents(Student[] students){
+    	Student[] result = new Student[students.length];
         int count =0;
         for(Student student : students){
             if(student.getGrade() == A){
-                count++;
+            	result[count++] = student;
             }
         }
-        Student[] gradeAStudents = new Student[count];
-        int index = 0;
-        for(Student student : students){
-            if(student.getGrade() == A){
-                gradeAStudents[index++] = student;
-            }
-        }
-        return gradeAStudents;
+        return Arrays.copyOfRange(result, 0, count);
     }
     
+    // Lỗi tương tự, và em cũng làm sai yêu cầu
+    // Đề yêu cầu tìm học sinh học lại có nghĩa là xuất hiện 2 lần trở lên trong danh sách
+    // chứ k phải tìm học sinh có học lực F
     private static Student[] findRepeatStudents(Student[] students){
         int count = 0;
         for(Student student : students){
