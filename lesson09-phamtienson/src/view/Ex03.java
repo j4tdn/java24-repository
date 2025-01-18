@@ -6,6 +6,9 @@ public class Ex03 {
 	public static String revert(String s) {
 	String trimed = s.trim();
 	String[] words = trimed.split("\\s+");
+	
+	// Em đọc kỹ lại đề hi
+	// Chưa đúng yêu cầu
 	StringBuilder cleaned = new StringBuilder();
 	for (int i = 0; i < words.length; i++) {
 		cleaned.append(words[i]);

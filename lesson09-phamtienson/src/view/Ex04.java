@@ -15,6 +15,8 @@ public class Ex04 {
 		ip.close();
 	}
 	
+	// Tên hàm chưa đúng
+	// isValidPassword hoặc sao đó cho có nghĩa em hi
 	public static boolean isPassword(String username, String password) {
 		if (password.length()<8) {
 			return false;
@@ -24,6 +26,8 @@ public class Ex04 {
 		boolean haveSpecial = false;
 		String special ="~!@#$%^&*";
 		
+		// Logic của em thì thành ra haveDigit, haveCapital, haveSpecial nó chỉ phụ thuộc
+		// vào kí tự cuối cùng --> chưa đúng
 		for(char c : password.toCharArray()) {
 			if (Character.isDigit(c)) {
 				haveDigit = true;
