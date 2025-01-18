@@ -15,6 +15,8 @@ public class Ex04 {
 			System.out.print("Nhập tên mật khẩu: ");
 			String pw = ip.nextLine();
 			
+			// Thay vì if else, em có thể if, trong if return thì code sẽ dễ nhìn hơn
+			// Nên cách bài trước a mới nói em tách hàm để xử lý
 			if(pw.length() < 8) {
 				System.out.println("Mk phải lớn hơn 8 ký tự");
 			} else if(!pw.matches(".*[0-9].*")) {
