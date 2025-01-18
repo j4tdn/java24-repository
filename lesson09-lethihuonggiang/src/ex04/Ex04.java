@@ -26,7 +26,10 @@ public class Ex04 {
         ip.close();
     }
 
+    // Anh đọc qua cách làm thì thấy sai
+    // Chưa xử lý được
     private static boolean isValidPassword(String password, String username) {
+    	// Tên một số hàm chưa ổn lắm em hi, nên là 1 cụm động từ
         return isLength(password) && 
                containsDigit(password) && 
                containsUppercase(password) && 

@@ -16,6 +16,8 @@ public class Ex03 {
         ip.close();
     }
     
+    // Sai yêu cầu
+    // Xem kỹ lại đề bài
     public static String stringProcessing(String s) {
   
         String string = s.trim().replaceAll("\\s+", " ");
