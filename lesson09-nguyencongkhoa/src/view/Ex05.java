@@ -14,6 +14,7 @@ public class Ex05 {
 		isHappyNumber(num);
 	}
 
+	// isHappy thì nên trả về boolean em hi
 	private static void isHappyNumber(int n) {
 		int res = n;
 		int sum = 0;
@@ -22,9 +23,9 @@ public class Ex05 {
 			if (sum > 10) {
 				n = sum;
 			} else if (sum >= 2 && sum <= 9) {
+				// Logic này có vẻ không đúng
 				System.out.println(res + " không phải số hạnh phúc!!");
 				return;
-
 			} else {
 				System.out.println(res + " là số hạnh phúc");
 				return;

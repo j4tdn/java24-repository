@@ -32,6 +32,8 @@ public class Ex02 {
 		String[] arrNumbers = ss.split("\\D+");
 		int max = Integer.MIN_VALUE;
 		for (String arr : arrNumbers) {
+			// Bài toán sẽ bị failed khi arr của em rỗng
+			// Em có thể thử chuỗi a1b2c3d4dee
 			max = Math.max(max, Integer.parseInt(arr));
 		}
 		numbers[i] = max;
