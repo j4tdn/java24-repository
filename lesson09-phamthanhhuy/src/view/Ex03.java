@@ -6,6 +6,8 @@ public class Ex03 {
 	
 	public static void main(String[] args) {
 		
+		// Bài làm tốt
+		// Em nên tách hàm để xử lý
 		String s = " Welcome    to JAVA10    class ";
 		String s1 = s.trim().replaceAll("\\s+", " ");
 		System.out.println(s1); 
@@ -15,7 +17,7 @@ public class Ex03 {
 		
 		for(int i = 0; i < words.length; i ++) {
 			StringBuilder sb = new StringBuilder(words[i]);
-			System.out.print(" " + sb.reverse() + " ");
+			System.out.print(sb.reverse() + " ");
 		}
 
 	}

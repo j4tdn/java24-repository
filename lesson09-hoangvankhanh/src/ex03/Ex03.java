@@ -16,6 +16,8 @@ public class Ex03 {
         ip.close();
     }
     
+    // Em xem lại kỹ đề sẽ thấy mình làm sai
+    // A yêu cầu đảo từng từ trong chuỗi, chứ ko phải đảo nguyên chuỗi hi
     public static String stringProcessing(String input) {
   
         String trimmedInput = input.trim().replaceAll("\\s+", " ");

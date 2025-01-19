@@ -19,18 +19,20 @@ public class Ex01 {
 				new Student(107, "Vũ", 'C'),
 				new Student(104, "Hoàng", 'B')
 		};
-		List<Student> gradeA = getGradeA (students, 'A');
-		List<Student> learnAgain = getlearnAgain (students);
 		
-		System.out.println("Sinh viên đạt điểm A môn cấu trúc dữ liệu là: ");
-		for (Student student : gradeA) {
-			System.out.println(student.name);
-		}
-		
-		System.out.println("Danh sách sinh viên học hơn 1 lần: ");
-		for (Student student : learnAgain) {
-			System.out.println(student.name);
-		}
+		// Hmm, Sơn làm gì đây :(
+//		List<Student> gradeA = getGradeA (students, 'A');
+//		List<Student> learnAgain = getlearnAgain (students);
+//		
+//		System.out.println("Sinh viên đạt điểm A môn cấu trúc dữ liệu là: ");
+//		for (Student student : gradeA) {
+//			System.out.println(student.name);
+//		}
+//		
+//		System.out.println("Danh sách sinh viên học hơn 1 lần: ");
+//		for (Student student : learnAgain) {
+//			System.out.println(student.name);
+//		}
 		
 		
 		

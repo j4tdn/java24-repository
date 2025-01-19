@@ -18,6 +18,8 @@ public class Ex02 {
 		
 	}
 	
+	// Bài làm tốt
+	// Cố gắng đặt tên biến hợp lý hơn là ổn em hi
 	private static int[] getLargestValNumber(String[] inputs) {
 		int[] maxNum = new int[inputs.length];
 		
@@ -28,6 +30,7 @@ public class Ex02 {
 		return maxNum;
 	}
 	
+	// Tốt
 	private static int getValMaxNumber(String input) {
 		String[] inputs = input.split("[a-z]+");
 		if(inputs.length == 0) {

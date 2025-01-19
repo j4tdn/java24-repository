@@ -8,6 +8,7 @@ public class Ex03 {
 		}
 	}
 	
+	// Hmm chưa được
 	public static void main(String[] args) {
 		String s = "Welcome      to JAVA10 class";
 		

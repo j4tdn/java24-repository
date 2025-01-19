@@ -5,6 +5,8 @@ import java.security.InvalidAlgorithmParameterException;
 
 public class PassWordCheck {
 	
+	// Em có thể tham khảo pattern của 1 số bạn
+	// A sẽ chỉ tại lớp kỹ hơn hi
 	public static boolean ValidPassword(String password) throws IOException{
 		if(password.length() < 8) {
 			throw new IOException("Mat khau phai dai hon 8 ki tu");	

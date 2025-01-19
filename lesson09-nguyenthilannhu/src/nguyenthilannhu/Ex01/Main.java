@@ -1,7 +1,13 @@
+// tên package không được viết hoa em hi
 package nguyenthilannhu.Ex01;
 
 public class Main {
 	
+	// 1. Em phải đi duyệt mảng students tìm A 2 lần --> lần 1 để tìm count, thừa
+    //    A nhớ a chỉ cách làm tương tự rồi mà hè, a có sửa tạm như bên dưới
+    
+    // 2. Nếu chuyển qua tìm học sinh đặt loại C, sẽ có thể xảy ra trường hợp
+    // là một bạn học loại C 2 lần, khi đó kết quả tên bạn đó sẽ bị trùng, chưa được
      public static Student[] getStudentsWithGradeA(Student[] students) {
 	        int count = 0;
 	        for (Student student : students) {
@@ -22,6 +28,10 @@ public class Main {
 
 	   
 	    public static Student[] getStudentsRetaking(Student[] students) {
+	    	// Hình như những cái a nói a hướng dẫn em không học thì phải
+	    	// A nói là không bao giờ cho mảng fix length như này cả
+	    	
+	    	// Kết quả có thể tạm ra đúng nhưng cách làm kiểu hard code
 	        int[] idCount = new int[1000];
 	        for (Student student : students) {
 	            idCount[student.id]++;

@@ -4,8 +4,13 @@ public class Ex01 {
 
 	public static void main(String[] args) {
 		
+		// A thử thì kết quả ra 2 8 9 1 1 là chưa đúng
+		// Nên là 2 8 9 1
 		int[] array1 = {2, 8, 9, 1, 6};
 		int[] array2 = {2, 1, 1, 8, 9};
+		
+		// Em nên kiểm tra mảng nào có length nhỏ hơn rồi cho arrays có length bằng length đó
+		// chứ k fix cứng 5 như này được
 		int[] arrays = new int[5];
 		int s = 0;
 		

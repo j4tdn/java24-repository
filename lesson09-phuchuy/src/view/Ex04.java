@@ -30,6 +30,10 @@ public class Ex04 {
 		if (pass.length() < 8) {
 			throw new InvalidPasswordException("Độ dài mật khẩu phải lớn hơn 8");
 		}
+		
+		// Này ko phải là isDigi, is ...
+		// Mà nên là hasDigitLetter .. has... em hi
+		// A check sơ các pattern thì chưa đúng
 		boolean isDigit = Pattern.matches("^\\d", pass);
 		boolean isUpperCase = Pattern.matches("[A-Z]", pass);
 		boolean isContainSpec = Pattern.matches("[^\\w]", pass);

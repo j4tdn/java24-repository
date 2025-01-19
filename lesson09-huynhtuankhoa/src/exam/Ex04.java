@@ -11,6 +11,9 @@ public class Ex04 {
 				String username = sc.nextLine();
 				System.out.println("Enter password: ");
 				String password = sc.nextLine();
+				
+				// A feedback trường hợp tổng quát
+				// Em nên viết chung 1 hàm kiểu validate(...) rồi xử lý bên trong đó sẽ đẹp hơn
 				validatePassLength(password);
 				validateSpecialChar(password);
 				validateSimilar(username, password);
@@ -30,6 +33,9 @@ public class Ex04 {
 	}
 	
 	public static void validateSpecialChar(String pass) throws RegisterException {
+		// Idea e làm phủ định tốt nhưng sẽ bị sót với trường hợp các kí tự không nằm trong
+		// tập [a-zA-Z0-9], e nên tạo mảng chứa kí tự đặt biệt rồi xử lý đơn giản hơn 
+		// không còn dùng reges cũng được
 		if (pass.matches("[a-zA-Z0-9]+")) {
 			throw new RegisterException("Password must have at least one speacial char");
 		}
@@ -50,6 +56,7 @@ public class Ex04 {
 	}
 } 
 
+// Em nên tách ra 1 class cho sạch code
 class RegisterException extends Exception {
 	public RegisterException(String message) {
 		super(message);

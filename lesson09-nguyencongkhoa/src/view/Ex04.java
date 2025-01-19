@@ -35,12 +35,18 @@ public class Ex04 {
 		boolean isExistUpperCase = false;
 		boolean isExistSpecialCharacter = false;
 		
+		// matches là cả password match mới đúng
+		// có vẻ logic sai phải ko em
 		if (password.matches("(~!@#$%^&*)+")) {
 			isExistSpecialCharacter = true;
 		}
 		
 		for (int i = 0 ; i < password.length(); i++) {
 			char c = password.charAt(i);
+			
+			// này em đang dùng for mà cứ 1 kí tự bất kì lại kiểm tra thế này
+			// thì kết quả của isExistUpperCase, isExistDigit chỉ phụ thuộc vào kí tự cuối
+			// cùng hè
 			if (Character.isUpperCase(c)) {
 				isExistUpperCase = true;
 			}

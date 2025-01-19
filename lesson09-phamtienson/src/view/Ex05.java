@@ -17,6 +17,8 @@ public class Ex05 {
 	
 	public static boolean happyNumber(int num) {
 		
+		// Kết quả đúng
+		// Mà HashSet a chưa hướng dẫn, em giải thích sơ giúp a hi
 		HashSet<Integer> seen = new HashSet<>();
 		
 		while (num != 1 && !seen.contains(num)) {

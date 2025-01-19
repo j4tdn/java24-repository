@@ -4,6 +4,9 @@ public class Student {
 	
 	private int id;
 	private String name;
+	
+	// char cũng được
+	// nhưng em nên dùng Enum sẽ hay hơn
     private char rank;
     
     public Student() {

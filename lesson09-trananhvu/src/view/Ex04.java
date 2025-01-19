@@ -4,6 +4,9 @@ import exception.*;
 
 public class Ex04 {
 
+	// Bài làm tốt
+	// Tên hàm chưa hợp lý
+	// Có thể là isValidPassword...
     private static boolean isPassword(String password, String account) {
         int count = 0;
 

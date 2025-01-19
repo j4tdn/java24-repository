@@ -1,8 +1,13 @@
 package bean;
 
 public class Student {
+	// Ai cho đặt tên biết tiếng việt ri
+	// A dặn code liên quan đến mọi thứ nên đặt tiếng anh mà
 	private String mssv;
 	private String name;
+	
+	// Xếp loại e có thể dùng từ nhưng Rank, Level
+	// Và nên tạo enum để lưu trữ vì nó nằm trong tập A B C D E F thôi
 	private String sort;
 
 	public Student() {

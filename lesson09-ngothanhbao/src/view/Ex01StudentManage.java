@@ -22,6 +22,10 @@ public class Ex01StudentManage {
 		System.out.println("Nhung hoc sinh hoc lai --> " + Arrays.toString(reStudyStudent(students)));
 	}
 	
+	// Kết quả đúng nhưng tổng quát chưa được
+	// Nếu đề hỏi danh sách sinh viên được điểm B mà e làm cách này lỡ
+	// có 1 bạn học được B xong học cải thiện lại thêm 1 lần thì kết quả bạn đó sẽ bị trùng
+	// Điểm tốt: cách code sạch sẽ, tốt
 	public static Student[] getStudentWithA(Student[] students) {
 		Student[] res = new Student[students.length];
 		int count = 0;
@@ -33,6 +37,9 @@ public class Ex01StudentManage {
 		return Arrays.copyOfRange(res, 0, count);
 	}
 	
+	
+	// Sai đề, em đọc lại kỹ đề hi
+	// Vì có trường hợp bạn đó được điểm F nhưng chưa/không tham gia học lại
 	public static Student[] reStudyStudent(Student[] students) {
 		Student[] res = new Student[students.length];
 		int count = 0;

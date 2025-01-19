@@ -20,6 +20,9 @@ public class Ex04 {
             System.out.println("--> Lỗi : Độ dài mật khẩu >= 8");
             return false;
         }
+        
+        // Các bạn search à, lớp mình có 3 bạn làm kiểu như này
+        // Nó bị thừa pattern với lại a đâu hướng dẫn kiểu này :(
         if (!password.matches(".*\\d.*")) {
             System.out.println("--> Lỗi: Mật khẩu phải chứa ít nhất 1 chữ số");
             return false;

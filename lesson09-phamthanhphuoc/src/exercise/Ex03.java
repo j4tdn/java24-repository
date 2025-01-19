@@ -9,6 +9,8 @@ public class Ex03 {
 			 reverseString = reverseString + n.charAt(i);			 
 		 }
 		 
+		 // Chưa đúng yêu cầu
+		 // Em đọc lại kỹ đề và ví dụ hi
 		 
 		 System.out.println(n);
 		 System.out.println("\n===================================================================\n");

@@ -11,13 +11,13 @@ public class Ex03 {
 	
 	private static String revert(String s) {
 		String[] str = s.split("\\s+");
-		String strReverse = "";
+		// Vấn đề nằm ở đây, khi + chuỗi em nên dùng string mutable như StringBuider, StringBuffer
+		// A sửa tạm như dưới
+		StringBuilder strReverse = new StringBuilder();
 		for (String string : str) {
-			StringBuilder sb = new StringBuilder(string);
-			sb.reverse();
-			strReverse += sb.toString() + " ";
+			strReverse.append(new StringBuilder(string).reverse()).append(" ");
 		}
-		return strReverse.strip();
+		return strReverse.toString();
 	}
 	
 }

@@ -4,6 +4,13 @@ import java.util.Arrays;
 
 public class Ex02 {
 
+	// Logic tốt
+	// Nhưng em còn dùng mấy hàm hơi cơ bản, a ko phải chê hay gì nhưng có thể
+	// dùng các hàm có sẵn mình từng học để code ngẵn gọn hơn
+	// Còn kết quả a test 1 vài case ok
+	
+	// Các code logic nhỏ nhỏ như e làm chỉ dùng khi các bài toán chuyên dùng thuật toán
+	// nào đó mới code kiểu vậy, còn dạng xử lý vấn đề như này e nên dùng các hàm ngôn ngữ hỗ trợ sẽ tiện hơn
     private static String[] getLargestNumbers(String s) {
 
         int[] arr = new int[s.length()];

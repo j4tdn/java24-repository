@@ -21,6 +21,12 @@ public class Ex01 {
 		
 	}
 	
+	// Em làm thế này hiện tại kết quả đúng
+	// Nhưng tổng quát ví dụ yêu cầu thay đổi hỏi tìm các học sinh xếp loại khác như D chẳng hạn
+	// thì kết quả trả về có thể bị trùng
+	// VD: Bạn Nam học môn này 2 lần và cả 2 lần đều bị D
+	
+	// Khai báo hàm nên là getStudents(Student[] students, Rank rank)
 	public static void getStudentRankA(Student[] students) {
 		for (Student student: students) {
 			if (student.getRank().equals(Rank.A)) {
@@ -29,9 +35,13 @@ public class Ex01 {
 		}
 	}
 	
+	// Em để ý các phần khai báo tên hàm hi
 	public static Student[] getStudentLearnMore1Times(Student[] students) {
 		Student[] studentF = new Student[5];
 		int count = 0;
+		
+		// Kết quả tạm ra đúng nhưng cách làm chưa hay
+		// A sẽ sửa tại lớp hi
 		for (int i = 0; i < students.length; i++) {
 			for (int j = i + 1; j < students.length; j++) {
 				if (students[i].getId() == students[j].getId()) {
@@ -39,6 +49,7 @@ public class Ex01 {
 				}
 			}
 		}
+		// Em có thể dùng hàm Arrays.copyOfRange(studentF, 0, count);
 		Student[] finalStudentF = new Student[count];
 		for (int i = 0; i < count; i++) {
 			finalStudentF[i] = studentF[i]; 

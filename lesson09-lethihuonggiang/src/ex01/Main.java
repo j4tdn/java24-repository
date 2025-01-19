@@ -5,6 +5,7 @@ import ex01.Grades.Grade;
 public class Main {
 	public static void main(String[] args) {
 		
+		// Em nên tách hàm ra để xử lý cho từng câu hi
 		Student[] students = {
 				new Student(102, "Nam", Grades.Grade.C),
 				new Student(103, "Bảo", Grades.Grade.F),
@@ -18,6 +19,9 @@ public class Main {
 				new Student(104, "Hoàng", Grades.Grade.B),
 		};
 		
+		// Kết quả đúng nhưng tổng quát chưa được
+		// Nếu đề hỏi danh sách sinh viên được điểm B mà e làm cách này lỡ
+		// có 1 bạn học được B xong học cải thiện lại thêm 1 lần thì kết quả bạn đó sẽ bị trùng
 		System.out.println("\nDanh sách sinh viên được điểm A: ");
 		for (Student student : students) {
 			if (student.getGrade() == Grade.A) {
@@ -25,6 +29,8 @@ public class Main {
 			}
 		}
 		
+		// Sai đề, em đọc lại kỹ đề hi
+		// Vì có trường hợp bạn đó được điểm F nhưng chưa/không tham gia học lại
 		System.out.println("\nDanh sách sinh viên được điểm F và phải đăng ký học lại: ");
 		for (Student student : students) {
 			if (student.getGrade() == Grade.F) {

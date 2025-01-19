@@ -3,6 +3,8 @@ package utils;
 import exception.InvalidPasswordException;
 
 public class PasswordUtils {
+	
+	// Các bạn hơi bị làm dụng pattern :(
 	public static void checkPassword(String pw, String ac) throws InvalidPasswordException {
 		char[] password = pw.toCharArray();
 		char[] account = ac.toCharArray();
@@ -20,6 +22,8 @@ public class PasswordUtils {
 			throw new InvalidPasswordException("Có ít nhất 1 số!");
 		}
 
+		// Hmm, chưa đúng
+		// Lỡ họ nhập kí tự tiếng việt hay các bộ kí tự khác thì sao
 		if (pw.matches("[\\w\\d]+")) {
 			throw new InvalidPasswordException("Có ít nhất một kí tự đặc biệt (~!@#$%^&*)");
 		}

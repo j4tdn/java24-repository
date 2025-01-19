@@ -8,6 +8,7 @@ public class Ex03ReverseStr {
 		reverseString(s1);
 	}
 	
+	// Bài này dễ mà cách làm em sai rồi
 	public static void reverseString(String string) {
 		StringBuilder reverse = new StringBuilder();
 		String str = string.trim();

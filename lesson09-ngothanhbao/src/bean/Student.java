@@ -3,6 +3,10 @@ package bean;
 public class Student {
 	private int id;
 	private String name;
+	
+	// Character là KDL đối tượng của KDL char
+	// Trong bài này em nên dùng Enum để lưu sẽ hay hơn hi
+	// Tạo enum ví dụ Level, Rank ...
 	private Character rank;
 	
 	public Student() {

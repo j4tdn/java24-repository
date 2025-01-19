@@ -25,6 +25,8 @@ public class Ex05 {
                 System.out.println("La so hanh phuc");
             }
         } catch (StackOverflowError e) {
+        	// Hmm :P -> Chạy thì đúng rồi nhưng các làm chưa hợp lý
+        	// Để a sửa tại lớp
             System.out.println("Ko phai so hanh phuc");
         }
     }

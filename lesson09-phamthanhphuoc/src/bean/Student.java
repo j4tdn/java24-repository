@@ -1,8 +1,16 @@
 package bean;
 
 public class Student {
+	// kí tự đầu tiên của biến em nên viết thường hi
     private int Id;
     private String FullName;
+    
+    // char cũng được
+    // nhưng em nên dùng Enum sẽ hay hơn nha
+    
+    // char ví dụ như em chỗ thì dùng xếp loại A, a bị xung đột trong khi nó chỉ là 1 loại học
+    // lực 'A'
+    // Trong khi enum nó fix theo tên biến, giá trị của Enum ko bị vấn đề đó
     private char Grade;
 
     public Student(int Id, String FullName, char grade) {

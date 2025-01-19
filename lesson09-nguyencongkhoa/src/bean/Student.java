@@ -4,6 +4,9 @@ public class Student {
 
 	private int id;
 	private String name;
+	
+	// Tên biến: A nghĩ có thể đơn giản là rank hoặc level được rồi
+	// KDL e nên dùng Enum sẽ hay hơn
 	private String learningForce;
 
 	public Student() {

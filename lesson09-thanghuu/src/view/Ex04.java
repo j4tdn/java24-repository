@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class Ex04 {
 
+	// Hmm, sao Thắng đợt này code tệ ri :(
+	// Các bài trước code tốt mà, cố gắng xem lại em nghen
 	public static void main(String[] args) {
 		Scanner ip = new Scanner(System.in);
 		do {

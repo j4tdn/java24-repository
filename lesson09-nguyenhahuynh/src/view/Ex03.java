@@ -7,14 +7,8 @@ public class Ex03 {
 	public static void main(String[] args) {
 		Integer[] array = {8, 5, 9, 20};
 		
-		Arrays.sort(array, (a, b) -> {
-            int levelA = level(a);
-            int levelB = level(b);
-            if (levelA == levelB) {
-                return a - b;
-            }
-            return levelA - levelB;
-        });
+		// Nếu e biết dùng lambda và sorting có sẵn e có thể viết ngắn gọi như bên dưới
+		Arrays.sort(array, (a, b) -> level(a) - level(b));
 
         System.out.println("Mảng sau khi sắp xếp: " + Arrays.toString(array));
 	}
