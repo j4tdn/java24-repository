@@ -1,7 +1,5 @@
 package view;
 
-import java.util.Arrays;
-
 import bean.Tuple;
 import functional.TuppleMapper;
 
