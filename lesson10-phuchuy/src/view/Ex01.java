@@ -63,16 +63,16 @@ public class Ex01 {
 		
 		for (int i= 0; i < numbers.length; i++) {
 			if (numbers[i] > largest) {
+				thirdLargest = secondLargest;
 				secondLargest = largest;
 				largest = numbers[i];
 			} else if (numbers[i] > secondLargest && numbers[i] != largest) {
 				thirdLargest = secondLargest;
 				secondLargest = numbers[i];
-			} else if (numbers[i] > thirdLargest  && numbers[i] != secondLargest) {
+			} else if (numbers[i] > thirdLargest  && numbers[i] != secondLargest && numbers[i] != largest) {
 				thirdLargest = numbers[i];
 			}
 		}
-		
 		return thirdLargest;
 		}
 	}
