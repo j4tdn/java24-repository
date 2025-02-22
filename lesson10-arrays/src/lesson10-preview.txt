@@ -1,0 +1,26 @@
+1. Khái niệm sắp xếp
+-> Sắp xếp là duyệt qua từng phần tử trong danh sách
+-> Tìm cách hoán vị các phần tử sao cho đúng thứ tự của bài toán
+
+Bài toán 
+	+ Sắp xếp tăng dần
+	+ Sắp xếp giảm dần
+	+ Sắp xếp theo 1 thuộc tính
+	+ Sắp xếp theo N thuộc tính
+	
+Trường hợp
+	+ Danh sách nguyên thủy số nguyên/ số học
+	+ Danh sách đối tượng đơn/ nhiều thuộc tính
+
+	
+Thuật toán
++ Bubble Sort: sắp xếp nổi bọt
+	--> Duyệt qua các phần tử
+	--> So sánh từng phần tử liền kề và hoán vị chúng cho đến đúng thứ tự
+sắp xếp theo yêu cầu (tăng/giảm dần)
+VD: 8 2 17 22 14 36 ==> yêu cầu tăng dần
+
+Giải thích: 
++ với danh sách có N phần tử --> cần N-1 lần lặp để tìm N-1 phần tử lớn/nhỏ nhất theo thứ tự
++ Cứ mỗi lần lặp -> duyệt từ 0 đến cuối (ngoại trừ các ptu đã sx)
+	- So sánh từng cặp phần tử liền kề và hoán vị nếu chưa nằm đúng vị trí
