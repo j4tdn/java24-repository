@@ -14,6 +14,8 @@ public class Ex02Destructor {
 
 		c2 = new Car(22, "A22", "A22 Name", 440d); // H4
 		
+		c1.setModel("A!! kk");
+		System.out.println(c1);
 
 		// Ô nhớ, đối tượng ở vị trí H2 ko còn được liên kết bởi
 		// Bất kỳ biến nào ở STACK --> unused, với Java sẽ tự clear

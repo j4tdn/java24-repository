@@ -19,6 +19,7 @@ public class Ex03StaticAttributeDemo {
 		// c3.setModel("honda");
 		//CarAdv.setModel("Honda");
 		CarAdv.model = "MG";
+		c1.setModel("Bentley");
 
 		// Thuộc tính model nên được quản lý sử dụng chung cho
 		// tất cả các đối tượng của Class CarAdv

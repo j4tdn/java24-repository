@@ -18,4 +18,4 @@ public class Ex01SingletonDemo {
 		
 	}
 	
-}
+}	

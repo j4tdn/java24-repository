@@ -17,7 +17,7 @@
  		--> Số lượng tham số 
  		--> Ít nhất 1 kiểu dữ liệu truyền vào của tham số
  + Overriding: 
-	--> 2 hay nhiều phương thức được gọi là Overloading nếu 
+	--> 2 hay nhiều phương thức được gọi là Overiding nếu 
 	. Thuộc 2 hoặc nhiều class có quan hệ cha con
 	. Hàm trong class con override lại từ class cha
 		Vd: toString;
