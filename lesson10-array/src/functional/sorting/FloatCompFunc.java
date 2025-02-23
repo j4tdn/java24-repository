@@ -1,4 +1,4 @@
-package functional;
+package functional.sorting;
 
 @FunctionalInterface
 public interface FloatCompFunc {

@@ -2,7 +2,7 @@ package sorting.bubble;
 
 import java.util.Arrays;
 
-import functional.IntCompFunc;
+import functional.sorting.IntCompFunc;
 
 import static utils.ArrayUtils.*;
 

@@ -4,7 +4,7 @@ import static utils.ArrayUtils.swap;
 
 import java.util.Arrays;
 
-import functional.FloatCompFunc;
+import functional.sorting.FloatCompFunc;
 
 public class Ex04BubbleSortFloat {
 	

@@ -25,3 +25,14 @@ Giải thích:
 + Với danh sách có N phần tử -> cần N-1 lần lặp để tìm N-1 phần tử lớn/nhỏ nhất nằm đúng thứ tự
 + Cứ mỗi lần lặp -> duyệt từ đầu/cuối đến cuối/đầu(ngoại trừ các phần tử đã sắp xếp)
   - So sánh từng cặp phần tử liền kề và hoán vị nếu chưa nằm đúng vị trí
+  
+  
+Thuật toán
++ Selection Sort: Sắp xếp chọn
+--> Duyệt qua các phần tử
+--> Chọn phần tử lớn/nhỏ nhất nằm bên phải, trái sau mỗi lần lặp thỏa mã yêu cầu
+
+Giải thích:
++ Với danh sách có N phần tử -> cần N-1 lần lặp để tìm N-1 phần tử lớn/nhỏ nhất nằm đúng thứ tự
++ Cứ mỗi lần lặp -> lấy phần tử tại vị trí của lần lặp hiện tại, so sánh với các phần tử còn lại(chưa được sắp xếp)
+và hoán vị nếu thỏa mãn yêu cầu
