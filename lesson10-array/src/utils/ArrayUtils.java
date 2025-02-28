@@ -11,6 +11,14 @@ public class ArrayUtils {
 	private ArrayUtils() {
 	}
 	
+	public static void reverse(int[] elements) {
+		for (int i = 0; i < elements.length/2; i++) {
+			int temp = elements[i];
+			elements[i] = elements[elements.length - i - 1];
+			elements[elements.length - i - 1] = temp;
+		}
+	}
+	
 	public static void generate(String prefix, Item[] items) {
 		System.out.println(prefix + "{");
 		for (Item item: items) {
