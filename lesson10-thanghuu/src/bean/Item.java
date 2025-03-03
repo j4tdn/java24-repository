@@ -1,26 +1,26 @@
 package bean;
 
 public class Item {
-	private int id;
+	private Integer id;
 	private String name;
-	private int salesPrice;
-	private int storeId;
+	private Integer salesPrice;
+	private Integer storeId;
 
 	public Item() {
 	}
 
-	public Item(int id, String name, int salesPrice, int storeId) {
+	public Item(Integer id, String name, Integer salesPrice, Integer storeId) {
 		this.id = id;
 		this.name = name;
 		this.salesPrice = salesPrice;
 		this.storeId = storeId;
 	}
 
-	public int getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
@@ -32,19 +32,19 @@ public class Item {
 		this.name = name;
 	}
 
-	public int getSalesPrice() {
+	public Integer getSalesPrice() {
 		return salesPrice;
 	}
 
-	public void setSalesPrice(int salesPrice) {
+	public void setSalesPrice(Integer salesPrice) {
 		this.salesPrice = salesPrice;
 	}
 
-	public int getStoreId() {
+	public Integer getStoreId() {
 		return storeId;
 	}
 
-	public void setStoreId(int storeId) {
+	public void setStoreId(Integer storeId) {
 		this.storeId = storeId;
 	}
 
