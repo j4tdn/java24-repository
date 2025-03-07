@@ -1,10 +1,12 @@
-package sorting.bubble;
+package sorting.selection;
+
+import static utils.ArrayUtils.swap;
 
 import java.util.Arrays;
 
 import functional.sorting.IntCompFunc;
 import utils.ArrayUtils;
-public class Ex03BubbleSortInt {
+public class Ex01SelectionSortInt {
 
 	public static void main(String[] args) {
 		
@@ -12,10 +14,10 @@ public class Ex03BubbleSortInt {
 
 		System.out.println("Mảng ban đầu: " + Arrays.toString(elements));
 
-		bubbleSort(elements, (e1, e2) -> e1-e2);
+		selectionSort(elements, (e1, e2) -> e1-e2);
 		
 		System.out.println("\nMảng sắp xếp tăng dần: " + Arrays.toString(elements));
-		bubbleSort(elements, (e1,e2) -> e2-e1);
+		selectionSort(elements, (e1,e2) -> e2-e1);
 		
 		System.out.println("\nMảng sắp xếp giảm dần: " + Arrays.toString(elements));
 	}
@@ -38,11 +40,18 @@ public class Ex03BubbleSortInt {
 			}
 		}
 	}
-	private static void bubbleSort(int[] elements, IntCompFunc so) {
-		for (int i = 0 ; i < elements.length; i++) {
-			for (int j = 0; j < elements.length -1-i ; j++) {
-				if (so.compare(elements[j], elements[j+1]) > 0) {
-					utils.ArrayUtils.swap(elements, j, j+1);
+	private static void selectionSort(int[] elements, IntCompFunc icf) {
+		for (int i = elements.length-1;i> 0 ; i--) {
+			 int maxIndex = -1;
+			 int max = Integer.MIN_VALUE;
+			for (int j = 0; j < i ; j++) {
+				if (elements[j] > elements[i] && elements[j] > max) {
+					maxIndex = j;
+					max = elements[j];
+					
+				}
+				if ( maxIndex != -1 ) {
+					swap(elements, maxIndex, i);
 				}
 			}
 		}

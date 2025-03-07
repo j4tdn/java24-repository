@@ -2,7 +2,7 @@ package view;
 
 import java.util.Arrays;
 
-import functional.FloatCompFunc;
+import functional.sorting.FloatCompFunc;
 
 public class Ex04BubbleSortFloat {
 	public static void main(String[] args) {
