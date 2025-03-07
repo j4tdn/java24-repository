@@ -1,19 +1,30 @@
 package bean;
 
+import java.time.LocalDate;
+
 public class Item {
+
 	private Integer id;
 	private String name;
 	private Double salesPrice;
-	
+	private Integer storeId;
+	private LocalDate expiredDate;
+
 	public Item() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public Item(Integer id, String name, Double salesPrice) {
-		super();
 		this.id = id;
 		this.name = name;
 		this.salesPrice = salesPrice;
+	}
+
+	public Item(Integer id, String name, Double salesPrice, Integer storeId, LocalDate expiredDate) {
+		this.id = id;
+		this.name = name;
+		this.salesPrice = salesPrice;
+		this.storeId = storeId;
+		this.expiredDate = expiredDate;
 	}
 
 	public Integer getId() {
@@ -40,13 +51,25 @@ public class Item {
 		this.salesPrice = salesPrice;
 	}
 
-	@Override
-	public String toString() {
-		return "Item [id=" + id + ", name=" + name + ", salesPrice=" + salesPrice + "]";
+	public Integer getStoreId() {
+		return storeId;
 	}
 
-	
-	
-	
-	
+	public void setStoreId(Integer storeId) {
+		this.storeId = storeId;
+	}
+
+	public LocalDate getExpiredDate() {
+		return expiredDate;
+	}
+
+	public void setExpiredDate(LocalDate expiredDate) {
+		this.expiredDate = expiredDate;
+	}
+
+	@Override
+	public String toString() {
+		return "Item [id=" + id + ", name=" + name + ", salesPrice=" + salesPrice + ", storeId=" + storeId
+				+ ", expiredDate=" + expiredDate + "]";
+	}
 }
