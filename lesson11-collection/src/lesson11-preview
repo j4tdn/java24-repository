@@ -1,0 +1,10 @@
+VD: Iterable<T>
+
++ T: generic type đặt any kí tự nào, thường kí tự đơn viết hoa
++ Generic<T>: generic interface là interface có para truyền vào
+	Kiểu Iterable có para truyền vào là generic type KDL T, T đại diện cho KDL obj
+	là can truyền vào KDL obj nào đó cho T khi gọi Iterable
+	
++ Giúp tạo ra các common/util methods can apply cho any KDL nào
++ Pros: hạn chế raw(obj) types, bắt buộc phải khai báo KDL cụ thể thay vì dùng object cho mọi phần tử
+   --> hỗ trợ bắt lỗi tại compile
