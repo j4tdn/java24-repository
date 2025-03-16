@@ -9,7 +9,7 @@ public class CollectionUtils {
 	private CollectionUtils() {
 	}
 	
-	public static void generate(String prefix, Collection<Item> collection) {
+	public static <T> void generate(String prefix, Collection<T> collection) {
 		System.out.println(prefix + "  {");
 		collection.forEach(element -> {
 			System.out.println("   + " + element);

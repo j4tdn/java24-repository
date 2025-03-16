@@ -13,3 +13,7 @@ VD2: List<T>
 + Lợi ích: hạn chế raw(object) types, bắt buộc phải khai báo KDL cụ thể thay vì dùng
 object cho mọi phần tử
   --> hỗ trợ bắt lỗi tại compile
+  
+Câu hỏi
+1. Phân biệt Array và ArrayList
+2. Phân biệt ArrayList và LinkedList  
