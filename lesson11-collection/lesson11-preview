@@ -1,0 +1,11 @@
+VD: Iterable<T>
+
++ T: generic type đặt bất kỳ kí tự nào, thường kí tự đơn viết hoa
++ Generic<T>: generic interface là interface có than số truyền vào là generictype
+  Kiểu Interable có tham số tuyền vào là generic type KDL T, T đại diện cho KDL đối tượng 
+  Là có thể truyền vào KDL đối tượng nào đó cho T khi gọi Interable
+  
+  => Interable<Interger>
+  => Interable<String>
+  
+  + Giúp tạo ra các common/util methods 
