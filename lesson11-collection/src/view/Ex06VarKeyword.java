@@ -1,0 +1,22 @@
+package view;
+
+import java.util.Map.Entry;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+import bean.Item;
+
+public class Ex06VarKeyword {
+	
+	public static void main(String[] args) {
+		int a = 5;
+		Integer b = 6;
+		String s = "hello";
+		Item item = new Item();
+		List<String> list = new ArrayList<>();
+		Set<Entry<String, Integer>> set = new HashSet<>();
+	}
+	
+}

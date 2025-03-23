@@ -18,6 +18,12 @@ public class Item {
 		this.salesPrice = salesPrice;
 		this.storiId = storiId;
 	}
+	
+	public Item(Integer itemId, String name) {
+		this.itemId = itemId;
+		this.name = name;
+	}
+
 
 	public Integer getItemId() {
 		return itemId;
