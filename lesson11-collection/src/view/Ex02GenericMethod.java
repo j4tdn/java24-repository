@@ -22,7 +22,7 @@ public class Ex02GenericMethod {
 		
 		generate("2. In mảng với ints", ints);
 		generate("2. In mảng với dobs", dobs);
-		generate("2. In mảng với strs", strs);
+		// generate("2. In mảng với strs", strs);
 		
 		System.out.println("========================\n");
 		
@@ -31,17 +31,17 @@ public class Ex02GenericMethod {
 		List<String> lstrs = List.of("a", "b", "c", "d", "e");
 		List<Object> lobjs = List.of("a", 1, 2d, 3f, new Date());
 		
-		generate("3. In danh sách với ints", lints);
-		generate("3. In danh sách với dobs", ldobs);
+		// generate("3. In danh sách với ints", lints);
+		// generate("3. In danh sách với dobs", ldobs);
 		generate("3. In danh sách với strs", lstrs);
-		generate("3. In danh sách với objs", lobjs);
+		// generate("3. In danh sách với objs", lobjs);
 		
 		// Integer, Double, String là con của Object
 		// List<Integer>, List<Double>, List<String> không phải là con của List<Object>
 		// ArrayList<Object>, LinkedList<Object> là con của List<Object>
 	}
 	
-	private static <T> void generate(String prefix, List<T> elements) {
+	private static <T extends CharSequence> void generate(String prefix, List<T> elements) {
 		System.out.println(prefix + " { ");
 		for (T element: elements) {
 			System.out.println("   - " + element);
@@ -49,7 +49,7 @@ public class Ex02GenericMethod {
 		System.out.println("}\n");
 	}
 	
-	private static <Element> void generate(String prefix, Element[] elements) {
+	private static <Element extends Number> void generate(String prefix, Element[] elements) {
 		System.out.println(prefix + " { ");
 		for (Element element: elements) {
 			System.out.println("   - " + element);

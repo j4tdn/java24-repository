@@ -1,6 +1,7 @@
 package bean;
 
 import java.math.BigDecimal;
+import java.util.Objects;
 
 public class Item {
 
@@ -10,6 +11,11 @@ public class Item {
 	private Integer storeId;
 
 	public Item() {
+	}
+	
+	public Item(Integer itemId, String name) {
+		this.itemId = itemId;
+		this.name = name;
 	}
 
 	public Item(Integer itemId, String name, BigDecimal salesPrice, Integer storeId) {
@@ -62,6 +68,11 @@ public class Item {
 		}
 		
 		return getItemId() == that.getItemId();
+	}
+	
+	@Override
+	public int hashCode() {
+		return Objects.hash(getItemId());
 	}
 
 	@Override

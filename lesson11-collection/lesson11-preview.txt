@@ -14,6 +14,34 @@ VD2: List<T>
 object cho mọi phần tử
   --> hỗ trợ bắt lỗi tại compile
   
+Ôn tập
+--------
+Iterable<T>   :
+Collection<T> :
+List<T>       :                 --> ArrayList, LinkedList
+Set<T>        :                 --> HashSet, LinkedHashSet, TreeSet
+Map<K, V>     : Set<Entry<K, V> --> HashMap, LinkedHashMap, TreeMap
+
+Set<E> ==> set.add(e)
+       ==> map.put(new Entry<>(e, PRESENT))
+       
+Từ khóa 'var'
+--------
+- Hỗ trợ thay thế cho khai báo KDL phía bên trái của biến
+  + Dựa vào bên phải để biết KDL lúc compile
+  
+- Thông thường để biết biết có KDL là gì
+  + Bên trái là KDL lúc compile
+  + Bên phải là KDL lúc runtime
+  
+- Lưu ý
+  + var không thể chứa giá trị null
+  + var không thế chưa giá trị là một lambda
+  + var không thể là tham số truyền vào của hàm
+  
+
+--------  
+  
 Câu hỏi
 1. Phân biệt Array và ArrayList
 2. Phân biệt ArrayList và LinkedList  
