@@ -3,8 +3,8 @@ package functional;
 import bean.Item;
 
 @FunctionalInterface
-public interface ObjectMapper {
+public interface ItemMapper {
 	
 	Object apply(Item item);
-
+	
 }

@@ -83,7 +83,12 @@ hàm "bình thường" (có body) bằng các thêm các từ khóa: default, st
     	bằng anonymous function(lamda expression)
   
   VD: Shape: caclS
+  - Sau phiên bản Java 8, có các hàm có thân trong Interface, và có thể class implement
+  nhiều interface. Tuy nhiên nếu 2 interface cha có phương thức trùng tên thì class con
+  bắt buộc phải ovveride lại phương thức đó
   
+  - Nhưng đối với các hàm trừu tượng trong interface cha thì dù trùng tên hay không
+ class con vẫn phải ovverride lại
   
   
  Search từ khóa "Composition over Inheritance"
