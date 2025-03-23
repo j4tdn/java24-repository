@@ -1,5 +1,6 @@
 package view;
 
+import bean.Trader;
 import bean.Transaction;
 import model.DataModel;
 
@@ -24,6 +25,13 @@ public class Ex01TransactionDemo {
         System.out.println(getTransactionByYearAndSortByValue(transaction, (o1, o2) -> o1.getValue() - o2.getValue()));
         System.out.println(getTransactionByValueAndSortByCity(transaction, (o1, o2) -> o1.getTrader().getCity().compareTo(o2.getTrader().getCity())));
         System.out.println(getCity(transaction));
+        System.out.println(getTradersFromCambridgeAndSortByName(transaction, (o1, o2) -> o1.getName().compareTo(o2.getName())));
+        System.out.println(getNameOfTraders(transaction, (o1, o2) -> o1.compareTo(o2)));
+        System.out.println(isExistTradersInMilan(transaction));
+        System.out.println(getQuantityOfTradersInMilan(transaction));
+        System.out.println(getValueOfTransactionFromTradersLiveInCambridge(transaction));
+        System.out.println(getHighestValueOfTransaction(transaction));
+        System.out.println(getSmallestValueOfTransaction(transaction));
     }
 
     private static <T> Collection<T> getTransactionByYearAndSortByValue(Collection<T> collection, Comparator<T> comparator) {
@@ -63,6 +71,78 @@ public class Ex01TransactionDemo {
         return cities;
     }
 
+    private static <T> Collection<Trader> getTradersFromCambridgeAndSortByName(Collection<T> collection, Comparator<Trader> comparator) {
+        List<Trader> traders = new ArrayList<>();
+        for (T transaction : collection) {
+            if (transaction instanceof Transaction) {
+                if (((Transaction) transaction).getTrader().getCity().equals("Cambridge")) {
+                    traders.add(((Transaction) transaction).getTrader());
+                }
+            }
+        }
+        traders.sort(comparator);
+        return traders;
+    }
 
+    private static <T> List<String> getNameOfTraders(Collection<T> collection, Comparator<String> comparator) {
+        List<String> traders = new ArrayList<>();
+        for (T transaction : collection) {
+            if (transaction instanceof Transaction) {
+                traders.add(((Transaction) transaction).getTrader().getName());
+            }
+        }
+        traders.sort(comparator);
+        return traders;
+    }
+
+    private static boolean isExistTradersInMilan(Collection<Transaction> collection) {
+        boolean exist = false;
+        for (Transaction transaction : collection) {
+                if (transaction.getTrader().getCity().equals("Milan")) {
+                    exist = true;
+                }
+        }
+        return exist;
+    }
+
+    private static int getQuantityOfTradersInMilan(Collection<Transaction> collection) {
+        int quantity = 0;
+        for (Transaction transaction : collection) {
+            if (transaction.getTrader().getCity().equals("Milan")) {
+                quantity++;
+            }
+        }
+        return quantity;
+    }
+
+    private static Collection<Integer> getValueOfTransactionFromTradersLiveInCambridge(Collection<Transaction> collection) {
+        List<Integer> values = new ArrayList<>();
+        for (Transaction transaction : collection) {
+            if (transaction.getTrader().getCity().equals("Cambridge")) {
+                values.add(transaction.getValue());
+            }
+        }
+        return values;
+    }
+
+    private static int getHighestValueOfTransaction(Collection<Transaction> collection) {
+        int highestValue = Integer.MIN_VALUE;
+        for (Transaction transaction : collection) {
+            if (transaction.getValue() > highestValue) {
+                highestValue = transaction.getValue();
+            }
+        }
+        return highestValue;
+    }
+
+    private static int getSmallestValueOfTransaction(Collection<Transaction> collection) {
+        int smallestValue = Integer.MAX_VALUE;
+        for (Transaction transaction : collection) {
+            if (transaction.getValue() < smallestValue) {
+                smallestValue = transaction.getValue();
+            }
+        }
+        return smallestValue;
+    }
 
 }
