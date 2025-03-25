@@ -1,0 +1,16 @@
+VD: Iterable<T>
+VD2: List<T>
+
+
++ T: generic type đặt bất kỳ kí tự nào, thường kí tự đơn viết hoa
++ Generic<T>: generic interface là interface có tham số truyền vào là generic type
+Kiểu Iterable có tham số truyền vào là generic type KDL T, T đại diện cho KDL đối tượng
+Là có thể truyền vào KDL đối tượng nào đó cho T khi gọi Iterable
+
+=> Iterable<Integer>
+=> Iterable<String>
+
++ giúp tạo ra các common/util methods có thể áp dụng cho bất kỳ KDL(đối tượng) nào
++ Lợi ích: hạn chế raw(object) types, bắt buộc phải khai báo KDL cụ thể thay vì dùng 
+object cho mọi phần tử
+  --> hỗ trợ bắt lỗi tại compile
