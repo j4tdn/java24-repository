@@ -1,5 +1,7 @@
 package bean;
 
+import java.util.Objects;
+
 public class Transaction {
 	private Trader trader;
 	private int year;
@@ -36,6 +38,19 @@ public class Transaction {
 
 	public void setValue(int value) {
 		this.value = value;
+	}
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (!(obj instanceof Transaction that)) {
+			return false;
+		}
+		return getTrader().getCity() == that.getTrader().getCity();
+	}
+	@Override
+	public int hashCode() {
+		return Objects.hashCode(getTrader().getCity());
 	}
 
 	@Override

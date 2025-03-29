@@ -1,5 +1,7 @@
 package bean;
 
+import java.util.Objects;
+
 public class Trader {
 	private String name;
 	private String city;
@@ -27,7 +29,20 @@ public class Trader {
 	public void setCity(String city) {
 		this.city = city;
 	}
-	
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (!(obj instanceof Trader that)) {
+			return false;
+		}
+		return getCity() == that.getCity();
+	}
+	@Override
+	public int hashCode() {
+		return Objects.hashCode(getCity());
+	}
 	
 
 	@Override
