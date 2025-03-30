@@ -38,6 +38,14 @@ public class Transaction {
 	public void setValue(int value) {
 		this.value = value;
 	}
+	
+	public String getTraderName() {
+		return getTrader().getName();
+	}
+	
+	public String getTraderCity() {
+		return getTrader().getCity();
+	}
 
 	// equals, hashcode
 
