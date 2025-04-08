@@ -3,6 +3,7 @@ package collection.map;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.TreeMap;
 
 import static utils.CollectionUtils.*;
 
@@ -24,7 +25,7 @@ public class Ex02MapPrincipleOfPutting {
 		 + Có quals với key nào trong map chưa
 		 */
 		
-		Map<Item, List<Integer>> itemStoreMap = new HashMap<Item, List<Integer>>();
+		Map<Item, List<Integer>> itemStoreMap = new TreeMap<Item, List<Integer>>();
 		itemStoreMap.put(new Item(1, "Item A1"), List.of(101,201));
 		itemStoreMap.put(new Item(2, "Item A2"), List.of(102,202));
 		itemStoreMap.put(new Item(3, "Item A3"), List.of(103,203));

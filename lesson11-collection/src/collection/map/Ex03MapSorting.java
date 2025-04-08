@@ -1,14 +1,20 @@
 package collection.map;
 
+import java.util.Comparator;
+
 import java.util.*; // Import tất cả từ java.util để gọn
 import utils.CollectionUtils;
 
 public class Ex03MapSorting {
     public static void main(String[] args) {
-        Map<String, Integer> models = new TreeMap<>((s1, s2) -> {
-            if (s1 == null) return -1;
-            if (s2 == null) return 1;
-            return s1.compareTo(s2);
+        Map<String, Integer> models = new TreeMap<>((s1,s2) -> {
+        	if(s1 ==null) {
+        		return -1;
+        	}
+        	if(s2 == null) {
+        		return 1;
+        	}
+        	return s1.compareTo(s2);
         });
 
         models.put("Quảng Nam", 92);
@@ -20,23 +26,23 @@ public class Ex03MapSorting {
 
         CollectionUtils.generate("1. Sắp xếp theo Key", models);
         
-        CollectionUtils.generate("2. Sắp xếp theo values", models -> {
-        	
-        });
+        CollectionUtils.generate("2. Sắp xếp theo values", sort(models, (s1,s2) -> {
+        	return s1.getValue().compareTo(s2.getValue());
+        }));
     }
 
-    private static <K, V> Map<K, V> sort(Map<K, V> source, Comparator<Map.Entry<K, V>> comparator) {
+    private static Map<String, Integer> sort(Map<String, Integer> source, Comparator<Map.Entry<String, Integer>> comparator) {
         // B1: Chuyển đổi từ Map -> Set<Entry>
-        Set<Map.Entry<K, V>> entries = source.entrySet();
+        Set<Map.Entry<String, Integer>> entries = source.entrySet();
 
         // B2: Chuyển từ Set sang List
-        List<Map.Entry<K, V>> list = new ArrayList<>(entries);
+        List<Map.Entry<String, Integer>> list = new ArrayList<>(entries);
 
         // B3: Sắp xếp List
         list.sort(comparator);
 
         // B4: Đưa vào LinkedHashMap để giữ thứ tự
-        Map<K, V> target = new LinkedHashMap<>();
+        Map<String, Integer> target = new LinkedHashMap<>();
         list.forEach(entry -> target.put(entry.getKey(), entry.getValue()));
 
         return target;

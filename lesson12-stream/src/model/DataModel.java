@@ -1,0 +1,30 @@
+package model;
+
+import java.util.Arrays;
+import java.util.List;
+
+import bean.Apple;
+
+public class DataModel {
+	private DataModel() {
+		// TODO Auto-generated constructor stub
+	}
+	
+private DataModel() {
+		
+	}
+	
+	public static List<Apple> getApples() {
+		return List.of(
+				new Apple(1, "green", 200, "Vietnam"),	
+				new Apple(16, "green", 300, "Vietnam"),	
+				new Apple(22, "red", 300, "Lao"),	
+				new Apple(4, "yellow", 400, "Thailand"),	
+				new Apple(17, "red", 600, "Vietnam"),	
+				new Apple(6, "green", 100, "Thailand")	
+		);
+	}
+	
+
+
+}
