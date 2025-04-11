@@ -11,17 +11,6 @@ public class DataModel {
 	private DataModel() {
 	}
 	
-
-	public static List<Trader> getTraders() {
-		List<Trader> traders = Arrays.asList(
-				new Trader("Raoul", "Cambridge"),
-				new Trader("Mario", "Milan"),
-				new Trader("Alan", "Cambridge"),
-				 new Trader("Brian", "Cambridge")
-				);
-		return traders;
-	}
-	
 	
 	public static List<Transaction> getTransactions() {
 		Trader raoul = new Trader("Raoul", "Cambridge");
