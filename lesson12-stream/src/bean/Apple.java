@@ -1,5 +1,7 @@
 package bean;
 
+import java.util.Objects;
+
 public class Apple {
 	
 	private int id;
@@ -28,6 +30,27 @@ public class Apple {
 		this.color = color;
 		this.weight = weight;
 		this.country = country;
+	}
+	
+	public static boolean test(Apple apple) {
+	    final var fromVn = "Vietnam".equalsIgnoreCase(apple.getCountry());
+	    
+	    boolean isPrime = true;
+	    
+	    final var id = apple.getId();
+	    
+	    for (int i = 2; i <= Math.sqrt(id); i++) {
+	        if (id % i == 0) {
+	            isPrime = false;
+	            break;
+	        }
+	    }
+	    
+	    return id > 1 && fromVn && isPrime;
+	}
+	
+	public static int retrieveId(Apple apple) {
+		return apple.getId();
 	}
 
 	public int getId() {
@@ -75,7 +98,7 @@ public class Apple {
 	
 	@Override
 	public int hashCode() {
-		return super.hashCode();
+		return Objects.hash(getId());
 	}
 
 	@Override
