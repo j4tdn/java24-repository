@@ -47,7 +47,8 @@ public class Ex02MethodReference {
 		// Dạng 2: (T t) -> t.method() ==> T::method
 		
 		Function<Apple, Integer> f1 = (Apple apple) -> apple.getId();
-		Function<Apple, Integer> f11 = Apple::getId;
+		Function<Apple, Integer> f11 = Apple::getId; // non-static method reference
+		Function<Apple, Integer> f111 = Apple::retrieveId; // static method reference
 		
 		Function<Apple, String> f2 = (Apple apple) -> apple.getCountry();
 		Function<Apple, String> f22 = Apple::getCountry;
@@ -106,6 +107,11 @@ public class Ex02MethodReference {
 			
 			return Double.compare(a1.getWeight(), a2.getWeight());
 		});*/
+		
+		
+		// Lambda --> method reference --> non-static tuân theo 1 số dạng công thức
+		
+		// Lambda --> static method reference
 	}
 	
 	private static <T, R> Set<R> mapping(List<T> elements, Function<T, R> func) {
