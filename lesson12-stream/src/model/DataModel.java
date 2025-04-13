@@ -6,12 +6,22 @@ import java.util.Map;
 
 import bean.Apple;
 import bean.Dish;
+import bean.Player;
 import common.Kind;
 
 public class DataModel {
 
 	private DataModel() {
 
+	}
+	
+	public static List<Player> getPlayers() {
+		return List.of(
+			new Player("A1", List.of("baco", "haichuon", "giaro"), false),
+			new Player("A2", List.of(), true),
+			new Player("A3", List.of("bonco", "hairo", "giabich"), false),
+			new Player("A4", List.of("bayco", "boichuon", "giaco"), false)
+		);
 	}
 	
 	public static Map<String, Integer> getModels() {

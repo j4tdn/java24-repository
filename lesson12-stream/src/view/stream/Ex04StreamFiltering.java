@@ -28,6 +28,10 @@ public class Ex04StreamFiltering {
 		
 		// TODO: distinctBy(property)
 		
+		// Đầu vào 1 1 2 2 3
+		// Tìm các phần tử duy nhất: unique 3
+		// Liệt kê các phần tử mà ko trùng nhau: distinct 1 2 3
+		
 		generate(
 			"2. Tìm các phần tử duy nhất trong danh sách", 
 			getElements(elements, amount -> amount == 1)
@@ -43,9 +47,27 @@ public class Ex04StreamFiltering {
 			getElements(elements, amount -> amount > 1)
 		);
 		
-		// 5. Tìm 5 phần tử lớn nhất trong danh sách
+		generate(
+			"5. Lấy 2 phần tử đầu tiên", 
+			elements.stream()
+				.limit(2)
+				.toList()
+		);
 		
-		// 6. Sắp xếp tăng dần, sau đó lấy 2 phần tử cuối cùng trong danh sách
+		generate(
+			"5. Lấy 5 phần tử cuối cùng", 
+			elements.stream()
+				.skip(elements.size() - 5)
+				.toList()
+		);
+		
+		generate(
+			"7. Lấy các phần tử tử 3-7", 
+			elements.stream()
+				.skip(2)
+				.limit(4)
+				.toList()
+		);
 	}
 	
 	private static List<Integer> getElements(List<Integer> elements, Predicate<Long> predicate) {
