@@ -43,7 +43,7 @@ public class Ex02MethodReference {
 
 		Function<Apple, Integer> f1 = (Apple apple) -> apple.getId();
 		Function<Apple, Integer> f11 = Apple::getId; // non-static method reference
-		Function<Apple, Integer> f111 = Apple::retrieveId; // static method reference
+		Function<Apple, Integer> f111 = Apple::retrieveId; //  static method reference
 		
 
 		Function<Apple, String> f2 = (Apple apple) -> apple.getCountry();
@@ -87,18 +87,18 @@ public class Ex02MethodReference {
 		
 		inventory.add(new Apple(null));
 		
-		inventory.sort((a1,a2) -> {
-			if(a1.getCountry() == null) {
-				return 1;
-			}
-			
-			if(a2.getCountry() == null ) {
-				return -1;
-			}
-			
-			return a1.getCountry().compareTo(a2.getCountry());
-		});
-		
+//		inventory.sort((a1,a2) -> {
+//			if(a1.getCountry() == null) {
+//				return 1;
+//			}
+//			
+//			if(a2.getCountry() == null ) {
+//				return -1;
+//			}
+//			
+//			return a1.getCountry().compareTo(a2.getCountry());
+//		});
+//		
 		CollectionUtils.generate("Sắp xếp tăng dần theo Country, weigth", inventory);
 	}
 

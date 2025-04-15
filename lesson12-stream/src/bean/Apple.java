@@ -3,52 +3,64 @@ package bean;
 import java.util.Objects;
 
 public class Apple {
-	
+
 	private int id;
 	private String color;
 	private double weight;
 	private String country;
-	
+
 	public Apple() {
+		System.out.println("hello, empty constructor");
+		this.color = "dummy";
 	}
-	
+
 	public Apple(int id) {
 		this.id = id;
 	}
-	
-	public Apple(String country) {
-		this.country = country;
-	}
-	
+
+//	public Apple(String country) {
+//		this.country = country;
+//	}
+
 	public Apple(int id, String country) {
 		this.id = id;
 		this.country = country;
 	}
-	
+
 	public Apple(int id, String color, double weight, String country) {
 		this.id = id;
 		this.color = color;
 		this.weight = weight;
 		this.country = country;
 	}
-	
-	public static boolean test(Apple apple) {
-	    final var fromVn = "Vietnam".equalsIgnoreCase(apple.getCountry());
-	    
-	    boolean isPrime = true;
-	    
-	    final var id = apple.getId();
-	    
-	    for (int i = 2; i <= Math.sqrt(id); i++) {
-	        if (id % i == 0) {
-	            isPrime = false;
-	            break;
-	        }
-	    }
-	    
-	    return id > 1 && fromVn && isPrime;
+
+	public Apple(String line) {
+		String[] tokens = line.split(", ");
+		if (tokens.length == 4) {
+			this.id = Integer.parseInt(tokens[0]);
+			this.color = tokens[1];
+			this.weight = Double.parseDouble(tokens[2]);
+			this.country = tokens[3];
+		}
 	}
-	
+
+	public static boolean test(Apple apple) {
+		final var fromVn = "Vietnam".equalsIgnoreCase(apple.getCountry());
+
+		boolean isPrime = true;
+
+		final var id = apple.getId();
+
+		for (int i = 2; i <= Math.sqrt(id); i++) {
+			if (id % i == 0) {
+				isPrime = false;
+				break;
+			}
+		}
+
+		return id > 1 && fromVn && isPrime;
+	}
+
 	public static int retrieveId(Apple apple) {
 		return apple.getId();
 	}
@@ -84,18 +96,18 @@ public class Apple {
 	public void setCountry(String country) {
 		this.country = country;
 	}
-	
+
 	public boolean equals(Object o) {
-		if( this == o) {
+		if (this == o) {
 			return true;
 		}
-		if( !(o instanceof Apple that)) {
+		if (!(o instanceof Apple that)) {
 			return false;
 		}
-		
+
 		return getId() == that.getId();
 	}
-	
+
 	@Override
 	public int hashCode() {
 		return Objects.hash(getId());
