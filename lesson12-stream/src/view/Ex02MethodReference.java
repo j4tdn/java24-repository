@@ -38,7 +38,9 @@ public class Ex02MethodReference {
 		
 		
 //		Function<Apple, Integer> f1 = (Apple apple) -> apple.getId();
-//		Function<Apple, Integer> f11 = Apple::getId;
+		Function<Apple, Integer> f11 = Apple::getId;   // non-static method reference
+		Function<Apple, Integer> f111 = Apple::retrieveId;   // static method reference
+		
 //		
 //		
 //		Function<Apple, String> f2 = (Apple apple) -> apple.getCountry();
