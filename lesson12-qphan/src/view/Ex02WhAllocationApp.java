@@ -10,21 +10,20 @@ public class Ex02WhAllocationApp {
 	
 	 public static void main(String[] args) {
 	    	
-	        // B1
+	        // B1: Khởi dữ liệu đầu vào
 	        final Integer whAllocationAmount = 300;
-
-	        // B2
 	        final List<Store> stores = DataModel.getStores();
 	        
-	        // B3
+	        // B2: Thực hiện tính toán
 	        Map<Long, Integer> storeAllocatedValues = doAllocation(stores, whAllocationAmount);
 	        
-	        // B4
-	        // In kết quả
+	        // B3: In kết quả cuối cùng
+	        //   : Lưu ý: In kết quả từng bước sau khi xử lý
 	    }
 
 	    /**
 	     * Do Allocation.
+	     * 
 	     * Key: storeId with Long type
 	     * Value: storeAllocatedAmount after calculation with 4 steps
 	     * @return map of storeId, storeAllocatedAmount
