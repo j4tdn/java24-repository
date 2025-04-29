@@ -55,7 +55,7 @@ public class Store {
 		this.expectedSales = expectedSales;
 	}
 
-	public Boolean getSelected() {
+	public Boolean isSelected() {
 		return isSelected;
 	}
 
