@@ -27,7 +27,7 @@ public class NumberUtils {
 	}
 	
 	public static Integer zeroIfNegative(Integer source) {
-		return source < 0 ? 0 : source;
+		return Math.max(0, source);
 	}
 	
 }

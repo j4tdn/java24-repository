@@ -14,8 +14,8 @@ public class StreamUtils {
 	private StreamUtils() {
 	}
 
-	public static <E> List<E> filterToList(Collection<E> list, Predicate<E> predicate) {
-		return list.stream().filter(e -> predicate.test(e)).collect(Collectors.toList());
+	public static <E> List<E> filterToList(Collection<E> collection, Predicate<E> predicate) {
+		return collection.stream().filter(e -> predicate.test(e)).collect(Collectors.toList());
 	}
 
 	public static <E, K, V> Map<K, V> filterToMap(Collection<E> collection, Predicate<E> predicate,
@@ -24,8 +24,12 @@ public class StreamUtils {
 				.collect(Collectors.toMap(e -> keyMapper.apply(e), e -> valueMapper.apply(e)));
 	}
 
-	public static BigDecimal sum(Collection<BigDecimal> collection) {
+	public static BigDecimal sumOfBigDecimal(Collection<BigDecimal> collection) {
 		return collection.stream().reduce(BigDecimal.ZERO, BigDecimal::add);
+	}
+	
+	public static Integer sumOfInteger(Collection<Integer> collection) {
+		return collection.stream().reduce(0, Integer::sum);
 	}
 	
 	public static <E, K, V> Map<K, V> toMap(Collection<E> collection, Function<E, K> keyMapper, Function<E, V> valueMapper) {

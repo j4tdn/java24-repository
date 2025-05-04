@@ -31,8 +31,8 @@ public class DataModel {
 		return List.of(
 				new Store(1L, null, bd(18), bd(40), Boolean.TRUE),
 				new Store(2L, null, bd(19), bd(20), Boolean.TRUE), 
-				new Store(3L, null, bd(21), bd(17), Boolean.TRUE),
-				new Store(4L, null, bd(14), bd(31), Boolean.TRUE), 
+				new Store(3L, null, bd(21), bd(48), Boolean.TRUE),
+				new Store(4L, null, bd(8), bd(31), Boolean.TRUE), 
 				new Store(5L, null, bd(14), bd(10), Boolean.TRUE),
 				new Store(6L, null, bd(15), bd(30), Boolean.TRUE), 
 				new Store(7L, 2L, bd(15), null, Boolean.TRUE),
