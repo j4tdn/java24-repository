@@ -1,0 +1,825 @@
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+new file mode 100644
+--- /dev/null	(date 1743320422209)
++++ b/.idea/vcs.xml	(date 1743320422209)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+new file mode 100644
+--- /dev/null	(date 1743320422163)
++++ b/.idea/misc.xml	(date 1743320422163)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="21" project-jdk-type="JavaSDK">
++    <output url="file://$PROJECT_DIR$/out" />
++  </component>
++</project>
+\ No newline at end of file
+Index: src/view/Ex02MethodReference.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/view/Ex02MethodReference.java b/src/view/Ex02MethodReference.java
+new file mode 100644
+--- /dev/null	(date 1743324543316)
++++ b/src/view/Ex02MethodReference.java	(date 1743324543316)
+@@ -0,0 +1,27 @@
++package view;
++
++import bean.Apple;
++import model.DataModel;
++
++import java.util.*;
++import java.util.function.Function;
++
++public class Ex02MethodReference {
++    public static void main(String[] args) {
++        var inventory = new ArrayList<>(DataModel.getApples());
++        inventory.forEach(System.out::println);
++        System.out.println(mapping(inventory, Apple::getColor));
++        inventory.sort(Comparator.comparing(Apple::getColor, Comparator.reverseOrder()).thenComparing(Apple::getId, Comparator.reverseOrder()));
++    }
++
++    private static <T,R> Set<R> mapping(List<T> e, Function<T,R> func){
++        Set<R> set = new HashSet<>();
++
++        for (T t : e) {
++            set.add(func.apply(t));
++        }
++
++        return set;
++    }
++
++}
+Index: src/view/stream/Ex03StreamOperations.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/view/stream/Ex03StreamOperations.java b/src/view/stream/Ex03StreamOperations.java
+new file mode 100644
+--- /dev/null	(date 1744380805707)
++++ b/src/view/stream/Ex03StreamOperations.java	(date 1744380805707)
+@@ -0,0 +1,17 @@
++package view.stream;
++
++import bean.Dish;
++import model.DataModel;
++
++import java.util.List;
++
++public class Ex03StreamOperations {
++    public static void main(String[] args) {
++        List< Dish > dishes = DataModel.getDishes();
++
++        dishes.stream()
++                .filter(d -> d.getCalories() > 300)
++                .map(d->d.getCalories());
++
++    }
++}
+Index: src/model/DataModel.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/model/DataModel.java b/src/model/DataModel.java
+new file mode 100644
+--- /dev/null	(date 1744376935176)
++++ b/src/model/DataModel.java	(date 1744376935176)
+@@ -0,0 +1,58 @@
++package model;
++
++import bean.Apple;
++import bean.Dish;
++import common.Kind;
++
++import java.util.ArrayList;
++import java.util.HashMap;
++import java.util.List;
++import java.util.Map;
++
++public class DataModel {
++    private DataModel(){}
++
++    public static List<Dish> getDishes(){
++        return List.of(
++                new Dish("1", "D1", 243d, Kind.EGG),
++                new Dish("2", "D2", 356d, Kind.FISH),
++                new Dish("3", "D3", 465d, Kind.FISH),
++                new Dish("4", "D4", 876d, Kind.VEGGIE),
++                new Dish("5", "D5", 134d, Kind.FISH),
++                new Dish("6", "D6", 78d, Kind.OTHER),
++                new Dish("7", "D7", 44d, Kind.VEGGIE),
++                new Dish("8", "D8", 65d, Kind.VEGGIE)
++        );
++    }
++
++    public static List<Apple> getApples() {
++        return List.of(
++                new Apple(1,"green", 20.1, "Hue"),
++                new Apple(2,"blue", 22.1, "VietNam"),
++                new Apple(23,"red", 25.1, "Hue"),
++                new Apple(17,"white", 31.6, "Hue"),
++                new Apple(53,"black", 2.4, "VietNam"),
++                new Apple(6,"pink", 43.1, "Hue"),
++                new Apple(7,"green", 6.8, "Hue")
++        );
++    }
++
++    public static List<String> readFiles() {
++        return List.of(
++                "1, Green, 200, VietNam",
++                "16,  Green, 300, VietNam",
++                "22,  Red, 100, Lao"
++        );
++    }
++
++    public static Map<String, Integer> getModels() {
++        Map<String, Integer> models = new HashMap<>();
++        models.put("DFH", 1);
++        models.put("IHJ", 2);
++        models.put("CDR", 3);
++        models.put("VDR", 4);
++        models.put("EUN", 5);
++        models.put("RFV", 6);
++        return models;
++    }
++}
+Index: src/view/stream/Ex04StreamFiltering.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/view/stream/Ex04StreamFiltering.java b/src/view/stream/Ex04StreamFiltering.java
+new file mode 100644
+--- /dev/null	(date 1744384773060)
++++ b/src/view/stream/Ex04StreamFiltering.java	(date 1744384773060)
+@@ -0,0 +1,28 @@
++package view.stream;
++
++import java.util.HashMap;
++import java.util.List;
++import java.util.Map;
++import java.util.function.Predicate;
++import java.util.stream.Collectors;
++
++public class Ex04StreamFiltering {
++    public static void main(String[] args) {
++        List<Integer> elements = List.of(0,0,1,21,3,5,5,21,34, 34);
++
++        var evenElements = elements.stream()
++                .filter(x -> x % 2 == 0).toList();
++
++    }
++    private static List<Integer> getElements(List<Integer> elements, Predicate<Long> predicate) {
++        return elements.stream()
++                .collect(Collectors.groupingBy(e -> e, Collectors.counting()))
++                .entrySet()
++                .stream()
++                .filter(e -> predicate.test(e.getValue()))
++                .map(e -> e.getKey())
++                .distinct()
++                .sorted()
++                .toList();
++    }
++}
+Index: src/bean/Apple.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/bean/Apple.java b/src/bean/Apple.java
+new file mode 100644
+--- /dev/null	(date 1743775704608)
++++ b/src/bean/Apple.java	(date 1743775704608)
+@@ -0,0 +1,95 @@
++package bean;
++
++import java.util.Objects;
++
++public class Apple {
++    private int id;
++    private String color;
++    private double weight;
++    private String country;
++
++    public Apple() {
++    }
++
++    public Apple(int id) {
++        this.id = id;
++    }
++
++    public Apple(String country) {
++        this.country = country;
++    }
++
++    public Apple(int id, String country) {
++        this.id = id;
++        this.country = country;
++    }
++
++    public Apple(int id, String color, double weight, String country) {
++        this.id = id;
++        this.color = color;
++        this.weight = weight;
++        this.country = country;
++    }
++
++    public static boolean test(Apple apple) {
++        final var fromVn = "VietNam".equalsIgnoreCase(apple.getCountry());
++        boolean isPrime = true;
++        for (int i = 2; i<=Math.sqrt(apple.getId()); i++) {
++            if (i < 2) isPrime = false;
++            if( i%2 == 0 ) {
++                isPrime = false;
++                break;
++            }
++        }
++        return isPrime && fromVn;
++    }
++
++    public int getId() {
++        return id;
++    }
++
++    public void setId(int id) {
++        this.id = id;
++    }
++
++    public String getColor() {
++        return color;
++    }
++
++    public void setColor(String color) {
++        this.color = color;
++    }
++
++    public double getWeight() {
++        return weight;
++    }
++
++    public void setWeight(double weight) {
++        this.weight = weight;
++    }
++
++    public String getCountry() {
++        return country;
++    }
++
++    public void setCountry(String country) {
++        this.country = country;
++    }
++
++    @Override
++    public String toString() {
++        return "Apple [id=" + id + ", color=" + color + ", weight=" + weight + ", country=" + country + "]";
++    }
++
++    @Override
++    public boolean equals(Object o) {
++        if (o == null || getClass() != o.getClass()) return false;
++        Apple apple = (Apple) o;
++        return id == apple.id;
++    }
++
++    @Override
++    public int hashCode() {
++        return Objects.hashCode(id);
++    }
++}
+\ No newline at end of file
+Index: src/view/stream/Ex05StreamDistinctBy.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/view/stream/Ex05StreamDistinctBy.java b/src/view/stream/Ex05StreamDistinctBy.java
+new file mode 100644
+--- /dev/null	(date 1744530024042)
++++ b/src/view/stream/Ex05StreamDistinctBy.java	(date 1744530024042)
+@@ -0,0 +1,27 @@
++package view.stream;
++
++import bean.Apple;
++import model.DataModel;
++
++import java.util.*;
++import java.util.function.Function;
++import java.util.stream.Collectors;
++
++public class Ex05StreamDistinctBy {
++    public static void main(String[] args) {
++        List<Integer> elements = List.of(0,0,1,21,3,5,5,21,34, 34);
++
++        List<Apple> inventory = DataModel.getApples();
++
++        List<Apple> distinctApplesByCountry = distinctBy(inventory, Apple::getCountry);
++        List<Apple> distinctApplesByWeight = distinctBy(inventory, Apple::getWeight);
++
++        System.out.println(distinctApplesByCountry);
++        System.out.println(distinctApplesByWeight);
++    }
++
++    private static <Element, T> List<Element> distinctBy(List<Element> elements, Function<Element, T> func) {
++        Set<T> seen = new HashSet<T>();
++        return elements.stream().filter(e -> seen.add(func.apply(e))).collect(Collectors.toList());
++    }
++}
+Index: src/bean/Dish.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/bean/Dish.java b/src/bean/Dish.java
+new file mode 100644
+--- /dev/null	(date 1743780121211)
++++ b/src/bean/Dish.java	(date 1743780121211)
+@@ -0,0 +1,77 @@
++package bean;
++
++import common.Kind;
++
++import java.util.Objects;
++
++public class Dish {
++    private String id;
++    private String name;
++    private Double calories;
++    private Kind kind;
++
++    public Dish() {}
++
++    public Dish(String id, String name, Double calories, Kind kind) {
++        this.id = id;
++        this.name = name;
++        this.calories = calories;
++        this.kind = kind;
++    }
++
++    public String getId() {
++        return id;
++    }
++
++    public void setId(String id) {
++        this.id = id;
++    }
++
++    public String getName() {
++        return name;
++    }
++
++    public void setName(String name) {
++        this.name = name;
++    }
++
++    public Double getCalories() {
++        return calories;
++    }
++
++    public void setCalories(Double calories) {
++        this.calories = calories;
++    }
++
++    public Kind getKind() {
++        return kind;
++    }
++
++    public void setKind(Kind kind) {
++        this.kind = kind;
++    }
++
++    @Override
++    public String toString() {
++        return "Dish{" +
++                "id='" + id + '\'' +
++                ", name='" + name + '\'' +
++                ", calories=" + calories +
++                ", kind=" + kind +
++                '}';
++    }
++
++    @Override
++    public boolean equals(Object o) {
++        if (o == null || getClass() != o.getClass()) return false;
++        Dish dish = (Dish) o;
++        return Objects.equals(id, dish.id);
++    }
++
++    @Override
++    public int hashCode() {
++        return Objects.hashCode(id);
++    }
++}
++
++
+Index: src/view/Ex04ConstructorReference.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/view/Ex04ConstructorReference.java b/src/view/Ex04ConstructorReference.java
+new file mode 100644
+--- /dev/null	(date 1743777009152)
++++ b/src/view/Ex04ConstructorReference.java	(date 1743777009152)
+@@ -0,0 +1,26 @@
++package view;
++
++import bean.Apple;
++import model.DataModel;
++
++import java.util.ArrayList;
++import java.util.List;
++import java.util.function.Function;
++
++public class Ex04ConstructorReference {
++    public static void main(String[] args) {
++        final List<String> lines = DataModel.readFiles();
++
++        final List<Apple> objects = mapping(lines, Apple::new);
++
++        System.out.println(objects);
++    }
++
++    private static <T,R> List<R> mapping(List<T> elements, Function<T,R> func) {
++        List<R> result = new ArrayList<>();
++        for (T element : elements) {
++            result.add(func.apply(element));
++        }
++        return result;
++    }
++}
+Index: src/view/Ex03StaticMethodReference.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/view/Ex03StaticMethodReference.java b/src/view/Ex03StaticMethodReference.java
+new file mode 100644
+--- /dev/null	(date 1743775656193)
++++ b/src/view/Ex03StaticMethodReference.java	(date 1743775656193)
+@@ -0,0 +1,32 @@
++package view;
++
++import bean.Apple;
++import model.DataModel;
++
++import java.util.ArrayList;
++import java.util.List;
++import java.util.function.Predicate;
++
++public class Ex03StaticMethodReference {
++    public static void main(String[] args) {
++        final var inventory = DataModel.getApples();
++
++       final var redApples =  filter(inventory, apple -> apple.getColor().equals("red"));
++
++       final var target = filter(inventory, Apple::test);
++
++        System.out.println(target);
++    }
++
++    private static List<Apple> filter(List<Apple> inventory, Predicate<Apple> predicate) {
++        List<Apple> result = new ArrayList<>();
++
++        for (Apple apple : inventory) {
++            if (predicate.test(apple)) {
++                result.add(apple);
++            }
++        }
++        return result;
++    }
++
++}
+Index: src/view/stream/Ex01StreamBasicDemo.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/view/stream/Ex01StreamBasicDemo.java b/src/view/stream/Ex01StreamBasicDemo.java
+new file mode 100644
+--- /dev/null	(date 1744377729613)
++++ b/src/view/stream/Ex01StreamBasicDemo.java	(date 1744377729613)
+@@ -0,0 +1,37 @@
++package view.stream;
++
++import bean.Dish;
++import common.Kind;
++import model.DataModel;
++
++import java.util.*;
++import java.util.stream.Collectors;
++
++public class Ex01StreamBasicDemo {
++    public static void main(String[] args) {
++        List<Dish> menu = DataModel.getDishes();
++
++        List<Dish> l1 = menu.stream()
++                .filter(d -> d.getCalories() > 250)
++                .toList();
++
++        var l2 = menu.stream()
++                .map(Dish::getName)
++                .collect(Collectors.joining(","));
++
++        var l3 = menu.stream()
++                .filter(d -> d.getKind() == Kind.VEGGIE)
++                .map(Dish::getName)
++                .collect(Collectors.joining(","));
++        System.out.println(l3);
++
++        Map<String, Integer> models = DataModel.getModels();
++
++        var res = models.entrySet()
++                .stream()
++                .sorted(Map.Entry.comparingByKey())
++                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (a, b) -> a, LinkedHashMap::new));
++        System.out.println(res);
++    }
++
++}
+Index: ../lesson11-trananhvu/.idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../lesson11-trananhvu/.idea/workspace.xml b/../lesson11-trananhvu/.idea/workspace.xml
+new file mode 100644
+--- /dev/null	(date 1743320293544)
++++ b/../lesson11-trananhvu/.idea/workspace.xml	(date 1743320293544)
+@@ -0,0 +1,82 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="AutoImportSettings">
++    <option name="autoReloadType" value="SELECTIVE" />
++  </component>
++  <component name="ChangeListManager">
++    <list default="true" id="c5de9fc2-1d9d-447c-8115-a68fb56b2b49" name="Changes" comment="" />
++    <option name="SHOW_DIALOG" value="false" />
++    <option name="HIGHLIGHT_CONFLICTS" value="true" />
++    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
++    <option name="LAST_RESOLUTION" value="IGNORE" />
++  </component>
++  <component name="FileTemplateManagerImpl">
++    <option name="RECENT_TEMPLATES">
++      <list>
++        <option value="Class" />
++      </list>
++    </option>
++  </component>
++  <component name="Git.Settings">
++    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
++  </component>
++  <component name="ProjectColorInfo">{
++  &quot;customColor&quot;: &quot;&quot;,
++  &quot;associatedIndex&quot;: 6
++}</component>
++  <component name="ProjectId" id="2uieH7LGswFybyt2K1LRVLIO4K0" />
++  <component name="ProjectViewState">
++    <option name="hideEmptyMiddlePackages" value="true" />
++    <option name="showLibraryContents" value="true" />
++  </component>
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;Application.Ex02PrintRectangle.executor&quot;: &quot;Run&quot;,
++    &quot;Application.Ex03CDManagementSystem.executor&quot;: &quot;Run&quot;,
++    &quot;Application.Ex04CardGame.executor&quot;: &quot;Run&quot;,
++    &quot;Application.Ex05Dictionary.executor&quot;: &quot;Run&quot;,
++    &quot;Application.Ex06ExpenseManagement.executor&quot;: &quot;Run&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;lesson11-ex&quot;,
++    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
++    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
++    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
++    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
++  }
++}</component>
++  <component name="SharedIndexes">
++    <attachedChunks>
++      <set>
++        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.23654.189" />
++        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-IU-243.23654.189" />
++      </set>
++    </attachedChunks>
++  </component>
++  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
++  <component name="TaskManager">
++    <task active="true" id="Default" summary="Default task">
++      <changelist id="c5de9fc2-1d9d-447c-8115-a68fb56b2b49" name="Changes" comment="" />
++      <created>1742735733763</created>
++      <option name="number" value="Default" />
++      <option name="presentableId" value="Default" />
++      <updated>1742735733763</updated>
++      <workItem from="1742735735574" duration="13000" />
++      <workItem from="1742735763819" duration="2026000" />
++      <workItem from="1742737827887" duration="69000" />
++      <workItem from="1742779477415" duration="1451000" />
++      <workItem from="1742782125930" duration="3091000" />
++      <workItem from="1742786121319" duration="1592000" />
++      <workItem from="1742787757620" duration="3944000" />
++      <workItem from="1743064740576" duration="2000" />
++      <workItem from="1743315397935" duration="3830000" />
++    </task>
++    <servers />
++  </component>
++  <component name="TypeScriptGeneratedFilesManager">
++    <option name="version" value="3" />
++  </component>
++</project>
+\ No newline at end of file
+Index: ../lesson11-trananhvu/.idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../lesson11-trananhvu/.idea/misc.xml b/../lesson11-trananhvu/.idea/misc.xml
+new file mode 100644
+--- /dev/null	(date 1743320275782)
++++ b/../lesson11-trananhvu/.idea/misc.xml	(date 1743320275782)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectRootManager" version="2" default="true">
++    <output url="file://$PROJECT_DIR$/out" />
++  </component>
++</project>
+\ No newline at end of file
+Index: src/common/Kind.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/common/Kind.java b/src/common/Kind.java
+new file mode 100644
+--- /dev/null	(date 1743780026524)
++++ b/src/common/Kind.java	(date 1743780026524)
+@@ -0,0 +1,9 @@
++package common;
++
++public enum Kind {
++    MEAT,
++    FISH,
++    EGG,
++    VEGGIE,
++    OTHER
++}
+Index: src/view/stream/Ex07StreamMatching.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/view/stream/Ex07StreamMatching.java b/src/view/stream/Ex07StreamMatching.java
+new file mode 100644
+--- /dev/null	(date 1744533364813)
++++ b/src/view/stream/Ex07StreamMatching.java	(date 1744533364813)
+@@ -0,0 +1,14 @@
++package view.stream;
++
++import java.util.List;
++import java.util.Optional;
++
++public class Ex07StreamMatching {
++    public static void main(String[] args) {
++        List<Integer> elements = List.of(1, 2, 1, 4, 5, 8, 7, 10, 4, 12);
++
++        var res1 = elements.stream().anyMatch(e -> e % 10 == 0);
++        Optional<Integer> res2 = elements.stream().filter(e -> e % 4 == 0).findFirst();
++        res2.ifPresent(System.out::println);
++    }
++}
+Index: src/view/stream/Ex08StreamReduce.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/view/stream/Ex08StreamReduce.java b/src/view/stream/Ex08StreamReduce.java
+new file mode 100644
+--- /dev/null	(date 1744533873293)
++++ b/src/view/stream/Ex08StreamReduce.java	(date 1744533873293)
+@@ -0,0 +1,16 @@
++package view.stream;
++
++import java.util.Arrays;
++import java.util.List;
++
++public class Ex08StreamReduce {
++    public static void main(String[] args) {
++        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
++
++        System.out.println(numbers.stream().reduce(Integer::sum));
++
++        System.out.println(numbers.stream().reduce(Integer::max));
++        System.out.println(numbers.stream().reduce(Integer::min));
++
++    }
++}
+Index: .idea/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+new file mode 100644
+--- /dev/null	(date 1743320303505)
++++ b/.idea/.gitignore	(date 1743320303505)
+@@ -0,0 +1,8 @@
++# Default ignored files
++/shelf/
++/workspace.xml
++# Editor-based HTTP Client requests
++/httpRequests/
++# Datasource local storage ignored files
++/dataSources/
++/dataSources.local.xml
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+new file mode 100644
+--- /dev/null	(date 1743320422127)
++++ b/.idea/modules.xml	(date 1743320422127)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/lesson12-stream.iml" filepath="$PROJECT_DIR$/lesson12-stream.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+Index: lesson12-stream.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lesson12-stream.iml b/lesson12-stream.iml
+new file mode 100644
+--- /dev/null	(date 1743320422089)
++++ b/lesson12-stream.iml	(date 1743320422089)
+@@ -0,0 +1,11 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="JAVA_MODULE" version="4">
++  <component name="NewModuleRootManager" inherit-compiler-output="true">
++    <exclude-output />
++    <content url="file://$MODULE_DIR$">
++      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: src/view/Ex01UsingLocalVariableFromLambda.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/view/Ex01UsingLocalVariableFromLambda.java b/src/view/Ex01UsingLocalVariableFromLambda.java
+new file mode 100644
+--- /dev/null	(date 1743320464042)
++++ b/src/view/Ex01UsingLocalVariableFromLambda.java	(date 1743320464042)
+@@ -0,0 +1,18 @@
++package view;
++
++public class Ex01UsingLocalVariableFromLambda {
++    private static String author = "Admin";
++    public static void main(String[] args) {
++        testing(10);
++    }
++
++    public static void testing(int duration) {
++        String taskName = "TaskExecutor";
++
++        Runnable task = () -> {
++            System.out.println(taskName + duration + " seconds");
++            System.out.println("by" + author);
++        };
++        task.run();
++    }
++}

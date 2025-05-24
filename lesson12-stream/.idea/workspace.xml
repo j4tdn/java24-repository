@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c7530416-cba7-4a7d-a199-f3645fa30210" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../lesson11-trananhvu/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lesson11-trananhvu/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson12-stream.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bean/Apple.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bean/Dish.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/Kind.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/DataModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/Ex01UsingLocalVariableFromLambda.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/Ex02MethodReference.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/Ex03StaticMethodReference.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/Ex04ConstructorReference.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/stream/Ex01StreamBasicDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/stream/Ex03StreamOperations.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/stream/Ex04StreamFiltering.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/stream/Ex05StreamDistinctBy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/stream/Ex07StreamMatching.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/stream/Ex08StreamReduce.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2v1l7GfkNfONE8k3kntq9BZHaBp" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Ex01StreamBasicDemo.executor": "Run",
+    "Application.Ex01UsingLocalVariableFromLambda.executor": "Run",
+    "Application.Ex02MethodReference.executor": "Run",
+    "Application.Ex03StaticMethodReference.executor": "Run",
+    "Application.Ex04ConstructorReference.executor": "Run",
+    "Application.Ex04StreamFiltering.executor": "Run",
+    "Application.Ex05StreamDistinctBy.executor": "Run",
+    "Application.Ex07StreamMatching.executor": "Run",
+    "Application.Ex08StreamReduce.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "ex12",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/java24/2. JAVA/lesson12-qphan",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.23654.189" />
+        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-IU-243.23654.189" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c7530416-cba7-4a7d-a199-f3645fa30210" name="Changes" comment="" />
+      <created>1743320293976</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1743320293976</updated>
+      <workItem from="1743320295083" duration="3528000" />
+      <workItem from="1743773867239" duration="8901000" />
+      <workItem from="1744166737089" duration="1481000" />
+      <workItem from="1744196607922" duration="742000" />
+      <workItem from="1744376680020" duration="5391000" />
+      <workItem from="1744383593765" duration="1418000" />
+      <workItem from="1744525286796" duration="6521000" />
+      <workItem from="1744555992739" duration="1000" />
+      <workItem from="1744602179054" duration="6697000" />
+      <workItem from="1745132419124" duration="942000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
