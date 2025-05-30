@@ -23,7 +23,7 @@ public class WhAllocationDemo {
 
 	public static void main(String[] args) {
 
-		// Step 1: Check for planning amount
+		System.out.println(" Step 1: Check for planning amount");
 		Integer planningAmount = DataModel.planningAmount;
 		Integer requiredMinPlanningAmount = DataModel.requiredMinPlanningAmount;
 
@@ -32,7 +32,7 @@ public class WhAllocationDemo {
 			return;
 		}
 
-		// Step 2: Filling gaps by references or average
+		System.out.println("\nStep 2: Filling gaps by references or average");
 		List<Store> storesA55 = DataModel.mockStoresOfRefItemA55().values().stream().flatMap(List::stream)
 				.collect(Collectors.toList());
 		List<Store> storesA77 = DataModel.mockStoresOfRefItemA77().values().stream().flatMap(List::stream)
@@ -46,30 +46,30 @@ public class WhAllocationDemo {
 		System.out.println("Stores A77 after filling gaps");
 		storesA55.forEach(System.out::println);
 
-		// Step 3: Calculate Store Demand of current Item(Item A1)
+		System.out.println("\nStep 3: Calculate Store Demand of current Item(Item A1)");
 		Map<Store, BigDecimal> demand = calculateStoreDemandOfA1(storesA55, storesA77);
 		demand.forEach((s, demandNew) -> {
 			System.out.printf("Store %s, Demand New: %s\n", s.getDesc(), demandNew);
 		});
 
-		// Step 4: Sum up Demand to WH Level
+		System.out.println("\nStep 4: Sum up Demand to WH Level");
 		Map<Integer, BigDecimal> demandWH = sumDemandByWH(demand);
 		demandWH.forEach((whId, totalDemand) -> {
 			System.out.printf("WH: %d, Total Demand: %s\n", whId, totalDemand);
 		});
 
-		// Step 5 Calculate Shares
+		System.out.println("\nStep 5 Calculate Shares");
 		Map<Integer, BigDecimal> whShare = calWHShare(demandWH);
 		whShare.forEach((wh, share) -> {
 			System.out.printf("WH: %d, WH share: %s\n", wh, share);
 		});
-		// Step 6 Allocate by Shares
+		System.out.println("\nStep 6 Allocate by Shares");
 		Map<Integer, BigDecimal> allocateShare = calAllocateByShare(whShare, planningAmount);
 		allocateShare.forEach((wh, alloc) -> {
 			System.out.printf("WH: %d, Alloc: %s\n", wh, alloc);
 		});
 
-		// Step 7 Apply Minimum
+		System.out.println("\nStep 7 Apply Minimum"); 
 		Integer minPerStore = DataModel.minPerStore;
 		Integer amountOfStore = DataModel.mockItemStoreIds().size();
 		Map<Integer, BigDecimal> min = applyMin(allocateShare, minPerStore, amountOfStore);
