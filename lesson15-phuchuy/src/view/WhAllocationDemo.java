@@ -3,9 +3,11 @@ package view;
 import static model.DataModel.mockRefStores;
 import static model.DataModel.mockRefWeights;
 import static model.DataModel.mockStoreTrendFactors;
+import static model.DataModel.mockStoresOfRefItemA55;
 import static model.DataModel.mockStoresOfRefItemA77;
 import static model.DataModel.planningAmount;
 import static model.DataModel.requiredMinPlanningAmount;
+import static utils.CollectionUtils.generate;
 import static utils.NumberUtils.bd;
 
 import java.math.BigDecimal;
@@ -23,21 +25,38 @@ import bean.Store;
 public class WhAllocationDemo {
 
 	public static void main(String[] args) {
-
-		System.out.println(
-				"Check Planning Amount ..... " + checkPlanningAmount(planningAmount, requiredMinPlanningAmount));
 		
-		List<Store> interpolatedPotential = fillingGapPotentials(mockStoresOfRefItemA77(), mockRefStores());
-		System.out.println(interpolatedPotential);
-		calDemand(mockRefWeights(), mockStoreTrendFactors(), fillingGapPotentials(mockStoresOfRefItemA77(), mockRefStores()));
-
+		Map<Integer, BigDecimal> storeTrendFactors = mockStoreTrendFactors();
+		Map<Integer, Integer> refStores = mockRefStores();
+		Map<Integer, BigDecimal> refWeights = mockRefWeights();
+		
+		List<Map<Item, List<Store>>> refItems = new ArrayList<>();
+		refItems.add(mockStoresOfRefItemA55());
+		refItems.add(mockStoresOfRefItemA77());
+		
+		
+		System.out.println("Step 1: Check Planning Amount ..... ");
+		if (!(checkPlanningAmount(planningAmount, requiredMinPlanningAmount))) {
+			System.out.println("Invadlid !");
+			return;
+		} else {
+			System.out.println("OK !");
+		}
+		
+		
+		for (var ele: refItems) {
+			List<Store> interpolatedPotential = fillingGapPotentials(ele, refStores);
+			generate("Step 2: filling gap potential for each refItem", interpolatedPotential);
+		
+		}
+		
 	}
 
 	private static boolean checkPlanningAmount(Integer planningAmount, Integer requireAmount) {
 		return planningAmount > requireAmount;
 	}
 
-	private static List<Store> fillingGapPotentials (Map<Item, List<Store>> item, Map<Integer, Integer> refStore) {
+	private static List<Store> fillingGapPotentials(Map<Item, List<Store>> item, Map<Integer, Integer> refStore) {
 		List<Store> result = new ArrayList<>();
 
 		List<Store> stores = item.entrySet().stream().flatMap(entry -> entry.getValue().stream())
@@ -46,7 +65,7 @@ public class WhAllocationDemo {
 		List<Store> storeWithNoPotential = stores.stream().filter(t -> t.getPotential().compareTo(bd(0)) == 0).toList();
 
 		List<Store> storeWithPotential = stores.stream().filter(t -> t.getPotential().compareTo(bd(0)) != 0).toList();
-		
+
 		for (var ele : storeWithPotential) {
 			ele.setPotential(ele.getPotential().setScale(1, RoundingMode.HALF_UP));
 		}
@@ -56,9 +75,9 @@ public class WhAllocationDemo {
 
 		for (var ele : storeWithNoPotential) {
 			Integer storeId = ele.getId();
-			
+
 			Integer refStoreId = refStore.get(storeId);
-			
+
 			Store refStorePotential = stores.stream().filter(t -> t.getId() == refStoreId).findFirst().orElse(null);
 			if (refStoreId != null) {
 				ele.setPotential(refStorePotential.getPotential().setScale(1, RoundingMode.HALF_UP));
