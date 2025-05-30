@@ -24,3 +24,4 @@ class Ex02InternalClass {
 	}
 	
 }
+

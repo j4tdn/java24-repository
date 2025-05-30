@@ -12,6 +12,7 @@ public class Item {
 
 	public Item() {
 	}
+	
 	public Item(Integer itemId, String name) {
 		this.itemId = itemId;
 		this.name = name;
@@ -68,6 +69,7 @@ public class Item {
 		
 		return getItemId() == that.getItemId();
 	}
+	
 	@Override
 	public int hashCode() {
 		return Objects.hash(getItemId());

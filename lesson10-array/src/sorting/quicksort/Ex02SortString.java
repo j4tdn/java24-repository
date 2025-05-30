@@ -19,8 +19,6 @@ public class Ex02SortString {
 
 		System.out.println("1. Mảng ban đầu: " + Arrays.toString(elements));
 
-		
-		
 		Arrays.sort(elements, (s1, s2) -> {
 			if (s1 == null) {
 				return -1;
@@ -33,10 +31,6 @@ public class Ex02SortString {
 
 		System.out.println("\n2. Mảng sắp xếp tăng dần: " + Arrays.toString(elements));
 
-		
-		
-		
-		
 		Arrays.sort(elements, (s1, s2) -> {
 			if (s1 == null) {
 				return -1;

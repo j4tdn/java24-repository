@@ -55,4 +55,5 @@ public class Ex05ObjectTypeAvailable {
 		// Item i22 = 22 'Z' 22d
 		
 	}
+	
 }

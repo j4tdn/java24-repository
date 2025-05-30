@@ -1,0 +1,10 @@
+Abstraction = Tính chất trừu tượng
+
+Định nghĩa
+==========
+Tính chất trừu tượng được thể qua 
++ class
++ abstract class
++ interface
++ abstract method
+

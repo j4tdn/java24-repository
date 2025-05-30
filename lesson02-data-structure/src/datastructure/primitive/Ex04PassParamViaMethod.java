@@ -45,4 +45,5 @@ public class Ex04PassParamViaMethod {
 	private static void modify(int number) { // xanh
 		number = 9999;
 	}
+	
 }

@@ -7,7 +7,6 @@ public class Book {
 	private Double price;
 	
 	public Book() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public Book(String id, String name, Double price) {
@@ -44,8 +43,4 @@ public class Book {
 	public String toString() {
 		return "Book [id=" + id + ", name=" + name + ", price=" + price + "]";
 	}
-	
-	
-	
-	
 }

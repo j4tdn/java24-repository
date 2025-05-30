@@ -45,4 +45,6 @@ public class Ex01ObjectTypeDemo {
 		System.out.println("item4 ==> " + item4);
 	}
 	
+	
+	
 }

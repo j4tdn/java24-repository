@@ -5,7 +5,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Random;
 
-import utills.IoUtils;
+import utils.IoUtils;
 
 public class Ex07Finally {
 	

@@ -2,6 +2,6 @@ package inheritance.iinterface;
 
 public interface Style {
 	
-	void setBorder ();
-
+	void setBorder();
+	
 }

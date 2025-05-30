@@ -1,4 +1,3 @@
-
 package view.datetime;
 
 import java.text.DateFormat;

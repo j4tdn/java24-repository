@@ -26,17 +26,11 @@ public class Ex03SortItem {
 		});
 		ArrayUtils.generate("1. Tăng dần theo id", items);
 		
-		
-		
-		
 		// Arrays.sort(items);
 		Arrays.sort(items, (i1, i2) -> {
 			return Double.compare(i2.getSalesPrice(), i1.getSalesPrice());
 		});
 		ArrayUtils.generate("2. Giảm dần theo salesPrice", items);
-		
-		
-		
 		
 		Arrays.sort(items, (i1, i2) -> {
 			int storeIdDiff = i1.getStoreId().compareTo(i2.getStoreId());

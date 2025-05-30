@@ -6,6 +6,7 @@ import java.util.Set;
 import utils.CollectionUtils;
 
 public class Ex01SetDemo {
+	
 	public static void main(String[] args) {
 		Set<String> set = new HashSet<>();
 		
@@ -17,14 +18,12 @@ public class Ex01SetDemo {
 		set.add("z1");
 		set.add("g6");
 		
-		
-		
 		// duplicated values
 		set.add("b4");
 		set.add("a8");
 		
-		System.out.println("Size : " + set.size());
-		CollectionUtils.generate("Dữ liệu : ", set);
+		System.out.println("size: " + set.size());
+		CollectionUtils.generate("1. Dữ liệu", set);
 	}
-
+	
 }

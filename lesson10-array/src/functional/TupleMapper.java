@@ -1,8 +1,10 @@
 package functional;
 
-import bean.*;
+import bean.Tuple;
 
 @FunctionalInterface
 public interface TupleMapper {
- Object apply(Tuple tuple);
+	
+	Object apply(Tuple tuple);
+	
 }

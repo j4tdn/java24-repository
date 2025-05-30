@@ -11,7 +11,6 @@ public class ArrayUtils {
 	private ArrayUtils() {
 	}
 	
-	// Hàm giảm dần, theo kiểu có sẵn
 	public static void reverse(int[] elements) {
 		for (int i = 0; i < elements.length/2; i++) {
 			int temp = elements[i];

@@ -1,5 +1,5 @@
 package bean;
-import java.math.BigDecimal;
+
 public class TextBook extends Book {
 	
 	private Boolean isNew;
@@ -7,9 +7,9 @@ public class TextBook extends Book {
 	
 	public TextBook() {
 	}
-	public TextBook(String id, String name, Double price)
-	{
-		this(id,name,price,true,0d);
+	
+	public TextBook(String id, String name, Double price) {
+		this(id, name, price, true, 0d);
 	}
 
 	public TextBook(String id, String name, Double price, Boolean isNew, Double discountInPercent) {
@@ -17,7 +17,7 @@ public class TextBook extends Book {
 		this.isNew = isNew;
 		this.discountInPercent = discountInPercent;
 	}
-
+	
 	public Boolean getIsNew() {
 		return isNew;
 	}
@@ -33,20 +33,11 @@ public class TextBook extends Book {
 	public void setDiscountInPercent(Double discountInPercent) {
 		this.discountInPercent = discountInPercent;
 	}
+
 	@Override
 	public String toString() {
 		return "TextBook [isNew=" + isNew + ", discountInPercent=" + discountInPercent + ", getId()=" + getId()
 				+ ", getName()=" + getName() + ", getPrice()=" + getPrice() + "]";
 	}
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
 }

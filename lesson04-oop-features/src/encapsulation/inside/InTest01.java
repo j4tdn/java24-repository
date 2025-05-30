@@ -3,7 +3,7 @@ package encapsulation.inside;
 public class InTest01 {
 	
 	private static int a1;
-	public static int  a2;
+	public static int a2;
 	protected static int a3;
 	int a4;
 	
@@ -12,5 +12,4 @@ public class InTest01 {
 	protected static void method03() {};
 	static void method04() {};
 	
-
 }

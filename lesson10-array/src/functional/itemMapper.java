@@ -1,7 +1,10 @@
 package functional;
+
 import bean.Item;
+
 @FunctionalInterface
-public interface itemMapper {
+public interface ItemMapper {
 	
 	Object apply(Item item);
+	
 }

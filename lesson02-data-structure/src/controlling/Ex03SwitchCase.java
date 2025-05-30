@@ -75,4 +75,5 @@ public class Ex03SwitchCase {
 			System.out.println("Invalid Day");
 		}
 	}
+	
 }

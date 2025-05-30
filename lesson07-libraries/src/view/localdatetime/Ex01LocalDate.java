@@ -1,4 +1,3 @@
-
 package view.localdatetime;
 
 import java.time.LocalDate;
