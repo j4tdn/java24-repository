@@ -1,0 +1,7 @@
+1. Text File
+- Content đọc dc
+- Đọc/ghi file theo lines, strings
+
+2. Serializable file
+- Content đc mã hoá, chuyển sang bytestream
+- Đọc & ghi obj
