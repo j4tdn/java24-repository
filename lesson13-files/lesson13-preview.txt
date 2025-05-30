@@ -1,0 +1,8 @@
+1. Text file
+- Nội dung đọc được
+- Đọc/ghi file theo từng dòng, từng string
+
+
+2. Serializable file
+- Nội dung được mã hóa, chuyển sang bytestream
+- Đọc và ghi đối tượng
