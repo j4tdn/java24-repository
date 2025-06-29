@@ -102,7 +102,7 @@ public class warehouseAllocationService {
 			Item itemA55 = refItemA55Data.keySet().iterator().next();
 			Item itemA77 = refItemA77Data.keySet().iterator().next();
 			List<Store> storesA55 = refItemA55Data.get(itemA55);
-			List<Store> storesA77 = refItemA55Data.get(itemA77);
+			List<Store> storesA77 = refItemA77Data.get(itemA77);
 
 			// step 2: Fill gaps by references or average
 			fillPotentialGaps(storesA55, refStores);

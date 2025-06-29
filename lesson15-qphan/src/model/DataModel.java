@@ -3,6 +3,7 @@ package model;
 import static utils.NumberUtils.bd;
 
 import java.math.BigDecimal;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.IntStream;
@@ -31,8 +32,33 @@ public class DataModel {
 	private DataModel() {
 	}
 	
-	private static List<Integer> mockItemStoreIds() {
+	public static List<Integer> mockItemStoreIds() {
 		return IntStream.rangeClosed(1, 14).boxed().toList();
+	}
+	
+	public static Map<Integer, Integer> mockStoreWhIds() {
+		Map<Integer, Integer> storeWhIds = new LinkedHashMap<>();
+		storeWhIds.put(1, 2);
+		storeWhIds.put(2, 1);
+		storeWhIds.put(3, 1);
+		storeWhIds.put(4, 1);
+		storeWhIds.put(5, 1);
+		storeWhIds.put(6, 1);
+		storeWhIds.put(7, 2);
+		storeWhIds.put(8, 2);
+		storeWhIds.put(9, 2);
+		storeWhIds.put(10, 2);
+		storeWhIds.put(11, 3);
+		storeWhIds.put(12, 3);
+		storeWhIds.put(13, 3);
+		storeWhIds.put(14, 3);
+		return storeWhIds;
+	}
+	
+	public static Map<Item, List<Store>> mockRefItemStores() {
+		Map<Item, List<Store>> refItemStores = new LinkedHashMap<>(mockStoresOfRefItemA55());
+		refItemStores.putAll(mockStoresOfRefItemA77());
+		return refItemStores;
 	}
 
 	/**

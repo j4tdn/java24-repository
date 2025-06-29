@@ -105,90 +105,90 @@ public class WhAllocationDemo {
 			System.out.println("--------------------------");
 		}
 
-		// Step 3
-		System.out.println("Step3: Calculate Store Demand of current Item(Item A1)");
-		
-		Map<Integer, BigDecimal> storeDemandMap = new HashMap<>();
-
-		Map<Item, List<Store>> refItemStores = new HashMap<>();
-		refItemStores.putAll(DataModel.mockStoresOfRefItemA55());
-		refItemStores.putAll(DataModel.mockStoresOfRefItemA77());
-		
-		// trọng số
-		Map<Integer, BigDecimal> refItemWeights = DataModel.mockRefWeights();
-		
-		// trend factor
-		Map<Integer, BigDecimal> storeTrendFactors = DataModel.mockStoreTrendFactors();
-		
-		Set<Integer> storeIds = new HashSet<>();
-		for (List<Store> stores : refItemStores.values()) {
-			for (Store store : stores) {
-				storeIds.add(store.getId());
-			}
-		}
-		
-		for (Integer storeId : storeIds) {
-			BigDecimal numerator = BigDecimal.ZERO;
-			BigDecimal denominator = BigDecimal.ZERO;
-		
-			for (Item refItem : refItemStores.keySet()) {
-				List<Store> stores = refItemStores.get(refItem);
-				
-				BigDecimal potential = null;
-				for (Store store : stores){
-					if (store.getId() == storeId) {
-						potential = store.getPotential();
-						break;
-					}
-				}
-				
-				if(potential == null || potential.compareTo(BigDecimal.ZERO) == 0){
-					continue;
-				}
-				
-				BigDecimal weight = refItemWeights.getOrDefault(refItem.getId(), BigDecimal.ONE);
-				
-				numerator = numerator.add(potential.multiply(weight));
-				denominator = denominator.add(weight);
-			}
-			
-			if (denominator.compareTo(BigDecimal.ZERO) == 0) {
-				storeDemandMap.put(storeId, demand);
-				System.out.println("Store " + storeId + "\tDemand = 0 (No maintained Potential)");
-				continue;
-			}
-			
-			
-			BigDecimal trendFactor = storeTrendFactors.getOrDefault(storeIds, BigDecimal.ONE);
-			
-			BigDecimal demand = numerator.divide(denominator, 4, RoundingMode.HALF_UP)
-										 .multiply(trendFactor)
-										 .setScale(1, RoundingMode.HALF_UP);
-			
-			storeDemandMap.put(storeId, demand);
-			System.out.println("Store " + storeId + "\tDemand = " + demand);
-			
-			
-		}
-		System.out.println("--------------------------");
-	
-	
-		// Step 4
-		System.out.println("Step4: Sum up Demand to WH Level");
-		
-		Map<Integer, String> storeIdToWh = new HashMap<>();
-		for (List<Store> stores : refItemStores.values()) {
-			for (Store store : stores) {
-				storeIdToWh.put(store.getId(), store.getWh());
-			}
-		}
-		
-		Map<String, BigDecimal> whDemandMap = new HashMap<>();
-		
-		for (Store store : stores) {
-			BigDecimal demand = store.getDemand();
-			
-			
-		}
+//		// Step 3
+//		System.out.println("Step3: Calculate Store Demand of current Item(Item A1)");
+//		
+//		Map<Integer, BigDecimal> storeDemandMap = new HashMap<>();
+//
+//		Map<Item, List<Store>> refItemStores = new HashMap<>();
+//		refItemStores.putAll(DataModel.mockStoresOfRefItemA55());
+//		refItemStores.putAll(DataModel.mockStoresOfRefItemA77());
+//		
+//		// trọng số
+//		Map<Integer, BigDecimal> refItemWeights = DataModel.mockRefWeights();
+//		
+//		// trend factor
+//		Map<Integer, BigDecimal> storeTrendFactors = DataModel.mockStoreTrendFactors();
+//		
+//		Set<Integer> storeIds = new HashSet<>();
+//		for (List<Store> stores : refItemStores.values()) {
+//			for (Store store : stores) {
+//				storeIds.add(store.getId());
+//			}
+//		}
+//		
+//		for (Integer storeId : storeIds) {
+//			BigDecimal numerator = BigDecimal.ZERO;
+//			BigDecimal denominator = BigDecimal.ZERO;
+//		
+//			for (Item refItem : refItemStores.keySet()) {
+//				List<Store> stores = refItemStores.get(refItem);
+//				
+//				BigDecimal potential = null;
+//				for (Store store : stores){
+//					if (store.getId() == storeId) {
+//						potential = store.getPotential();
+//						break;
+//					}
+//				}
+//				
+//				if(potential == null || potential.compareTo(BigDecimal.ZERO) == 0){
+//					continue;
+//				}
+//				
+//				BigDecimal weight = refItemWeights.getOrDefault(refItem.getId(), BigDecimal.ONE);
+//				
+//				numerator = numerator.add(potential.multiply(weight));
+//				denominator = denominator.add(weight);
+//			}
+//			
+//			if (denominator.compareTo(BigDecimal.ZERO) == 0) {
+//				storeDemandMap.put(storeId, demand);
+//				System.out.println("Store " + storeId + "\tDemand = 0 (No maintained Potential)");
+//				continue;
+//			}
+//			
+//			
+//			BigDecimal trendFactor = storeTrendFactors.getOrDefault(storeIds, BigDecimal.ONE);
+//			
+//			BigDecimal demand = numerator.divide(denominator, 4, RoundingMode.HALF_UP)
+//										 .multiply(trendFactor)
+//										 .setScale(1, RoundingMode.HALF_UP);
+//			
+//			storeDemandMap.put(storeId, demand);
+//			System.out.println("Store " + storeId + "\tDemand = " + demand);
+//			
+//			
+//		}
+//		System.out.println("--------------------------");
+//	
+//	
+//		// Step 4
+//		System.out.println("Step4: Sum up Demand to WH Level");
+//		
+//		Map<Integer, String> storeIdToWh = new HashMap<>();
+//		for (List<Store> stores : refItemStores.values()) {
+//			for (Store store : stores) {
+//				storeIdToWh.put(store.getId(), store.getWh());
+//			}
+//		}
+//		
+//		Map<String, BigDecimal> whDemandMap = new HashMap<>();
+//		
+//		for (Store store : stores) {
+//			BigDecimal demand = store.getDemand();
+//			
+//			
+//		}
 	}
 }
