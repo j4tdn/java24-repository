@@ -1,3 +1,6 @@
+-- Xóa cơ sở dữ liệu
+DROP DATABASE java24_shopping;
+
 -- Tạo cơ sử dữ liệu
 CREATE DATABASE IF NOT EXISTS java24_shopping CHAR SET utf8mb4;
 
