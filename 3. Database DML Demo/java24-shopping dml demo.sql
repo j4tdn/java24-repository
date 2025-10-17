@@ -1,6 +1,12 @@
+USE java24_shopping;
+
+-- DML in theory
+-- Testing
+
+
+
 -- DML in theory
 
-USE java24_shopping;
 -- 0. SELECT
 SELECT * FROM T07_ITEM_GROUP;
 SELECT * FROM T26_ITEM_GROUP_BACKUP;
