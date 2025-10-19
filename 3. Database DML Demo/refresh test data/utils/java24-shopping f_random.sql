@@ -11,5 +11,5 @@ DELIMITER $$
 CREATE FUNCTION f_random(from_incl INT, end_incl INT)
 RETURNS INT
 BEGIN
-	RETURN from_incl + floor(rand() * (end_incl+1));
+	RETURN from_incl + floor(rand() * (end_incl-from_incl+1));
 END $$
