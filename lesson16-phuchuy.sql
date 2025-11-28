@@ -122,6 +122,7 @@ select * from t03_project;
 select * from t01_employee t01 
 join t05_department_manager t05 on t05.c05_employee_id = t01.c01_employee_id
 join t03_project t03 on t03.c03_employee_id = t03.c03_employee_id
+
 order by t01.c01_name;
 
 
