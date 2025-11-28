@@ -1,0 +1,50 @@
+
+USE JAVA24_SHOPPING;
+-- 0. SELECT
+SELECT * FROM t07_item_group;
+SELECT * FROM t26_item_group_backup;
+SELECT * FROM T01_ITEM;
+
+SET autocommit = 0;
+SET autocommit = 1;
+commit;
+rollback;
+
+-- 1.0 DELETE/TRUNCATE
+DELETE FROM T07_ITEM_GROUP WHERE C07_ITEM_GROUP_ID = 2;
+
+-- 1. INSERT
+INSERT INTO T07_ITEM_GROUP(C07_ITEM_GROUP_ID, C07_ITEM_GROUP_NAME, C07_STATUS)
+VALUES
+(1, 'Áo', 1),
+(2, 'Quần', 1);
+
+INSERT INTO T07_ITEM_GROUP(C07_ITEM_GROUP_NAME, C07_STATUS)
+VALUES
+('Giày', 0),
+('Dép', 1);
+
+-- insert with dummy data
+INSERT INTO T07_ITEM_GROUP(C07_ITEM_GROUP_ID, C07_ITEM_GROUP_NAME, C07_STATUS)
+SELECT 5 CxID, 'Mũ' CxNAME, 1 CxSTATUS
+UNION ALL
+SELECT 6, 'Nón', 1;
+
+-- insert with data from another table
+INSERT INTO t26_item_group_backup(C26_ITEM_GROUP_ID, C26_ITEM_GROUP_NAME)
+SELECT C07_ITEM_GROUP_ID, C07_ITEM_GROUP_NAME
+  FROM T07_ITEM_GROUP
+ WHERE C07_STATUS = 1;
+
+-- insert with a large of data(not from other table(s))
+-- insert 100, 1000 rows
+-- procedure, function with for, if else
+
+INSERT INTO T01_ITEM VALUES
+(1, 'Áo 1', 1, 'RED');
+
+
+-- 3. UPDATE
+UPDATE T07_ITEM_GROUP
+   SET C07_STATUS = 1
+ WHERE C07_ITEM_GROUP_ID MOD 2 != 0;

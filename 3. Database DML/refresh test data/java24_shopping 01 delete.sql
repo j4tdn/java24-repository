@@ -1,0 +1,30 @@
+SET FOREIGN_KEY_CHECKS = 0;
+
+TRUNCATE TABLE t01_item;
+TRUNCATE TABLE t02_size;
+TRUNCATE TABLE t03_item_detail;
+TRUNCATE TABLE t04_warehouse_receipt;
+TRUNCATE TABLE t05_warehouse_receipt_detail;
+TRUNCATE TABLE t06_provider;
+TRUNCATE TABLE t07_item_group;
+TRUNCATE TABLE t08_gallery;
+TRUNCATE TABLE t09_order;
+TRUNCATE TABLE t10_bill;
+TRUNCATE TABLE t11_payment_method;
+TRUNCATE TABLE t12_order_detail;
+TRUNCATE TABLE t13_order_status;
+TRUNCATE TABLE t14_order_status_detail;
+TRUNCATE TABLE t15_customer;
+TRUNCATE TABLE t16_employee;
+TRUNCATE TABLE t17_department; 
+TRUNCATE TABLE t18_delivery_address;
+TRUNCATE TABLE t19_voucher;
+TRUNCATE TABLE t20_role;
+TRUNCATE TABLE t21_role_detail;
+TRUNCATE TABLE t22_tax;
+TRUNCATE TABLE t23_cart;
+TRUNCATE TABLE t24_shopping_cart;
+TRUNCATE TABLE t25_cart_later_on;
+TRUNCATE TABLE t26_item_group_backup;
+
+SET FOREIGN_KEY_CHECKS = 1;
