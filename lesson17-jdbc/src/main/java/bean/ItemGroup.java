@@ -1,0 +1,60 @@
+package bean;
+
+import java.util.Objects;
+
+public class ItemGroup {
+	private Integer id;
+	private String name;
+	private Boolean status;
+	public ItemGroup() {
+		
+	}
+
+	public ItemGroup(Integer id, String name, Boolean status) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.status = status;
+	}
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public Boolean getStatus() {
+		return status;
+	}
+	public void setStatus(Boolean status) {
+		this.status = status;
+	}
+	@Override
+	public int hashCode() {
+		
+		return Objects.hash(getId());
+	}
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) {
+			return true;
+		}
+
+		if (!(o instanceof ItemGroup that)) {
+			return false;
+		}
+
+		return getId().equals(that.getId());
+	}
+	@Override
+	public String toString() {
+		return "ItemGroup [id=" + id + ", name=" + name + ", status=" + status + "]";
+	}
+	
+
+}
