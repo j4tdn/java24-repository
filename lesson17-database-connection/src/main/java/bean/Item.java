@@ -53,6 +53,7 @@ public class Item {
                 ", name='" + name + '\'' +
                 ", itemGroupId=" + itemGroupId +
                 ", color='" + color + '\'' +
+                ", itemGroup=" + itemGroup +
                 '}';
     }
 }

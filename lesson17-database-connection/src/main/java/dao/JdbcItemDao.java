@@ -11,12 +11,12 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class JdbcItemsDao extends GenericDao implements ItemsDao{
+public class JdbcItemDao extends GenericDao implements ItemDao {
     private static final int BATCH_SIZE = 100;
 
     private Connection connection;
 
-    public JdbcItemsDao() {
+    public JdbcItemDao() {
         connection = DbConnection.getConnection();
     }
 
@@ -29,7 +29,7 @@ public class JdbcItemsDao extends GenericDao implements ItemsDao{
         final var result = new ArrayList<Item>();
         try {
             pst = connection.prepareStatement(GET_ALL_ITEM);
-            pst.executeUpdate();
+            rs = pst.executeQuery();
             while (rs.next()) {
                 Item item = new Item();
                 item.setId(rs.getInt("C01_ITEM_ID"));

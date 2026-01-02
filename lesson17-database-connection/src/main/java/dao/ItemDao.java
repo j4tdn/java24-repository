@@ -4,6 +4,6 @@ import bean.Item;
 
 import java.util.List;
 
-public interface ItemsDao {
+public interface ItemDao {
     List<Item> getAll();
 }

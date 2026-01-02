@@ -1,16 +1,15 @@
 package service;
 
 import bean.Item;
-import dao.ItemsDao;
-import dao.JdbcItemGroupDao;
-import dao.JdbcItemsDao;
+import dao.ItemDao;
+import dao.JdbcItemDao;
 
 import java.util.List;
 
 public class ItemServiceImp implements ItemService {
-    private ItemsDao itemDao;
+    private ItemDao itemDao;
     public ItemServiceImp() {
-        itemDao = new JdbcItemsDao();
+        itemDao = new JdbcItemDao();
     }
     @Override
     public List<Item> getAll() {
