@@ -1,0 +1,18 @@
+MVc
+
+1. Model 
+--> Nơi chức các đối tượng thao tác dữ liệu
+--> Package: dao(data access object)
+
+2. View 
+--> Có thể là file java hoặc fe file phụ thuộc vào ngôn ngữ đang sử dụng
+--> Java : Render UI từ server trả về FE
+--> FE   : Render ở phía client
+
+3. Controller 
+--> Nơi chứa các đối tượng nhận request từ view
+	- truy vấn dữ liệu từ dao 
+	- xử lý logic nếu có 
+	- trả về view
+--> Package : controller: nhận, trả request
+			: service   : xử lý logic và lấy dữ liệu từ dao
