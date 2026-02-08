@@ -2,11 +2,11 @@ package service;
 
 import java.util.List;
 
-import bean.ItemGroup;
-import bean.ItemGroupDto;
+import dto.ItemGroupDto;
+import persistence.ItemGroup;
 
 public interface ItemGroupService {
-
+	
 	/**
 	 * Get all available item groups
 	 * 
@@ -20,13 +20,6 @@ public interface ItemGroupService {
 	 * @return list of {@link ItemGroupDto}
 	 */
 	List<ItemGroupDto> getItemGroupDetails();
-	
-	/**
-	 * Get list of group with related items
-	 * 
-	 * @return list of {@link ItemGroup}
-	 */
-	List<ItemGroup> getItemGroups();
 	
 	/**
 	 * Get item group with the given id
@@ -43,30 +36,15 @@ public interface ItemGroupService {
 	ItemGroup get(String name);
 	
 	/**
-	 * Insert a new item group
+	 * Save new item group
 	 * 
-	 * @param group then given group
+	 * @param group the group
 	 */
 	void save(ItemGroup group);
 	
 	/**
-	 * Insert new item groups
-	 * 
-	 * @param groups the given groups
+	 * Test 1st, 2nd level cache of Hibernate
 	 */
-	void saveGroups(List<ItemGroup> groups);
+	void testHibernateCache();
 	
-	/**
-	 * Update an existing item group
-	 * 
-	 * @param group then given group
-	 */
-	void update(ItemGroup group);
-	
-	/**
-	 * Save new or update an existing item group
-	 * 
-	 * @param group then given group
-	 */
-	void saveOrUpdate(ItemGroup group);
 }

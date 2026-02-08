@@ -1,8 +1,5 @@
 package view;
 
-import java.util.List;
-
-import bean.ItemGroup;
 import service.ItemGroupService;
 import service.ItemGroupServiceImpl;
 import utils.IoUtils;
@@ -20,11 +17,13 @@ public class Ex02ItemGroupView {
 		// itemGroupService.update(new ItemGroup(10, "Loại Hàng X10", Boolean.FALSE));
 		// itemGroupService.saveOrUpdate(new ItemGroup(11, "Loại Hàng X11", Boolean.TRUE));
 		
+		/*
 		itemGroupService.saveGroups(List.of(
 			new ItemGroup("Loại Hàng 14", true),
 			new ItemGroup("Loại Hàng 15", false),
 			new ItemGroup("Loại Hàng 16", true)
 		));
+		*/
 		
 		IoUtils.generate(
 			"1. Liệt kê các loại hàng trong hệ thống", 
@@ -34,6 +33,25 @@ public class Ex02ItemGroupView {
 		IoUtils.generate(
 			"2. Liệt kê loại hàng theo mã loại", 
 			itemGroupService.get(22)
+		);
+		
+		IoUtils.generate(
+			"3. Liệt kê loại hàng theo tên loại", 
+			itemGroupService.get("Thắt lưng")
+		);
+		
+		System.out.println("4. Liệt kê loại hàng kèm thông tin mặt hàng");
+		final var groups = itemGroupService.getItemGroups();
+		groups.forEach(group -> {
+			System.out.println(group);
+			for (var item: group.getItems()) {
+				System.out.println("    - " + item);
+			}
+		});
+		
+		IoUtils.generate(
+			"6. Liệt kê, đếm số lượng mặt hàng của từng loại hàng", 
+			itemGroupService.getItemGroupDetails()
 		);
 		
 		// 3. Liệt kê loại hàng theo tên loại
@@ -50,7 +68,7 @@ public class Ex02ItemGroupView {
 		// Thông tin cần lấy: MaLH, TenLH, TongSoLuongMatHang, ChiTiet(TenMatHang, KichCo, SoLuong)
 		
 		// 7. Liệt kê mặt hàng có số lượng nhiều nhất trong hệ thống
-		// Yêu cầu: TenMH, SoLuong
+		// Yêu cầu: TenMH, SoLuong --> if(rs.next)
 		
 		// 8. Truy vấn dữ liệu liên quan Date, Time
 		

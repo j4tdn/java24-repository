@@ -2,8 +2,8 @@ package dao;
 
 import java.util.List;
 
-import bean.ItemGroup;
-import bean.ItemGroupDto;
+import dto.ItemGroupDto;
+import persistence.ItemGroup;
 
 public interface ItemGroupDao {
 
@@ -13,7 +13,7 @@ public interface ItemGroupDao {
 	 * @return list of {@link ItemGroup}
 	 */
 	List<ItemGroup> getAll();
-	
+
 	/**
 	 * Get all available item groups together with item's info
 	 * 
@@ -26,8 +26,8 @@ public interface ItemGroupDao {
 	 * 
 	 * @return found {@link ItemGroup} or null if not found
 	 */
-	ItemGroup get(int id);
-	
+	ItemGroup get(Integer id);
+
 	/**
 	 * Get item group with the given name
 	 * 
@@ -36,24 +36,15 @@ public interface ItemGroupDao {
 	ItemGroup get(String name);
 
 	/**
-	 * Insert a new item group
+	 * Save new item group
 	 * 
-	 * @param group the given group
+	 * @param group the group
 	 */
 	void save(ItemGroup group);
 	
 	/**
-	 * Insert new item groups
-	 * 
-	 * @param groups the given groups
+	 * Test 1st, 2nd level cache of Hibernate
 	 */
-	void saveGroups(List<ItemGroup> groups);
-	
-	/**
-	 * Update an existing item group
-	 * 
-	 * @param group then given group
-	 */
-	void update(ItemGroup group);
-	
+	void testHibernateCache();
+
 }

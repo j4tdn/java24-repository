@@ -1,85 +1,106 @@
 package dao;
 
-import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
 
 import bean.ItemGroup;
-import connection.DbConnection;
+import bean.ItemGroupDto;
 import dao.base.GenericDao;
 import utils.IoUtils;
 
-public class JdbcItemGroupDao extends GenericDao implements ItemGroupDao {
+public class JdbcItemGroupDao extends GenericDao<ItemGroup> implements ItemGroupDao {
+
+	private static final String GET_ALL_ITEM_GROUPS = "" + "SELECT * FROM T07_ITEM_GROUP";
 	
-	private static final int BATCH_SIZE = 1000;
-	
-	private Connection conn;
-	
-	public JdbcItemGroupDao() {
-		conn = DbConnection.getConnection();
-	}
-	
-	private static final String GET_ALL_ITEM_GROUPS = ""
-			+ "SELECT * FROM T07_ITEM_GROUP";
-	
-	private static final String GET_ITEM_GROUP_BY_ID = ""
-			+ "SELECT * \n"
-			+ "  FROM T07_ITEM_GROUP\n"
+	private static final String GET_ITEM_GROUP_DETAILS = ""
+			+ "SELECT t07.C07_ITEM_GROUP_ID " + ItemGroupDto.PROP_ID + ",\n"
+			+ "       t07.C07_ITEM_GROUP_NAME " + ItemGroupDto.PROP_NAME + ",\n"
+			+ "       SUM(t03.C03_AMOUNT) " + ItemGroupDto.PROP_AMOUNT_OF_ITEMS + ",\n"
+			+ "       GROUP_CONCAT(concat(t01.C01_ITEM_NAME, '-', t03.C03_SIZE_ID, '-', t03.C03_AMOUNT)) " + ItemGroupDto.PROP_ITEM_DETAILS + "\n"
+			+ "  FROM t07_item_group t07\n"
+			+ "  JOIN t01_item t01\n"
+			+ "    ON t01.C01_ITEM_GROUP_ID = t07.C07_ITEM_GROUP_ID\n"
+			+ "  JOIN t03_item_detail t03\n"
+			+ "    ON t03.C03_ITEM_ID = t01.C01_ITEM_ID\n"
+			+ " GROUP BY t07.C07_ITEM_GROUP_ID";
+
+	private static final String GET_ITEM_GROUP_BY_ID = "" + "SELECT * \n" + "  FROM T07_ITEM_GROUP\n"
 			+ " WHERE C07_ITEM_GROUP_ID = ?";
-	
-	private static final String INSERT_ITEM_GROUP = ""
-			+ "INSERT INTO T07_ITEM_GROUP(C07_ITEM_GROUP_NAME, C07_STATUS)\n"
+
+	private static final String GET_ITEM_GROUP_BY_NAME = "" + "SELECT * \n" + "  FROM T07_ITEM_GROUP\n"
+			+ " WHERE C07_ITEM_GROUP_NAME = ?";
+
+	private static final String INSERT_ITEM_GROUP = "" + "INSERT INTO T07_ITEM_GROUP(C07_ITEM_GROUP_NAME, C07_STATUS)\n"
 			+ "VALUES(?, ?)";
-	
-	private static final String UPDATE_ITEM_GROUP = ""
-			+ "UPDATE T07_ITEM_GROUP\n"
-			+ "   SET C07_ITEM_GROUP_NAME = ?,\n"
-			+ "       C07_STATUS = ?\n"
-			+ " WHERE C07_ITEM_GROUP_ID = ?";
-	
+
+	private static final String UPDATE_ITEM_GROUP = "" + "UPDATE T07_ITEM_GROUP\n" + "   SET C07_ITEM_GROUP_NAME = ?,\n"
+			+ "       C07_STATUS = ?\n" + " WHERE C07_ITEM_GROUP_ID = ?";
+
 	@Override
 	public List<ItemGroup> getAll() {
-		final var result = new ArrayList<ItemGroup>();
-		try {
-			st = conn.createStatement();
-			rs = st.executeQuery(GET_ALL_ITEM_GROUPS);
-			while (rs.next()) {
-				ItemGroup group = new ItemGroup(
-						rs.getInt("C07_ITEM_GROUP_ID"), 
-						rs.getString("C07_ITEM_GROUP_NAME"), 
-						rs.getBoolean("C07_STATUS"));
-				result.add(group);
+		return getAll(GET_ALL_ITEM_GROUPS, rs -> {
+			ItemGroup group = null;
+			try {
+				group = transform(rs);
+			} catch (SQLException e) {
+				e.printStackTrace();
 			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} finally {
-			IoUtils.close(rs, st);
-		}
-		return result;
+			return group;
+		});
+	}
+	
+	@Override
+	public List<ItemGroupDto> getItemGroupDetails() {
+		return getList(GET_ITEM_GROUP_DETAILS, rs -> {
+			ItemGroupDto group = null;
+			try {
+				group = transformItemGroupDto(rs);
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+			return group;
+		});
 	}
 
 	@Override
 	public ItemGroup get(int id) {
-		ItemGroup result = null;
-		try {
-			pst = conn.prepareStatement(GET_ITEM_GROUP_BY_ID);
-			pst.setInt(1, id);
-			rs = pst.executeQuery();
-			if (rs.next()) {
-				result = new ItemGroup(
-					rs.getInt("C07_ITEM_GROUP_ID"), 
-					rs.getString("C07_ITEM_GROUP_NAME"), 
-					rs.getBoolean("C07_STATUS"));
+		return get(GET_ITEM_GROUP_BY_ID, pst -> {
+			try {
+				pst.setInt(1, id);
+			} catch (SQLException e) {
+				e.printStackTrace();
 			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} finally {
-			IoUtils.close(rs, pst);
-		}
-		return result;
+		}, rs -> {
+			ItemGroup group = null;
+			try {
+				group = transform(rs);
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+			return group;
+		});
 	}
-	
+
+	@Override
+	public ItemGroup get(String name) {
+		return get(GET_ITEM_GROUP_BY_NAME, pst -> {
+			try {
+				pst.setString(1, name);
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}, rs -> {
+			ItemGroup group = null;
+			try {
+				group = transform(rs);
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+			return group;
+		});
+	}
+
 	@Override
 	public void save(ItemGroup group) {
 		executeUpdate(INSERT_ITEM_GROUP, pst -> {
@@ -89,15 +110,15 @@ public class JdbcItemGroupDao extends GenericDao implements ItemGroupDao {
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
-		}, group);
+		});
 	}
-	
+
 	@Override
 	public void saveGroups(List<ItemGroup> groups) {
 		try {
 			pst = conn.prepareStatement(INSERT_ITEM_GROUP);
 			int counter = 0;
-			for (ItemGroup group: groups) {
+			for (ItemGroup group : groups) {
 				pst.setString(1, group.getName());
 				pst.setBoolean(2, group.getStatus());
 				pst.addBatch();
@@ -112,7 +133,7 @@ public class JdbcItemGroupDao extends GenericDao implements ItemGroupDao {
 			IoUtils.close(pst);
 		}
 	}
-	
+
 	@Override
 	public void update(ItemGroup group) {
 		executeUpdate(UPDATE_ITEM_GROUP, pst -> {
@@ -123,6 +144,20 @@ public class JdbcItemGroupDao extends GenericDao implements ItemGroupDao {
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
-		}, group);
+		});
+	}
+
+	public static ItemGroup transform(ResultSet rs) throws SQLException {
+		return new ItemGroup(rs.getInt("C07_ITEM_GROUP_ID"), rs.getString("C07_ITEM_GROUP_NAME"),
+				rs.getBoolean("C07_STATUS"));
+	}
+	
+	public static ItemGroupDto transformItemGroupDto(ResultSet rs) throws SQLException {
+		return new ItemGroupDto(
+					rs.getInt(ItemGroupDto.PROP_ID), 
+					rs.getString(ItemGroupDto.PROP_NAME),
+					rs.getInt(ItemGroupDto.PROP_AMOUNT_OF_ITEMS), 
+					rs.getString(ItemGroupDto.PROP_ITEM_DETAILS)
+				);
 	}
 }
