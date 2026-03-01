@@ -1,0 +1,39 @@
+<project xmlns="https://maven.apache.org/POM/4.0.0" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>bkit.java24</groupId>
+  <artifactId>lesson18-nguyenhuuthanh</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  
+ 
+	<!-- Khai báo biến-->
+	<properties>
+		<com.mysql.version>8.0.33</com.mysql.version>
+		<commons-codec.version>1.20.0</commons-codec.version>
+		<org.hibernate.orm.version>7.2.1.Final</org.hibernate.orm.version>
+	</properties>
+
+	<!-- Khai báo các thư viện (dependency) sẽ sử dụng trong dự án-->
+	<dependencies>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${com.mysql.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>${commons-codec.version}</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate.orm</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>${org.hibernate.orm.version}</version>
+			<scope>compile</scope>
+		</dependency>
+	</dependencies>
+
+  
+</project>
