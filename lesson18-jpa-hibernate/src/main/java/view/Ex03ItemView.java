@@ -1,0 +1,16 @@
+package view;
+
+import service.ItemService;
+import service.ItemServiceImpl;
+
+public class Ex03ItemView {
+    private static ItemService itemService;
+
+    static {
+        itemService = new ItemServiceImpl();
+    }
+
+    public static void main(String[] args) {
+        System.out.println(itemService.getAll());
+    }
+}

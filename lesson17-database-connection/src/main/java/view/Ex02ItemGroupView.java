@@ -22,8 +22,8 @@ public class Ex02ItemGroupView {
         // liet ke loai hang theo ten loai
         // - statement: sql injection
         // - PreparedStatement: xu li loi
-//        ItemGroup getItemByName = itemGroupService.getItemByName("Áo");
-//        System.out.println(getItemByName);
+        ItemGroup getItemByName = itemGroupService.getItemByName("a");
+        System.out.println(getItemByName);
 
         // Liet ke cac mat hang(kem thong tin loai hang)
 
@@ -37,18 +37,18 @@ public class Ex02ItemGroupView {
 
         // Liet ke, dem so luong mat hang cua tung loai hang
         // Thong tin can lay: MaLH, TenLH, TongSoLuongMatHang, ChiTiet(TenMatHang, Kichco, Soluong)
-        List<ListGroups> getAllListGroups = itemGroupService.getAllListGroups();
-        for (ListGroups listGroups : getAllListGroups) {
-            System.out.println(listGroups);
-        }
+//        List<ListGroups> getAllListGroups = itemGroupService.getAllListGroups();
+//        for (ListGroups listGroups : getAllListGroups) {
+//            System.out.println(listGroups);
+//        }
 
 
         // Liet ke cac mat hang co so luong nhieu nhat trong he thong
         // TenMH, Soluong
-        List<Item>  getAllItems = itemGroupService.getAllItems();
-        for (Item item : getAllItems) {
-            System.out.println(item);
-        }
+//        List<Item>  getAllItems = itemGroupService.getAllItems();
+//        for (Item item : getAllItems) {
+//            System.out.println(item);
+//        }
     }
 
 
