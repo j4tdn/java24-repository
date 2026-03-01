@@ -1,0 +1,23 @@
+package service;
+
+import java.util.List;
+
+import dao.HibernateStudentDao;
+import dao.StudentDao;
+import persistence.Student;
+
+public class StudentServiceImpl implements StudentService {
+
+	private StudentDao studentDao;
+	
+	public StudentServiceImpl() {
+		studentDao = new HibernateStudentDao();
+		
+	}
+	
+	@Override
+	public List<Student> get(Integer id) {
+		return studentDao.get(id);
+	}
+	
+}
