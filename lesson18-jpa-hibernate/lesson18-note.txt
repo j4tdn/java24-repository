@@ -1,0 +1,12 @@
+
+
+@OneToMany --> LAZY fetch
+
+@ManyToMany --> LAZY fetch
+
+--> Khi không chắc chắn ko nên chuyển từ mặc định lazy sang eager để tránh select N+1
+
+@OneToOne --> EAGER fetch
+
+@ManyToOne --> EAGER fetch
+
