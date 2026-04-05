@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="../assets/images/header.png" />
+    <title>EX01 HTML5 Familiar</title>
+  </head>
+  <body>
+    <!-- 
+        HTML: nên chứa nội dung
+        CSS: chứa phần thiết kế, màu sắc, bố cục
+
+        Phân loại thẻ
+
+        - Inline (không xuống hàng sau khi render nội dung) và Block (xuống hàng sau khi render nội dung)
+        VD: inline: image, a, strong, em ...
+        block: p, hx, div ...
+
+        - Single và Double: học thuộc, nhắc cấu trúc thẻ
+        VD: single: meta, link
+        double: title, hx
+
+        Khi chạy 1 file html
+        Trình duyệt web đọc nội dung bên trong các HTML tags để render ra giao diện
+        - hiển thị nội dung
+        - kèm với style mặc định từ các thuộc tính của từng thẻ
+        VD: h1 font-size 2em
+            h2 font-size 1.5em
+
+        Lưu ý: mình có thể override lại giá trị của các thuộc tính này
+
+        Câu hỏi: khi màn cần tiêu đề lớn nhất thì mình dùng h1 hoặc h5 thay thế h1 sau đó override font-size được không ?
+        Trả lời: semantic tag - thẻ ngữ nghĩa
+            - dùng đúng tag với mục đích của nó để code readable, maintainable
+            - có những thẻ có tác dụng (giá trị thuộc tính mặc định) giống nhau nhưng designer vẫn tạo ra nhiều thẻ có tên khác nhau để dùng cho các mục đích khác nhau
+        VD: div, section, nav, aside, article
+    -->
+    <!-- This is a simple HTML5 page to familiarize with the basic structure -->
+    <h1>HTML5 Familiar</h1>
+    <h2>HTML5 Familiar</h2>
+    <h3>HTML5 Familiar</h3>
+
+    <table border="1" cellspacing="0" cellpadding="6">
+      <thead>
+        <tr>
+          <th rowspan="2">Id</th>
+          <th rowspan="2">Name</th>
+          <th rowspan="2">Age</th>
+          <th colspan="2">Phone</th>
+        </tr>
+        <tr>
+          <th>Fax 1</th>
+          <th>Fax 2</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Le Van Teo</td>
+          <td>22</td>
+          <td>121</td>
+          <td>242</td>
+        </tr>
+
+        <tr>
+          <td>2</td>
+          <td>Ha Nam Thanh</td>
+          <td>35</td>
+          <td>121</td>
+        </tr>
+
+        <tr>
+          <td>3</td>
+          <td>Dang Van Nhan</td>
+          <td>18</td>
+          <td>121</td>
+          <td>242</td>
+        </tr>
+
+        <tr>
+          <td>4</td>
+          <td>Nguyen Ngoc Uc</td>
+          <td>46</td>
+          <td>121</td>
+          <td>242</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
