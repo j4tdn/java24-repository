@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<link rel="icon" href="/images/header.png">
+	<title>Ex01 HTML5 Familiar</title>
+</head>
+
+<body>
+	<!--
+
+	PHÂN LOẠI THẺ 
+	- Inline ( không xuống hàng khi render nội dung ) và Block (xuống hàng sau khi renden nội dung )
+		VD inline : image 
+	khi chạy 1 file html 
+	Trình duyệt web đoc 1 nội dung bên trong các HTML tags để render ra giao diện 
+	- hiện thị nội dung 
+	- kèm với style mặc định từ các thuộc tính cuat từng thẻ 
+	VD: h1 font-size 2em
+		h2 font-size 1.5em
+
+	Lưu ý: mình có thể override lại giá trị của các thuộc tính này 
+
+	Câu hỏi: khi mà cần 1 tiêu đề lớn nhất thì mình dùng hoặc h5 thay thế h1 sau đó override font-size được không
+	trả lời : semantic tag - thẻ ngữ nghĩa 
+			-> dùng đúng tag với mục đích của nó để code readable, maintainable
+			
+	
+	-->
+	<h1>This is content of H1</h1>
+	<h2>This is content of H2</h2>
+	<h3>This is content of H3</h3>
+	<h4>This is content of H4</h4>
+	<h5>This is content of H5</h5>
+	<h6>This is content of H6</h6>
+
+
+	<!-- paragraph tag -->
+	<p> Lorem ipsum dolor <strong>sit</strong>, amet consectetur adipisicing elit. Vitae, eum adipisci. Quas laborum ex eaque assumenda
+		ducimus maxime exercitationem, consequatur placeat facere blanditiis! Laboriosam possimus voluptatem deleniti
+		ducimus atque? Deserunt.</p>
+		<br> 
+	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, nam maiores vel ea impedit quas iusto, saepe
+		ratione expedita inventore adipisci hic quod quibusdam cum. Hic dicta dolor voluptas explicabo.</p>
+
+	<!--Table tags-->	
+	<table  cellspacing  = 0> 
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Name</th>
+				<th>Age</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>Van Tai</td>
+				<td>22</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Thi Hien</td>
+				<td>42</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>Thanh Cong</td>
+				<td>22</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>Bao Ngoc</td>
+				<td>19</td>
+			</tr>
+
+		</tbody>
+	</table>
+
+</body>
+
+</html>

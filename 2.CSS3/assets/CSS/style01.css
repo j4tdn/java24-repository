@@ -1,0 +1,87 @@
+p{
+    color: red;
+}
+li:nth-child(2){
+    text-transform: uppercase;
+}
+p[pid='p1']{
+    text-decoration: line-through;
+}
+p[pid='p2']{
+    text-transform: capitalize;
+}
+.coppy{
+    text-transform: capitalize;
+}
+/*
+====== CSS UTILS
+
+*/
+.block-xs{
+width: 200px;
+height: 120px;
+
+
+}
+.mb-8px{
+    margin-bottom: 8px;
+}
+.block-md{
+width: 240px;
+height: 160px;
+
+}
+.block-container{
+    border: 1px dashed #2f9a7e;
+    padding: 20px;
+    width: 300px;
+    .block-item{
+        width:200px;
+        height: 120px;
+    }
+
+}
+.bcl{
+    float: left;
+}
+.bcr{
+   /*
+   nth-child(an + b) tham số là a và b
+    - a: chu kì lặp lại nội dung css này
+    : mặc định --> lặp lại đi từ trên xuống
+                --> đi từ dưới lên
+    -b: vị trí bắt đầu của child sẽ ăn Css
+    : phần tử đầu tiên là 1
+    : nếu là -b tính từ phần tử đầu tiên từ dưới lên
+   */
+   .block-item  :nth-child(){
+      border-radius: 20px;
+    }
+.left{
+     float: right;
+        clear: right;
+}
+.bg-orange{
+    background:orange;
+}
+.bg-green {
+    background: green;
+}
+.bg-blue {
+    background: blue;
+}
+.bg-pink {
+    background: pink;
+}
+.bg-red {
+    background: red;
+}
+.block1{
+    float: left;
+}
+.block2{
+    float: left;
+}
+.clearfix{
+    clear: left;
+}
