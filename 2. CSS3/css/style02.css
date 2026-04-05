@@ -1,0 +1,161 @@
+* {
+	box-sizing: border-box;
+}
+@font-face {
+	font-family: 'Kaushan';
+	src: url('../assets/webfonts/KaushanScript-Regular.otf') format('opentype');
+}
+
+#page-header {
+	background: greenyellow;
+	height: 66px;
+
+	/*nested css*/
+	h2 {
+		line-height: 66px;
+	}
+}
+
+.text {
+	font-family: Kaushan, sans-serif;
+}
+
+.text-bold {
+	font-weight: 600;
+}
+
+.copy {
+	font-style: italic;
+	text-decoration: overline;
+	text-transform: uppercase;
+}
+
+ul {
+	list-style-type: decimal;
+	list-style-position: outside; /*default*/
+
+	li:nth-child(2) {
+		color: #ab2;
+	}
+}
+
+.block1 {
+	float: left;
+}
+
+.block2 {
+	float: left;
+}
+
+.block3 {
+	padding: 20px;
+	width: 220px;
+	border: 1px solid red;
+
+	margin-bottom: 20px;
+}
+
+.block4 {
+	width: 220px;
+
+	margin-top: 20px;
+}
+
+.clearfix {
+	clear: left;
+}
+
+.mb-8px {
+	margin-bottom: 8px;
+}
+
+.block-container {
+	width: 300px;
+	padding: 20px;
+
+	.block-item {
+		width: 200px;
+		height: 120px;
+	}
+}
+
+.bcl {
+	float: left;
+}
+
+.bcr {
+	float: left;
+	width: 800px;
+
+	/*
+		nth-child(an+b) tham số là a và b
+		- a: chu kì lặp lại nội dung css này
+		   : mặc định --> lặp lại đi từ trên xuống
+		              --> - đi từ dưỡi lên
+           : 0 --> ko lặp lại
+
+		- b: vị trí bắt đầu của child sẽ ăn css
+		   : phần tử đầu tiền là 1 từ trên xuống
+		   : nếu -b tính phần tử đầu tiên là 1 từ dưới lên
+
+		nth-child(1)   
+		nth-child(2)
+
+		nth-child(n)
+		nth-child(2n)
+		nth-child(3n)
+
+		nth-child(n+1)
+		nth-child(2n+1)
+		nth-child(n+3)
+
+		nth-child(n-1)	
+		nth-child(n-2): minor
+
+		
+	*/
+
+	.block-item:nth-child(-n+3) {
+		float: left;
+	}
+
+	.block-item:nth-child(n+4) {
+		clear: left;
+	}
+}
+
+/* ===================
+   =====CSS UTILS=====
+   =================== */
+
+/*step=40px*/
+
+.block-xs {
+	width: 200px;
+	height: 120px;
+}
+
+.block-md {
+	width: 240px;
+	height: 160px;
+}
+
+.bg-pink {
+	background: pink;
+}
+
+.bg-blue {
+	background: blue;
+}
+
+.bg-red {
+	background: red;
+}
+
+.bg-orange {
+	background: orange;
+}
+
+.bg-green {
+	background: green;
+}
