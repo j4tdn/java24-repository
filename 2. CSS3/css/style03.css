@@ -35,21 +35,4 @@
     }
 }
 
-#page-footer {
-    background-color: #4b1c0e; 
-    color: #ffffff;            
-    height: 40px;            
-    line-height: 40px;         
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    clear: both;               
-}
-
-#page-footer .footer-left {
-    float: left;               
-}
-
-#page-footer .footer-right {
-    float: right;              
-}
 
