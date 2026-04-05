@@ -1,0 +1,24 @@
+p {
+	color: red;
+}
+
+.p11 {
+	text-transform: uppercase;
+}
+
+p.p1 {
+	text-decoration: underline;
+	background: purple;
+}
+
+p[class='p2'] {
+	text-decoration: line-through;
+}
+
+p#copy-right {
+	text-transform: capitalize;
+}
+
+li:nth-child(2) {
+	text-transform: uppercase;
+}
