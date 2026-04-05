@@ -1,0 +1,42 @@
+/*  CSS Reset */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+  font-size: 32px;
+  font-family: Corbel, sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 66px;
+  background: #2b2b2b;
+  padding: 0 160px;
+  color: white;
+}
+
+.menu {
+  display: flex;
+  gap: 44px;
+}
+
+.menu a {
+  color: white;
+}
