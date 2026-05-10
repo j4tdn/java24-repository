@@ -1,0 +1,109 @@
+.block-background {
+	.block {
+		border: 1px solid red;
+		margin: 100px;
+
+		height: 300px;
+
+		float: left;
+	}
+
+	.block-01 {
+		width: 200px;
+
+		background-color: orange;
+		background-image: url(../images/cat.png);
+
+		background-size: cover; /* Kích thước của element cùng ratio với kích thước hình ảnh thực tế */
+
+		/*background-size: 100px 150px;
+		background-repeat: no-repeat;
+		background-position: center center;*/
+	}
+
+	.block-02 { 
+		width: 300px;
+
+		background-image: linear-gradient(blue, yellow, red);
+		box-shadow: 0 0 40px 0 black inset;
+		opacity: 0.8;
+	}
+
+	.block-03 { 
+		width: 300px;
+
+		background-image: linear-gradient(105deg,
+			blue 0%, blue 30%, 
+			yellow 31%, yellow 70%,
+			red 71%);
+	}
+
+	.block-04 { 
+		width: 300px;
+
+		background-image: radial-gradient(ellipse, blue, yellow);
+	}
+}
+
+.block-position-z-index {
+	
+	position: relative;
+
+	.block {
+		width: 150px;
+		height: 150px;
+		color: #fff;
+	}
+
+	.block-01 {
+		background-color: orange;
+
+		border-radius: 2px;
+	}
+
+	.block-02 {
+		background-color: blue;
+		position: relative;
+
+		top: 20px;
+		left: 20px;
+
+		border-radius: 50%;
+	}
+
+	.block-03 {
+		background-color: green;
+
+		position: absolute;
+		top: 100px;
+		left: 100px;
+
+		border-radius: 10px;
+	}
+}
+
+.block-display {
+	.block {
+		width: 120px;
+		height: 120px;
+
+		display: inline-block;
+	}
+
+	.block-01 {
+		background-color: orange;
+	}
+
+	.block-02 {
+		background-color: green;
+		margin-left: -4px;
+
+		/*display: none;*/
+		visibility: hidden;
+	}
+
+	.block-03 {
+		background-color: blue;
+		margin-left: -4px;
+	}
+}
