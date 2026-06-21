@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ex01: Flexbox</title>
+
+    <style>
+        .container {
+            display: flex;
+        }
+
+        .sidebar {
+            width: 200px;
+            background: lightcoral;
+        }
+
+        .main-content {
+            flex: 1;
+            background: lightblue;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: auto;
+            }
+        }
+    </style>
+    
+</head>
+<body>
+
+    <div class="container">
+        <div class="sidebar">Sidebar 200px</div>
+        <div class="main-content">Test nội dung khi nào co lại sẽ tự sắp xếp .....</div>
+    </div>
+
+</body>
+</html>
