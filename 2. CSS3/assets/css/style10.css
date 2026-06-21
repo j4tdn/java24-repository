@@ -1,0 +1,35 @@
+* {
+	box-sizing: box-sizing;
+}
+
+.container {
+	min-height: 600px;
+	width: 700px;
+	
+	margin: 100px auto;
+	border: 1px dotted green;
+
+	display: flex;
+}
+
+.item {
+	height: 150px;
+	background-color: orange;
+	border: 1px solid blueviolet;
+}
+
+.item1 {
+	width: 100px;
+	flex-grow: 1;
+}
+
+.item2 {
+	width: 100px;
+	flex-grow: 0;
+}
+
+.item3 {
+	width: 100px;
+	flex-grow: 3;
+}
+
