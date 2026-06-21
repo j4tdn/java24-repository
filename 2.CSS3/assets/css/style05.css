@@ -1,0 +1,108 @@
+.ulcontainer, .olcontainer {
+	color: green;
+
+	li > a {
+		color: red;
+	}
+}
+
+h1 ~ p {
+	background-color: orange;
+}
+
+#user-info {
+	input[type='checkbox']:enabled + label {
+		color: black;
+	}
+
+	input[type='checkbox']:checked + label {
+		color: green;
+	}
+
+	input[type='checkbox']:disabled + label {
+		color: lightgray;
+		cursor: not-allowed;
+	}
+}
+
+/*Thứ tự: link visited hover active */
+
+.about-us {
+	&:link {
+		color: red;
+	}
+
+	&:visited {
+		color: yellow;
+	}
+
+	&:active {
+		color: orange;
+	}
+}
+
+.f-text {
+	&:focus {
+		border: 2px solid violet;
+		outline: none;
+	}
+}
+
+.f-mail {
+	&:valid {
+		border: 2px solid green;
+		outline: none;
+
+		color: green;
+	}
+
+	&:invalid {
+		border: 2px solid red;
+		outline: none;
+
+		color: red;
+	}
+}
+
+.block1 {
+	p {
+		&:first-child {
+			text-transform: uppercase;
+		}
+
+		&:last-child {
+			text-transform: uppercase;
+		}
+	}
+}
+
+.block2 {
+	p {
+		&:first-of-type {
+			text-transform: uppercase;
+		}
+
+		&:last-of-type {
+			text-transform: uppercase;
+		}
+	}
+}
+
+.cftitle {
+	&::first-letter {
+		color: red;
+	}
+
+	&::after {
+		/*content: '\1F49E';*/
+
+		content: '';
+
+		width: 180px;
+		height: 2px;
+		background-color: red;
+
+		display: block;
+		margin: 10px 0 20px 4px;
+	}
+}
